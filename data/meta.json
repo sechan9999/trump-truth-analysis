@@ -1,0 +1,15 @@
+{
+  "source": "https://ix.cnn.io/data/truth-social/truth_archive.json",
+  "collected_at": "2026-10-06T15:03:08+00:00",
+  "range": [
+    "2025-01-20T04:52:26.003000+00:00",
+    "2026-10-06T14:04:02.366000+00:00"
+  ],
+  "total": 12068,
+  "by_kind": {
+    "text": 6180,
+    "media_only": 3437,
+    "link_only": 1263,
+    "retruth": 1188
+  }
+}

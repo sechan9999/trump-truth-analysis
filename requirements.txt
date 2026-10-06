@@ -1,0 +1,7 @@
+pandas
+requests
+ftfy
+numpy
+scikit-learn
+model2vec
+sentence-transformers

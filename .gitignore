@@ -1,0 +1,6 @@
+data/raw.json
+data/posts.json
+data/*.npy
+data/potion/
+data/*.log
+__pycache__/
