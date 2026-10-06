@@ -52,5 +52,7 @@ Naming rule: a label says what a post is about, never its tone or intent, unless
 |---|---|
 | 2026-10-06 | Labels v2 audited on the fixed 300-post sample: 234/300 fit = 78.0% (Wilson 95% CI 73.0–82.3%). Lowest: Thanks & greetings 53%, GOP & legislation 60%, Media & opponents 70%; highest: Endorsements 100%. 3 posts marked unjudgeable, 12 borderline/dual-topic. Criterion: does the label reasonably match the post's dominant topic. 5 reviewers, same rubric, one reviewer per post (inter-rater agreement not measured). 기준: 지배적 주제와 라벨이 합리적으로 맞는가, 검토자 5명 분담 판정. Results: `data/audit/audit_results.csv`. 라벨 v2 감사 결과 |
 
+| 2026-10-06 | Re-review: 2 reviewers re-checked all 300 and agreed final judgments → **78.3% (235/300, Wilson 95% CI 73.3–82.6%)**. 7 changed (4 N→Y, 3 Y→N); first-pass retention 97.7%, κ 0.93. Inter-rater agreement not measured (individual re-review judgments not recorded). 재검토 후 최종 78.3%, 검토자 간 일치도 미측정 |
+
 ## Not yet done / 미완료
 - Intervention precision audit: 50-post sample (`data/intervention_audit.csv`) not yet reviewed. 매핑 정밀도 감사 미실시

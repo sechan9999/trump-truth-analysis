@@ -1,5 +1,7 @@
 # 이중 판정(검토자 간 일치도) 안내 / Double-coding instructions
 
+> **상태(2026-10-06):** 300건은 2명이 전체 재검토해 최종 판정에 합의했지만(최종 78.3%), 재검토자 개별 판정이 기록되지 않아 검토자 간 일치도는 아직 측정되지 않았습니다. 이 50건 표본으로 측정할 수 있습니다. 2차 판정은 최종 판정(`final_fits`)과 비교됩니다. / Status: all 300 were re-reviewed by 2 people (final 78.3%), but individual judgments were not recorded, so inter-rater agreement is still unmeasured; this sample can measure it.
+
 라벨 감사(300건)는 검토자 5명이 글을 나눠 1명씩 판정했습니다. 그래서 검토자끼리 기준을 얼마나 같게 적용했는지는 아직 모릅니다. 이 50건을 **처음과 다른 검토자**가 다시 판정해 일치도를 잽니다.
 
 The 300-post label audit was single-coded (5 reviewers, one per post). These 50 posts are re-judged by a **different reviewer** to measure inter-rater agreement.

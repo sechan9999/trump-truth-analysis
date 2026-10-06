@@ -188,7 +188,11 @@ function vals(){
   let mx = 0; Object.values(d.counts).forEach(v => v.forEach(x => { if (x > mx) mx = x; }));
   const mon = last.length > 4 ? Math.round((new Date(last.replace(/\./g,'-')) - new Date('2025-01-20')) / 2629746000) : '…';
   const au = d.audit ? d.audit.overall : null;
-  const audit = au ? (st.lang === 'ko' ? `일치 ${Math.round(au.fit_rate*100)}% (95% CI ${Math.round(au.ci95[0]*100)}–${Math.round(au.ci95[1]*100)}%, 검토자 ${d.audit.reviewers || '?'}명 분담·글당 1명)` : `${Math.round(au.fit_rate*100)}% fit (95% CI ${Math.round(au.ci95[0]*100)}–${Math.round(au.ci95[1]*100)}%; ${d.audit.reviewers || '?'} reviewers, one per post)`) : (st.lang === 'ko' ? '미실시' : 'not yet done');
+  const rr = d.audit && d.audit.rereview;
+  const pc = x => (x*100).toFixed(1);
+  const audit = au ? (st.lang === 'ko'
+    ? `최종 일치 ${pc(au.fit_rate)}% (${au.fit}/${au.n}, 95% CI ${pc(au.ci95[0])}–${pc(au.ci95[1])}%; 1차 ${d.audit.reviewers}명 분담 판정 후 ${rr ? rr.reviewers : '?'}명이 전체 재검토, 1차 대비 유지 ${rr ? pc(rr.retention) : '?'}%·κ ${rr ? rr.kappa_first_vs_final.toFixed(2) : '?'}, 검토자 간 일치도 미측정)`
+    : `final fit ${pc(au.fit_rate)}% (${au.fit}/${au.n}, 95% CI ${pc(au.ci95[0])}–${pc(au.ci95[1])}%; first pass split among ${d.audit.reviewers} reviewers, then all re-checked by ${rr ? rr.reviewers : '?'}; first-pass retention ${rr ? pc(rr.retention) : '?'}%, κ ${rr ? rr.kappa_first_vs_final.toFixed(2) : '?'}; inter-rater agreement not measured)`) : (st.lang === 'ko' ? '미실시' : 'not yet done');
   return {audit, lv: d.labels ? d.labels.version : '', sil: d.stats ? d.stats.overall_silhouette.toFixed(2) : '', end: m.length ? m[m.length-1].replace('-','.') : '…', total: d.meta.total.toLocaleString(), n: d.meta.analyzed.toLocaleString(), mon, collected: d.meta.collected, max: Math.ceil(mx/10)*10 || 10, lastm: m.length ? short(m[m.length-1]) : '', lastd: +last.slice(8,10) || ''};
 }
 const esc = x => x.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

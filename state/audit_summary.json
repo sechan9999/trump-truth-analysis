@@ -3,6 +3,18 @@
  "n": 300,
  "overall": {
   "n": 300,
+  "fit": 235,
+  "fit_rate": 0.783,
+  "ci95": [
+   0.733,
+   0.826
+  ],
+  "unjudgeable": 3,
+  "fit_rate_judgeable": 0.791,
+  "borderline": 12
+ },
+ "first_pass": {
+  "n": 300,
   "fit": 234,
   "fit_rate": 0.78,
   "ci95": [
@@ -17,27 +29,27 @@
   "0": {
    "label": "관세·무역",
    "n": 30,
-   "fit": 24,
-   "fit_rate": 0.8,
+   "fit": 25,
+   "fit_rate": 0.833,
    "ci95": [
-    0.627,
-    0.905
+    0.664,
+    0.927
    ],
    "unjudgeable": 0,
-   "fit_rate_judgeable": 0.8,
+   "fit_rate_judgeable": 0.833,
    "borderline": 1
   },
   "1": {
    "label": "언론·정적 언급",
    "n": 30,
-   "fit": 21,
-   "fit_rate": 0.7,
+   "fit": 20,
+   "fit_rate": 0.667,
    "ci95": [
-    0.521,
-    0.833
+    0.488,
+    0.808
    ],
    "unjudgeable": 2,
-   "fit_rate_judgeable": 0.75,
+   "fit_rate_judgeable": 0.714,
    "borderline": 2
   },
   "2": {
@@ -56,14 +68,14 @@
   "3": {
    "label": "법원·인사 지명",
    "n": 30,
-   "fit": 27,
-   "fit_rate": 0.9,
+   "fit": 28,
+   "fit_rate": 0.933,
    "ci95": [
-    0.744,
-    0.965
+    0.787,
+    0.982
    ],
    "unjudgeable": 0,
-   "fit_rate_judgeable": 0.9,
+   "fit_rate_judgeable": 0.933,
    "borderline": 2
   },
   "4": {
@@ -145,11 +157,21 @@
    "borderline": 0
   }
  },
+ "rereview": {
+  "reviewers": 2,
+  "retention": 0.977,
+  "retained": 293,
+  "kappa_first_vs_final": 0.932,
+  "changed": 7,
+  "n_to_y": 4,
+  "y_to_n": 3
+ },
+ "inter_rater_agreement": null,
  "text_changed_rows": 4,
  "criterion": "Does the label reasonably match the post's dominant topic? (Y/N)",
  "criterion_ko": "글의 지배적 주제와 라벨이 합리적으로 맞는가 (Y/N)",
  "reviewers": 5,
- "coding": "single-coded: 5 reviewers split the sample using the same rubric; each post judged by one reviewer; inter-rater agreement not measured",
- "coding_ko": "검토자 5명이 같은 루브릭으로 표본을 나눠 판정(글당 1명). 검토자 간 일치도는 측정하지 않음",
+ "coding": "First pass: 5 reviewers split the sample with the same rubric (one per post). Re-review: 2 reviewers re-checked all 300 and agreed final judgments. Inter-rater agreement not measured (individual re-review judgments not recorded); first-pass-to-final retention reported instead.",
+ "coding_ko": "1차: 검토자 5명이 같은 루브릭으로 표본을 나눠 판정(글당 1명). 재검토: 2명이 300건 전체를 다시 보고 최종 판정에 합의. 재검토자 개별 판정이 기록되지 않아 검토자 간 일치도는 측정하지 않았고, 대신 1차 판정 대비 재검토 유지율을 보고함",
  "method": "300 posts, 30 per cluster, fixed random sample (seed 42). note: borderline, dual-topic, unjudgeable. CI = Wilson 95%."
 }

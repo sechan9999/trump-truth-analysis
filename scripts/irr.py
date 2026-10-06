@@ -46,7 +46,7 @@ def kappa(a: np.ndarray, b: np.ndarray) -> float:
 
 
 def score() -> None:
-    first = pd.read_csv(FIRST, encoding="utf-8-sig", dtype={"id": str})[["id", "label", "fits", "note"]]
+    first = pd.read_csv(FIRST, encoding="utf-8-sig", dtype={"id": str})[["id", "label", "final_fits", "note"]].rename(columns={"final_fits": "fits"})  # compare with the agreed final judgment
     second = pd.read_csv(FILLED, encoding="utf-8-sig", dtype={"id": str})
     blind = pd.read_csv(BLIND, encoding="utf-8-sig", dtype={"id": str})
     if set(second["id"]) != set(blind["id"]):
