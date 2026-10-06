@@ -1,0 +1,675 @@
+{
+ "schema": "message_index_weekly/v1",
+ "week": "2026-10-05",
+ "window_weeks": 4,
+ "method_version": "v1.1",
+ "gazetteer_version": "v1",
+ "matching_rules_version": "v2",
+ "labels_version": "v2",
+ "collected": "2026-10-06",
+ "n_posts_total": 12069,
+ "n_posts_analyzed": 6079,
+ "silhouette_cosine": 0.095,
+ "site": "https://sechan9999.github.io/trump-truth-analysis/",
+ "coverage": {
+  "mapped_share": 0.581,
+  "any_state_share": 1.0,
+  "n_endorse_window": 31,
+  "n_mapped_battleground": 18.0
+ },
+ "small_n": true,
+ "states": {
+  "AK": {
+   "endorse_share": 0.167,
+   "dem_mention_share": 0.0,
+   "n_endorse": 3.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 4.95,
+   "rank": 2,
+   "surge": false,
+   "small_n": true
+  },
+  "FL": {
+   "endorse_share": 0.056,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.59,
+   "rank": 6,
+   "surge": false,
+   "small_n": true
+  },
+  "GA": {
+   "endorse_share": 0.056,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.38,
+   "rank": 6,
+   "surge": false,
+   "small_n": true
+  },
+  "IA": {
+   "endorse_share": 0.111,
+   "dem_mention_share": 0.0,
+   "n_endorse": 2.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.45,
+   "rank": 3,
+   "surge": false,
+   "small_n": true
+  },
+  "KS": {
+   "endorse_share": 0.056,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.08,
+   "rank": 6,
+   "surge": false,
+   "small_n": true
+  },
+  "ME": {
+   "endorse_share": 0.0,
+   "dem_mention_share": 0.0,
+   "n_endorse": 0.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.33,
+   "rank": 10,
+   "surge": false,
+   "small_n": true
+  },
+  "MI": {
+   "endorse_share": 0.111,
+   "dem_mention_share": 1.0,
+   "n_endorse": 2.0,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": 0.61,
+   "rank": 3,
+   "surge": false,
+   "small_n": true
+  },
+  "MN": {
+   "endorse_share": 0.0,
+   "dem_mention_share": 0.0,
+   "n_endorse": 0.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.42,
+   "rank": 10,
+   "surge": false,
+   "small_n": true
+  },
+  "NC": {
+   "endorse_share": 0.111,
+   "dem_mention_share": 0.0,
+   "n_endorse": 2.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.17,
+   "rank": 3,
+   "surge": false,
+   "small_n": true
+  },
+  "NH": {
+   "endorse_share": 0.0,
+   "dem_mention_share": 0.0,
+   "n_endorse": 0.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.23,
+   "rank": 10,
+   "surge": false,
+   "small_n": true
+  },
+  "OH": {
+   "endorse_share": 0.056,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.24,
+   "rank": 6,
+   "surge": false,
+   "small_n": true
+  },
+  "TX": {
+   "endorse_share": 0.278,
+   "dem_mention_share": 0.0,
+   "n_endorse": 5.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.33,
+   "rank": 1,
+   "surge": false,
+   "small_n": true
+  }
+ },
+ "topic_labels": {
+  "iran_war": {
+   "ko": "이란·전쟁 외교",
+   "en": "Iran & war diplomacy",
+   "color": "#0F766E",
+   "cohesion": 0.152,
+   "caution": false,
+   "keywords": [
+    "iran",
+    "war",
+    "israel",
+    "strait",
+    "nuclear"
+   ]
+  },
+  "tariffs_trade": {
+   "ko": "관세·무역",
+   "en": "Tariffs & trade",
+   "color": "#1F4FBF",
+   "cohesion": 0.11,
+   "caution": false,
+   "keywords": [
+    "tariffs",
+    "tariff",
+    "trade",
+    "canada",
+    "china"
+   ]
+  },
+  "endorsements": {
+   "ko": "지지 선언",
+   "en": "Endorsements",
+   "color": "#A16207",
+   "cohesion": 0.296,
+   "caution": false,
+   "keywords": [
+    "secure",
+    "endorsement",
+    "second amendment",
+    "siege second",
+    "cut taxes"
+   ]
+  },
+  "gop_legislation": {
+   "ko": "공화당·입법",
+   "en": "GOP & legislation",
+   "color": "#0369A1",
+   "cohesion": 0.028,
+   "caution": true,
+   "keywords": [
+    "republicans",
+    "democrats",
+    "republican",
+    "vote",
+    "save act"
+   ]
+  },
+  "courts_nominations": {
+   "ko": "법원·인사 지명",
+   "en": "Courts & nominations",
+   "color": "#7C3AED",
+   "cohesion": 0.142,
+   "caution": false,
+   "keywords": [
+    "district court",
+    "serve judge",
+    "law",
+    "attorney",
+    "justice"
+   ]
+  },
+  "crime_immigration": {
+   "ko": "범죄·이민 단속",
+   "en": "Crime & immigration",
+   "color": "#B91C1C",
+   "cohesion": 0.047,
+   "caution": true,
+   "keywords": [
+    "ice",
+    "criminals",
+    "illegal",
+    "crime",
+    "violent"
+   ]
+  },
+  "media_opponents": {
+   "ko": "언론·정적 언급",
+   "en": "Media & opponents",
+   "color": "#C2410C",
+   "cohesion": 0.009,
+   "caution": true,
+   "keywords": [
+    "fake news",
+    "york times",
+    "cnn",
+    "epstein",
+    "ratings"
+   ]
+  },
+  "shared_headlines": {
+   "ko": "기사 헤드라인 공유",
+   "en": "Shared headlines",
+   "color": "#64748B",
+   "cohesion": 0.044,
+   "caution": true,
+   "keywords": [
+    "administration",
+    "pro bono",
+    "elon",
+    "book",
+    "law firms"
+   ]
+  },
+  "white_house_construction": {
+   "ko": "백악관 공사",
+   "en": "White House construction",
+   "color": "#BE185D",
+   "cohesion": 0.14,
+   "caution": false,
+   "keywords": [
+    "white house",
+    "ballroom",
+    "reflecting pool",
+    "building",
+    "construction"
+   ]
+  },
+  "thanks_greetings": {
+   "ko": "축하·감사",
+   "en": "Thanks & greetings",
+   "color": "#15803D",
+   "cohesion": -0.003,
+   "caution": true,
+   "keywords": [
+    "congratulations",
+    "honor",
+    "happy",
+    "wonderful",
+    "god bless"
+   ]
+  }
+ },
+ "topics": [
+  {
+   "month": "2025-01",
+   "tariffs_trade": 3,
+   "media_opponents": 6,
+   "iran_war": 3,
+   "courts_nominations": 1,
+   "endorsements": 3,
+   "white_house_construction": 1,
+   "crime_immigration": 4,
+   "thanks_greetings": 26,
+   "shared_headlines": 10,
+   "gop_legislation": 7
+  },
+  {
+   "month": "2025-02",
+   "tariffs_trade": 35,
+   "media_opponents": 25,
+   "iran_war": 17,
+   "courts_nominations": 6,
+   "endorsements": 5,
+   "white_house_construction": 5,
+   "crime_immigration": 15,
+   "thanks_greetings": 54,
+   "shared_headlines": 33,
+   "gop_legislation": 25
+  },
+  {
+   "month": "2025-03",
+   "tariffs_trade": 45,
+   "media_opponents": 25,
+   "iran_war": 15,
+   "courts_nominations": 16,
+   "endorsements": 17,
+   "white_house_construction": 3,
+   "crime_immigration": 26,
+   "thanks_greetings": 54,
+   "shared_headlines": 56,
+   "gop_legislation": 23
+  },
+  {
+   "month": "2025-04",
+   "tariffs_trade": 44,
+   "media_opponents": 23,
+   "iran_war": 15,
+   "courts_nominations": 11,
+   "endorsements": 13,
+   "white_house_construction": 3,
+   "crime_immigration": 18,
+   "thanks_greetings": 51,
+   "shared_headlines": 49,
+   "gop_legislation": 27
+  },
+  {
+   "month": "2025-05",
+   "tariffs_trade": 35,
+   "media_opponents": 23,
+   "iran_war": 15,
+   "courts_nominations": 27,
+   "endorsements": 29,
+   "white_house_construction": 6,
+   "crime_immigration": 19,
+   "thanks_greetings": 49,
+   "shared_headlines": 27,
+   "gop_legislation": 29
+  },
+  {
+   "month": "2025-06",
+   "tariffs_trade": 26,
+   "media_opponents": 34,
+   "iran_war": 48,
+   "courts_nominations": 7,
+   "endorsements": 9,
+   "white_house_construction": 4,
+   "crime_immigration": 36,
+   "thanks_greetings": 50,
+   "shared_headlines": 24,
+   "gop_legislation": 50
+  },
+  {
+   "month": "2025-07",
+   "tariffs_trade": 41,
+   "media_opponents": 48,
+   "iran_war": 9,
+   "courts_nominations": 10,
+   "endorsements": 27,
+   "white_house_construction": 5,
+   "crime_immigration": 12,
+   "thanks_greetings": 64,
+   "shared_headlines": 39,
+   "gop_legislation": 42
+  },
+  {
+   "month": "2025-08",
+   "tariffs_trade": 33,
+   "media_opponents": 49,
+   "iran_war": 18,
+   "courts_nominations": 19,
+   "endorsements": 20,
+   "white_house_construction": 10,
+   "crime_immigration": 38,
+   "thanks_greetings": 54,
+   "shared_headlines": 24,
+   "gop_legislation": 41
+  },
+  {
+   "month": "2025-09",
+   "tariffs_trade": 16,
+   "media_opponents": 25,
+   "iran_war": 11,
+   "courts_nominations": 4,
+   "endorsements": 8,
+   "white_house_construction": 9,
+   "crime_immigration": 36,
+   "thanks_greetings": 40,
+   "shared_headlines": 10,
+   "gop_legislation": 23
+  },
+  {
+   "month": "2025-10",
+   "tariffs_trade": 24,
+   "media_opponents": 22,
+   "iran_war": 18,
+   "courts_nominations": 5,
+   "endorsements": 55,
+   "white_house_construction": 11,
+   "crime_immigration": 21,
+   "thanks_greetings": 50,
+   "shared_headlines": 10,
+   "gop_legislation": 21
+  },
+  {
+   "month": "2025-11",
+   "tariffs_trade": 21,
+   "media_opponents": 39,
+   "iran_war": 11,
+   "courts_nominations": 9,
+   "endorsements": 130,
+   "white_house_construction": 3,
+   "crime_immigration": 19,
+   "thanks_greetings": 44,
+   "shared_headlines": 13,
+   "gop_legislation": 68
+  },
+  {
+   "month": "2025-12",
+   "tariffs_trade": 14,
+   "media_opponents": 37,
+   "iran_war": 12,
+   "courts_nominations": 5,
+   "endorsements": 23,
+   "white_house_construction": 7,
+   "crime_immigration": 22,
+   "thanks_greetings": 31,
+   "shared_headlines": 23,
+   "gop_legislation": 23
+  },
+  {
+   "month": "2026-01",
+   "tariffs_trade": 35,
+   "media_opponents": 33,
+   "iran_war": 23,
+   "courts_nominations": 11,
+   "endorsements": 49,
+   "white_house_construction": 7,
+   "crime_immigration": 46,
+   "thanks_greetings": 46,
+   "shared_headlines": 21,
+   "gop_legislation": 18
+  },
+  {
+   "month": "2026-02",
+   "tariffs_trade": 23,
+   "media_opponents": 41,
+   "iran_war": 13,
+   "courts_nominations": 17,
+   "endorsements": 71,
+   "white_house_construction": 12,
+   "crime_immigration": 11,
+   "thanks_greetings": 30,
+   "shared_headlines": 49,
+   "gop_legislation": 25
+  },
+  {
+   "month": "2026-03",
+   "tariffs_trade": 8,
+   "media_opponents": 49,
+   "iran_war": 68,
+   "courts_nominations": 2,
+   "endorsements": 40,
+   "white_house_construction": 9,
+   "crime_immigration": 23,
+   "thanks_greetings": 31,
+   "shared_headlines": 50,
+   "gop_legislation": 37
+  },
+  {
+   "month": "2026-04",
+   "tariffs_trade": 17,
+   "media_opponents": 52,
+   "iran_war": 87,
+   "courts_nominations": 17,
+   "endorsements": 46,
+   "white_house_construction": 13,
+   "crime_immigration": 13,
+   "thanks_greetings": 37,
+   "shared_headlines": 35,
+   "gop_legislation": 25
+  },
+  {
+   "month": "2026-05",
+   "tariffs_trade": 13,
+   "media_opponents": 41,
+   "iran_war": 25,
+   "courts_nominations": 15,
+   "endorsements": 91,
+   "white_house_construction": 29,
+   "crime_immigration": 10,
+   "thanks_greetings": 39,
+   "shared_headlines": 22,
+   "gop_legislation": 28
+  },
+  {
+   "month": "2026-06",
+   "tariffs_trade": 15,
+   "media_opponents": 46,
+   "iran_war": 49,
+   "courts_nominations": 20,
+   "endorsements": 94,
+   "white_house_construction": 35,
+   "crime_immigration": 19,
+   "thanks_greetings": 59,
+   "shared_headlines": 13,
+   "gop_legislation": 44
+  },
+  {
+   "month": "2026-07",
+   "tariffs_trade": 24,
+   "media_opponents": 31,
+   "iran_war": 22,
+   "courts_nominations": 9,
+   "endorsements": 34,
+   "white_house_construction": 30,
+   "crime_immigration": 13,
+   "thanks_greetings": 43,
+   "shared_headlines": 70,
+   "gop_legislation": 32
+  },
+  {
+   "month": "2026-08",
+   "tariffs_trade": 46,
+   "media_opponents": 53,
+   "iran_war": 33,
+   "courts_nominations": 26,
+   "endorsements": 162,
+   "white_house_construction": 37,
+   "crime_immigration": 23,
+   "thanks_greetings": 41,
+   "shared_headlines": 68,
+   "gop_legislation": 33
+  },
+  {
+   "month": "2026-09",
+   "tariffs_trade": 31,
+   "media_opponents": 53,
+   "iran_war": 24,
+   "courts_nominations": 9,
+   "endorsements": 40,
+   "white_house_construction": 22,
+   "crime_immigration": 12,
+   "thanks_greetings": 45,
+   "shared_headlines": 38,
+   "gop_legislation": 24
+  },
+  {
+   "month": "2026-10",
+   "tariffs_trade": 7,
+   "media_opponents": 9,
+   "iran_war": 2,
+   "courts_nominations": 3,
+   "endorsements": 8,
+   "white_house_construction": 3,
+   "crime_immigration": 4,
+   "thanks_greetings": 7,
+   "shared_headlines": 7,
+   "gop_legislation": 13
+  }
+ ],
+ "annotations": [
+  {
+   "month": "2025-07",
+   "topic": "media_opponents",
+   "n_month": 48,
+   "share_month": 0.162,
+   "episode_start": "2025-07-14",
+   "episode_end": "2025-08-17",
+   "episode_count": 73,
+   "ratio": 2.9,
+   "keywords": [
+    "russia",
+    "schiff",
+    "jobs",
+    "fake"
+   ]
+  },
+  {
+   "month": "2025-11",
+   "topic": "endorsements",
+   "n_month": 130,
+   "share_month": 0.364,
+   "episode_start": "2025-10-13",
+   "episode_end": "2025-11-09",
+   "episode_count": 167,
+   "ratio": 20.9,
+   "keywords": [
+    "secure border",
+    "election congressman",
+    "endorsement election",
+    "energy"
+   ]
+  },
+  {
+   "month": "2026-02",
+   "topic": "shared_headlines",
+   "n_month": 49,
+   "share_month": 0.168,
+   "episode_start": "2026-02-23",
+   "episode_end": "2026-03-08",
+   "episode_count": 52,
+   "ratio": 5.2,
+   "keywords": [
+    "state union",
+    "maher",
+    "dinner",
+    "waste"
+   ]
+  },
+  {
+   "month": "2026-04",
+   "topic": "iran_war",
+   "n_month": 87,
+   "share_month": 0.254,
+   "episode_start": "2026-03-30",
+   "episode_end": "2026-04-26",
+   "episode_count": 85,
+   "ratio": 5.3,
+   "keywords": [
+    "iran",
+    "strait hormuz",
+    "lebanon",
+    "blockade"
+   ]
+  },
+  {
+   "month": "2026-08",
+   "topic": "endorsements",
+   "n_month": 162,
+   "share_month": 0.31,
+   "episode_start": "2026-08-03",
+   "episode_end": "2026-08-23",
+   "episode_count": 152,
+   "ratio": 5.6,
+   "keywords": [
+    "tuesday august",
+    "voting location",
+    "election day",
+    "vote"
+   ]
+  },
+  {
+   "month": "2026-08",
+   "topic": "shared_headlines",
+   "n_month": 68,
+   "share_month": 0.13,
+   "episode_start": "2026-08-17",
+   "episode_end": "2026-09-06",
+   "episode_count": 64,
+   "ratio": 4.7,
+   "keywords": [
+    "cheaper",
+    "darline graham",
+    "tax",
+    "senate"
+   ]
+  }
+ ],
+ "notes": {
+  "ko": "기술적 맥락 지표이며 예측 모형 입력이 아니다. 지지 선언은 접전주를 따라가는 내생 변수라 인과로 읽을 수 없다. 트루스소셜은 유권자 전체가 아니다. 가제티어에 없는 후보(경선 탈락자 등)는 후보명으로 잡히지 않는다. dem_mention은 민주당 후보 이름 언급 횟수이며 어조(공격 여부)는 측정하지 않는다.",
+  "en": "A descriptive context indicator, not a forecast input. Endorsements follow competitive races (endogenous), so no causal reading. Truth Social is not the electorate. Candidates missing from the gazetteer (e.g. primary losers) are not matched by name. dem_mention counts mentions of Democratic candidates by name; tone is not measured."
+ }
+}

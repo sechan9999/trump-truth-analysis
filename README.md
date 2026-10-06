@@ -54,6 +54,9 @@ GitHub Actions(`.github/workflows/weekly.yml`)가 매주 월요일 09:00(KST) �
 ## 허브용 주간 JSON
 `docs/weekly.json` (schema `truth-weekly/v1`, 약 8KB): 라벨·군집 통계·월별/주별 주제 건수. 게시물 원문과 좌표는 빼서 [US Election Insight Hub](https://github.com/sechan9999/us-election-insight-hub)의 '트럼프 메시지 분석' 탭이 가볍게 불러온다. → https://sechan9999.github.io/trump-truth-analysis/weekly.json
 
+## 허브 메시지 분석 탭 데이터 (`scripts/export_weekly.py`)
+`docs/message_index_weekly.json` (schema `message_index_weekly/v1`): 개입 지수(12개 주) + 월별 주제 건수(`topics`) + 주제 라벨·응집도 + 주석(급증 에피소드 상위 6개, 사건 이름 없음). 허브 `app/us/lib/seed-messages.ts`가 사용. 설계안의 `attack_share`는 어조를 측정하지 않으므로 `dem_mention_share`(민주당 후보 이름 언급)로 정의.
+
 ## 주제 급증 이벤트 (`events.py`, method v1)
 - 주제별 주간 게시 수가 기준선(이미 급증으로 잡힌 주를 뺀 직전 12주 중앙값)의 2배, 중앙값+3×MAD, 8건 중 가장 큰 값 이상이면 급증. 연속된 주는 시작 주 기준으로 하나의 에피소드
 - 에피소드마다 그 기간에 두드러진 키워드(같은 주제의 다른 기간 대비)와 대표 게시물 2건(원문 링크). **사건 이름은 붙이지 않음**
