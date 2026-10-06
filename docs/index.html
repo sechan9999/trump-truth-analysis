@@ -188,7 +188,7 @@ function vals(){
   let mx = 0; Object.values(d.counts).forEach(v => v.forEach(x => { if (x > mx) mx = x; }));
   const mon = last.length > 4 ? Math.round((new Date(last.replace(/\./g,'-')) - new Date('2025-01-20')) / 2629746000) : '…';
   const au = d.audit ? d.audit.overall : null;
-  const audit = au ? (st.lang === 'ko' ? `일치 ${Math.round(au.fit_rate*100)}% (95% CI ${Math.round(au.ci95[0]*100)}–${Math.round(au.ci95[1]*100)}%)` : `${Math.round(au.fit_rate*100)}% fit (95% CI ${Math.round(au.ci95[0]*100)}–${Math.round(au.ci95[1]*100)}%)`) : (st.lang === 'ko' ? '미실시' : 'not yet done');
+  const audit = au ? (st.lang === 'ko' ? `일치 ${Math.round(au.fit_rate*100)}% (95% CI ${Math.round(au.ci95[0]*100)}–${Math.round(au.ci95[1]*100)}%, 검토자 ${d.audit.reviewers || '?'}명 분담·글당 1명)` : `${Math.round(au.fit_rate*100)}% fit (95% CI ${Math.round(au.ci95[0]*100)}–${Math.round(au.ci95[1]*100)}%; ${d.audit.reviewers || '?'} reviewers, one per post)`) : (st.lang === 'ko' ? '미실시' : 'not yet done');
   return {audit, lv: d.labels ? d.labels.version : '', sil: d.stats ? d.stats.overall_silhouette.toFixed(2) : '', end: m.length ? m[m.length-1].replace('-','.') : '…', total: d.meta.total.toLocaleString(), n: d.meta.analyzed.toLocaleString(), mon, collected: d.meta.collected, max: Math.ceil(mx/10)*10 || 10, lastm: m.length ? short(m[m.length-1]) : '', lastd: +last.slice(8,10) || ''};
 }
 const esc = x => x.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

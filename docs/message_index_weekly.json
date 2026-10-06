@@ -689,6 +689,22 @@
   "ci95": [
    0.73,
    0.823
+  ],
+  "label_version": "v2",
+  "criterion": "Does the label reasonably match the post's dominant topic? (Y/N)",
+  "criterion_ko": "글의 지배적 주제와 라벨이 합리적으로 맞는가 (Y/N)",
+  "reviewers": 5,
+  "coding": "single-coded: 5 reviewers split the sample using the same rubric; each post judged by one reviewer; inter-rater agreement not measured",
+  "coding_ko": "검토자 5명이 같은 루브릭으로 표본을 나눠 판정(글당 1명). 검토자 간 일치도는 측정하지 않음",
+  "lowest": [
+   {
+    "topic": "thanks_greetings",
+    "fit_rate": 0.533
+   },
+   {
+    "topic": "gop_legislation",
+    "fit_rate": 0.6
+   }
   ]
  },
  "message_vs_public": {

@@ -148,7 +148,10 @@ def main() -> None:
         "topics": topics,
         "annotations": ann,
         "notes": iv["notes"],
-        "label_audit": {k: audit["overall"][k] for k in ("n", "fit", "fit_rate", "ci95")} if audit else None,
+        "label_audit": {**{k: audit["overall"][k] for k in ("n", "fit", "fit_rate", "ci95")},
+                        **{k: audit[k] for k in ("label_version", "criterion", "criterion_ko", "reviewers", "coding", "coding_ko")},
+                        "lowest": sorted(({"topic": SLUG[c], "fit_rate": v["fit_rate"]} for c, v in audit["by_cluster"].items()),
+                                         key=lambda x: x["fit_rate"])[:2]} if audit else None,
         "message_vs_public": message_vs_public(wk),
     }
     (DOCS / "message_index_weekly.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

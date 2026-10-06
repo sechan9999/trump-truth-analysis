@@ -54,7 +54,12 @@ def main() -> None:
     out = {"label_version": str(m["label_version"].iloc[0]), "n": len(m), "overall": stats(m),
            "by_cluster": {str(int(c)): {"label": g["label"].iloc[0], **stats(g)} for c, g in m.groupby("cluster")},
            "text_changed_rows": int(m["text_changed"].sum()),
-           "method": "300 posts, 30 per cluster, fixed random sample (seed 42). fits = Y/N: does the label describe the post. note: borderline, dual-topic, unjudgeable. CI = Wilson 95%."}
+           "criterion": "Does the label reasonably match the post's dominant topic? (Y/N)",
+           "criterion_ko": "글의 지배적 주제와 라벨이 합리적으로 맞는가 (Y/N)",
+           "reviewers": 5,
+           "coding": "single-coded: 5 reviewers split the sample using the same rubric; each post judged by one reviewer; inter-rater agreement not measured",
+           "coding_ko": "검토자 5명이 같은 루브릭으로 표본을 나눠 판정(글당 1명). 검토자 간 일치도는 측정하지 않음",
+           "method": "300 posts, 30 per cluster, fixed random sample (seed 42). note: borderline, dual-topic, unjudgeable. CI = Wilson 95%."}
     SUMMARY.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     o = out["overall"]
     print(f"overall {o['fit']}/{o['n']} = {o['fit_rate']:.1%} CI {o['ci95']} | 판정 가능분만 {o['fit_rate_judgeable']:.1%} | 본문 변경 {out['text_changed_rows']}행")
