@@ -33,3 +33,6 @@ python embed.py 10      # data/clustered.json, clusters_report.json (기본 모�
 | 3 | 법원·인사 지명 | 249 |
 
 군집 이름은 TF-IDF 상위어와 예시 글을 보고 수동으로 붙임.
+
+## 페이지
+https://sechan9999.github.io/trump-truth-analysis/ (한국어/English 토글, `?lang=en`)

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>트럼프 트루스소셜 게시물 분석</title>
+<meta name="description" content="Trump Truth Social posts, 2025.01–2026.10: embedding map, topic clusters and monthly trends.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F3F0;--card:#FFFFFF;--ink:#16181D;--sub:#3A3F48;--mute:#5A5F69;--line:#E2E2DC;--line2:#D6D6CF;--map:#FAFAF8;--dim:#DADAD3;--accent:#1F4FBF;--chip:#16181D;--chipfg:#FFFFFF;--label:rgba(255,255,255,.88)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121316;--card:#1B1D21;--ink:#ECECE8;--sub:#C9CAC4;--mute:#9EA1A8;--line:#2A2D33;--line2:#373A41;--map:#16181B;--dim:#33363C;--accent:#7EA2F5;--chip:#ECECE8;--chipfg:#121316;--label:rgba(27,29,33,.88)}}
+:root[data-theme="dark"]{--bg:#121316;--card:#1B1D21;--ink:#ECECE8;--sub:#C9CAC4;--mute:#9EA1A8;--line:#2A2D33;--line2:#373A41;--map:#16181B;--dim:#33363C;--accent:#7EA2F5;--chip:#ECECE8;--chipfg:#121316;--label:rgba(27,29,33,.88)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans KR',system-ui,sans-serif}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 16px 80px;display:flex;flex-direction:column;gap:40px}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.meta{font-size:13px;letter-spacing:.04em;color:var(--mute)}
+.tools{display:flex;gap:8px}
+.tbtn{min-height:36px;padding:6px 12px;border-radius:6px;border:1px solid var(--line2);background:var(--card);cursor:pointer;font-size:13px}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:6px;overflow:hidden}
+.seg button{min-height:36px;padding:6px 12px;border:0;background:var(--card);cursor:pointer;font-size:13px}
+.seg button[aria-pressed="true"]{background:var(--chip);color:var(--chipfg)}
+h1{margin:0;font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(30px,5vw,52px);line-height:1.15;letter-spacing:-.02em}
+.lede{margin:0;max-width:720px;font-size:16px;line-height:1.75;color:var(--sub)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:16px}
+h2{margin:0;font-size:18px;font-weight:600}
+.note{margin:0;font-size:14px;color:var(--mute);line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:36px;padding:6px 14px;border-radius:999px;border:1px solid var(--line2);background:var(--card);font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{background:var(--chip);color:var(--chipfg);border-color:var(--chip)}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pbtn{min-height:32px;padding:4px 12px;border-radius:6px;border:1px solid var(--line2);background:var(--card);font-size:13px;cursor:pointer}
+.pbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.count{margin-left:auto;font-size:13px;color:var(--mute)}
+.map{position:relative;height:min(600px,80vw);min-height:360px;border-radius:8px;background:var(--map);overflow:hidden}
+.map canvas{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair}
+.lbl{position:absolute;transform:translate(-50%,-50%);font-size:12px;font-weight:600;background:var(--label);padding:2px 8px;border-radius:4px;pointer-events:none;white-space:nowrap}
+.tip{position:absolute;pointer-events:none;font-size:12px;background:var(--ink);color:var(--bg);padding:4px 8px;border-radius:4px;white-space:nowrap;display:none}
+.post{position:absolute;right:12px;bottom:12px;width:min(360px,calc(100% - 24px));background:var(--card);border:1px solid var(--line2);border-radius:8px;padding:14px 16px;display:none;flex-direction:column;gap:8px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.post .head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.post .topic{font-size:12px;font-weight:600}
+.post .x{width:36px;height:36px;border:0;background:transparent;cursor:pointer;color:var(--mute);display:flex;align-items:center;justify-content:center}
+.post .date{font-size:12px;color:var(--mute)}
+.post .text{font-size:14px;line-height:1.6;max-height:180px;overflow-y:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.mini h3{margin:0;font-size:15px;font-weight:600}
+.mini .n{margin-left:auto;font-size:12px;color:var(--mute)}
+.mini p{margin:0;font-size:13px;color:var(--mute);line-height:1.5;min-height:39px}
+.bars{height:72px;display:flex;align-items:flex-end;gap:2px;border-bottom:1px solid var(--line2)}
+.bars div{flex:1;border-radius:1px 1px 0 0;min-height:1px}
+.axis{display:flex;justify-content:space-between;font-size:11px;color:var(--mute)}
+.insights{display:flex;flex-direction:column;gap:16px;max-width:760px;font-size:15px;line-height:1.8}
+.insights p{margin:0}
+footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var(--line2);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header style="display:flex;flex-direction:column;gap:14px">
+<div class="top">
+<div class="meta" data-t="meta"></div>
+<div class="tools">
+<div class="seg" role="group" aria-label="Language">
+<button type="button" data-lang="ko" aria-pressed="true">한국어</button>
+<button type="button" data-lang="en" aria-pressed="false">English</button>
+</div>
+<button type="button" class="tbtn" id="theme" data-t="theme"></button>
+</div>
+</div>
+<h1 data-t="title"></h1>
+<p class="lede" data-t="lede"></p>
+</header>
+
+<section class="card">
+<div style="display:flex;flex-direction:column;gap:6px">
+<h2 data-t="mapTitle"></h2>
+<p class="note" data-t="mapNote"></p>
+</div>
+<div class="chips" id="chips"></div>
+<div class="row"><span class="note" data-t="period"></span><span id="periods" class="row"></span><span class="count" id="count"></span></div>
+<div class="map" id="map">
+<canvas id="cv" aria-label="Message map"></canvas>
+<div id="labels"></div>
+<div class="tip" id="tip"></div>
+<div class="post" id="post" role="dialog">
+<div class="head"><span class="topic" id="pTopic"></span><button type="button" class="x" id="pClose" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+<div class="date" id="pDate"></div>
+<div class="text" id="pText"></div>
+<a id="pLink" target="_blank" rel="noopener" data-t="orig"></a>
+</div>
+</div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<h2 data-t="trendTitle"></h2>
+<p class="note" data-t="trendNote"></p>
+</div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section class="card">
+<h2 data-t="insTitle"></h2>
+<div class="insights" id="insights"></div>
+</section>
+
+<footer data-t="foot"></footer>
+</div>
+
+<script>
+const T = [
+  {k:2,c:'#0F766E',ko:['이란·전쟁 외교','이란 핵시설·호르무즈 해협, 우크라이나·이스라엘, 정상 통화'],en:['Iran & war diplomacy','Iran nuclear sites, Strait of Hormuz, Ukraine, Israel, leader calls'],x:89.2,y:42.3},
+  {k:0,c:'#1F4FBF',ko:['관세·무역','관세 부과와 무역 협상, 철강·반도체 투자 유치'],en:['Tariffs & trade','Tariffs, trade deals, steel and chip investment'],x:74.8,y:59.4},
+  {k:4,c:'#A16207',ko:['지지 선언','“Complete and Total Endorsement”, 공화당 후보 공개 지지'],en:['Endorsements','“Complete and Total Endorsement” of Republican candidates'],x:16.0,y:50.4},
+  {k:9,c:'#0369A1',ko:['공화당·입법','공화당 결집, 필리버스터·예산안, 민주당 비판'],en:['GOP & legislation','Rallying Republicans, filibuster, budget, attacks on Democrats'],x:44.0,y:47.5},
+  {k:3,c:'#7C3AED',ko:['법원·인사 지명','판사·검사 지명, 법원 판결, 법무부 개편'],en:['Courts & nominations','Judge and prosecutor nominations, rulings, DOJ overhaul'],x:32.5,y:41.1},
+  {k:6,c:'#B91C1C',ko:['범죄·이민 단속','ICE·불법이민 추방, 주방위군 투입, 범죄 대응'],en:['Crime & immigration','ICE deportations, National Guard deployments, crime'],x:50.0,y:35.0},
+  {k:1,c:'#C2410C',ko:['언론·정적 공격','가짜뉴스, 정적·방송인, 선거 부정 주장'],en:['Attacks on media & rivals','“Fake news”, rivals and TV hosts, election-fraud claims'],x:41.0,y:29.0},
+  {k:8,c:'#64748B',ko:['기사 헤드라인 공유','“Trump says…” 식 기사 제목을 본문에 옮겨 붙인 글'],en:['Shared headlines','Article headlines pasted as the post, “Trump says…”'],x:62.7,y:41.2},
+  {k:5,c:'#BE185D',ko:['백악관 공사','볼룸·반사연못·케네디센터 등 건축과 보수'],en:['White House construction','Ballroom, Reflecting Pool, Kennedy Center renovations'],x:55.8,y:87.6},
+  {k:7,c:'#15803D',ko:['축하·감사','임명 축하, 명절 인사, 방송 출연 예고'],en:['Thanks & greetings','Congratulations, holiday greetings, TV appearance notices'],x:54.6,y:59.2}
+];
+const C = {
+  0:[3,35,45,44,35,26,41,33,16,24,21,14,35,23,8,17,13,15,24,46,31,7],
+  1:[6,25,25,23,23,34,48,49,25,22,39,37,33,41,49,52,41,46,31,53,53,9],
+  2:[3,17,15,15,15,48,9,18,11,18,11,12,23,13,68,87,25,49,22,33,24,2],
+  3:[1,6,16,11,27,7,10,19,4,5,9,5,11,17,2,17,15,20,9,26,9,3],
+  4:[3,5,17,13,29,9,27,20,8,55,130,23,49,71,40,46,91,94,34,162,40,8],
+  5:[1,5,3,3,6,4,5,10,9,11,3,7,7,12,9,13,29,35,30,37,22,3],
+  6:[4,15,26,18,19,36,12,38,36,21,19,22,46,11,23,13,10,19,13,23,12,3],
+  7:[26,54,54,51,49,50,64,54,40,50,44,31,46,30,31,37,39,59,43,41,45,7],
+  8:[10,33,56,49,27,24,39,24,10,10,13,23,21,49,50,35,22,13,70,68,38,7],
+  9:[7,25,23,27,29,50,42,41,23,21,68,23,18,25,37,25,28,44,32,33,24,13]
+};
+const MONTHS = ['25.01','25.02','25.03','25.04','25.05','25.06','25.07','25.08','25.09','25.10','25.11','25.12','26.01','26.02','26.03','26.04','26.05','26.06','26.07','26.08','26.09','26.10'];
+const S = {
+  ko:{
+    meta:'2025.01 – 2026.10 · @realDonaldTrump · 12,068건',
+    title:'트럼프 트루스소셜 게시물 분석.',
+    lede:'2기 취임 후 21개월치 게시물 12,068건 가운데 본문이 있는 6,078건을 문장 임베딩으로 2차원에 펼치고, 열 개 주제 군집으로 나눴다. 가까이 놓인 점일수록 비슷한 말을 한 글이다. 2026년 8월의 최고치가 무엇으로 채워졌는지, 관세 이야기가 어디로 사라졌는지가 이 지도에서 읽힌다.',
+    theme:'다크 모드', themeL:'라이트 모드',
+    mapTitle:'메시지 지도', mapNote:'점 하나가 게시물 하나. 주제를 누르면 해당 글만 색이 뜬다. 점 위에 커서를 올리면 날짜와 주제가, 클릭하면 게시물 카드가 열린다.',
+    all:'전체', period:'기간', periods:['전체 기간','2025','2026','최근 3개월'], unit:'건',
+    orig:'원문 보기', et:'(미 동부)',
+    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~170건). 각 주제의 최다 월 막대는 짙게 표시했다. 26.10은 6일까지.', peak:'최다',
+    insTitle:'읽히는 것',
+    ins:[
+      ['최고치는 지지 선언이 만들었다.','2026년 8월 게시물은 972건, 일평균 31.35건으로 취임 후 최다다. 그달 본문 글 522건 중 지지 선언이 162건(31.0%)으로 어느 군집, 어느 달보다 많았다.'],
+      ['지지 선언은 파도처럼 온다.','2025년 9월 8건이던 것이 10월 55건, 11월 130건(그달 본문의 36.4%)으로 치솟았다. 2026년에도 2월 71건, 5~6월 91·94건, 8월 162건으로 몇 달 간격의 물결을 그린다. 좋아요 중앙값은 7,965로 열 개 군집 중 가장 낮다.'],
+      ['관세 이야기는 물러났다.','관세·무역 군집은 2025년 2~4월 본문의 15.9~17.3%였지만 2026년 3~6월에는 2.5~5.0%로 내려앉았다. 2026년 8월 46건(8.8%)으로 다시 올라오는 중이다.'],
+      ['이란·전쟁은 폭발형이다.','평소 월 10~20건대다가 2025년 6월 48건(16.7%), 2026년 3월 68건(21.5%), 4월 87건(25.4%)으로 튄다. 좋아요 중앙값 24,488로 반응이 가장 큰 군집이다.'],
+      ['범죄·이민에서 백악관 공사로.','범죄·이민 단속 군집은 2025년 9월 36건(19.8%), 2026년 1월 46건(15.9%)에서 2월 이후 월 10~23건으로 줄었다. 반대로 볼룸·반사연못 등 백악관 공사 이야기는 2025년 월 10건 안팎에서 2026년 5~8월 29~37건으로 늘었다.'],
+      ['링크 대신 제목을 붙인다.','링크만 올린 글은 2025년 3월 251건에서 12월 이후 월 0~41건으로 줄었다. 같은 시기 기사 제목을 본문에 옮겨 적는 헤드라인 공유 군집은 2025년 9~11월 월 10~13건에서 2026년 7월 70건, 8월 68건으로 늘었다. 기사 공유 방식이 바뀐 것으로 보인다(추정).']
+    ],
+    foot:'수집 2026-10-06 · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social 아카이브</a> · 본문 있는 글 6,078건(이미지·링크 단독, 리트루스, 20자 미만 제외) · 임베딩 all-mpnet-base-v2(소문자화, 서명 제거) · 투영 t-SNE(cosine, perplexity 40) · 군집 k-means(k=10, silhouette 0.05: 경계가 뚜렷하지 않음) · 날짜는 미 동부 기준 · <a href="https://github.com/sechan9999/trump-truth-analysis">코드·데이터</a>'
+  },
+  en:{
+    meta:'2025.01 – 2026.10 · @realDonaldTrump · 12,068 posts',
+    title:'Trump’s Truth Social posts, analyzed.',
+    lede:'Of 12,068 posts in the 21 months since the second inauguration, the 6,078 with text were embedded, laid out in two dimensions and split into ten topic clusters. The closer two dots are, the more alike the posts. The map shows what filled the August 2026 peak, and where the tariff talk went.',
+    theme:'Dark mode', themeL:'Light mode',
+    mapTitle:'Message map', mapNote:'Each dot is one post. Pick a topic to highlight its posts. Hover a dot for its date and topic; click it to open the post.',
+    all:'All', period:'Period', periods:['All time','2025','2026','Last 3 months'], unit:' posts',
+    orig:'View original', et:'(ET)',
+    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–170 posts). Each topic’s peak month is shaded dark. 26.10 runs through Oct 6.', peak:'Peak',
+    insTitle:'What stands out',
+    ins:[
+      ['Endorsements drove the peak.','August 2026 had 972 posts, 31.35 a day, the most since the inauguration. Of its 522 text posts, 162 (31.0%) were endorsements, more than any cluster in any month.'],
+      ['Endorsements come in waves.','From 8 in September 2025 to 55 in October and 130 in November (36.4% of that month’s text posts). In 2026: 71 in February, 91 and 94 in May–June, 162 in August. Their median likes, 7,965, are the lowest of the ten clusters.'],
+      ['Tariff talk receded.','Tariffs & trade made up 15.9–17.3% of text posts in February–April 2025, but only 2.5–5.0% in March–June 2026. It is climbing back, with 46 posts (8.8%) in August 2026.'],
+      ['Iran and war come in bursts.','Usually 10–20 posts a month, then 48 (16.7%) in June 2025, 68 (21.5%) in March 2026 and 87 (25.4%) in April 2026. With median likes of 24,488, it draws the strongest reaction.'],
+      ['From crime and immigration to White House construction.','Crime & immigration peaked at 36 posts (19.8%) in September 2025 and 46 (15.9%) in January 2026, then fell to 10–23 a month. White House construction (the ballroom, the Reflecting Pool) rose from about 10 a month in 2025 to 29–37 in May–August 2026.'],
+      ['Headlines instead of links.','Link-only posts fell from 251 in March 2025 to 0–41 a month after December. Over the same period the shared-headlines cluster, where an article title is pasted as the post, grew from 10–13 a month (September–November 2025) to 70 in July 2026 and 68 in August. The way articles are shared seems to have changed (inferred).']
+    ],
+    foot:'Collected 2026-10-06 · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social archive</a> · 6,078 text posts (excluding image-only, link-only, ReTruths and posts under 20 characters) · Embedding all-mpnet-base-v2 (lowercased, sign-offs removed) · Projection t-SNE (cosine, perplexity 40) · Clusters k-means (k=10, silhouette 0.05: boundaries are weak) · Dates in US Eastern time · <a href="https://github.com/sechan9999/trump-truth-analysis">Code & data</a>'
+  }
+};
+const byK = {}; T.forEach(t => byK[t.k] = t);
+const PER = [[0,21],[0,11],[12,21],[19,21]];
+const st = {lang:'ko', topic:'all', period:0, data:null, sel:null};
+try { const l = localStorage.getItem('tts-lang'); if (l === 'en' || l === 'ko') st.lang = l; } catch(e) {}
+if (new URLSearchParams(location.search).get('lang') === 'en') st.lang = 'en';
+const $ = id => document.getElementById(id);
+const cv = $('cv'), ctx = cv.getContext('2d');
+let shown = [];
+
+function txt(){
+  const s = S[st.lang];
+  document.documentElement.lang = st.lang;
+  document.title = s.title.replace(/\.$/,'');
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.dataset.t;
+    if (k === 'foot') el.innerHTML = s.foot;
+    else if (k === 'theme') el.textContent = isDark() ? s.themeL : s.theme;
+    else el.textContent = s[k];
+  });
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === st.lang));
+  $('insights').innerHTML = s.ins.map(([h,b]) => `<p><strong>${h}</strong> ${b}</p>`).join('');
+  chips(); periods(); grid(); labels(); draw(); card();
+}
+function chips(){
+  const s = S[st.lang];
+  const list = [{k:'all',c:'#9A9A92',name:s.all}].concat(T.map(t => ({k:t.k,c:t.c,name:t[st.lang][0]})));
+  $('chips').innerHTML = list.map(t => `<button type="button" class="chip" data-k="${t.k}" aria-pressed="${st.topic===t.k}"><span class="dot" style="background:${t.c}"></span>${t.name}</button>`).join('');
+  $('chips').querySelectorAll('button').forEach(b => b.onclick = () => { st.topic = b.dataset.k === 'all' ? 'all' : +b.dataset.k; chips(); labels(); draw(); });
+}
+function periods(){
+  $('periods').innerHTML = S[st.lang].periods.map((p,i) => `<button type="button" class="pbtn" data-i="${i}" aria-pressed="${st.period===i}">${p}</button>`).join('');
+  $('periods').querySelectorAll('button').forEach(b => b.onclick = () => { st.period = +b.dataset.i; periods(); draw(); });
+}
+function grid(){
+  const s = S[st.lang];
+  $('grid').innerHTML = T.map(t => {
+    const v = C[t.k], mx = Math.max(...v), top = v.indexOf(mx), n = v.reduce((a,b)=>a+b,0);
+    const bars = v.map((x,m) => `<div title="${MONTHS[m]} ${x}${s.unit}" style="height:${x/170*100}%;background:${t.c}${m===top?'':'59'}"></div>`).join('');
+    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p>${t[st.lang][1]}</p><div class="bars">${bars}</div><div class="axis"><span>25.01</span><span>${s.peak} ${MONTHS[top]} · ${mx}${s.unit}</span><span>26.10</span></div></div>`;
+  }).join('');
+}
+function labels(){
+  $('labels').innerHTML = T.filter(t => st.topic==='all' || st.topic===t.k).map(t => `<div class="lbl" style="left:${t.x}%;top:${t.y}%">${t[st.lang][0]}</div>`).join('');
+}
+function isDark(){
+  const a = document.documentElement.dataset.theme;
+  return a ? a === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+}
+function draw(){
+  const r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+  cv.width = r.width * dpr; cv.height = r.height * dpr;
+  ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,r.width,r.height);
+  const s = S[st.lang];
+  if (!st.data) { $('count').textContent = ''; return; }
+  const [m0,m1] = PER[st.period];
+  const dim = getComputedStyle(document.documentElement).getPropertyValue('--dim').trim();
+  const lit = []; shown = [];
+  st.data.pts.forEach((p,i) => {
+    if (p[3] < m0 || p[3] > m1) return;
+    const on = st.topic === 'all' || st.topic === p[2];
+    const o = {i, x:p[0]/100*r.width, y:p[1]/100*r.height, on};
+    shown.push(o);
+    if (on) lit.push(o); else { ctx.fillStyle = dim; ctx.beginPath(); ctx.arc(o.x,o.y,1.6,0,7); ctx.fill(); }
+  });
+  lit.forEach(o => { ctx.fillStyle = byK[st.data.pts[o.i][2]].c; ctx.beginPath(); ctx.arc(o.x,o.y,2.2,0,7); ctx.fill(); });
+  if (st.sel !== null) { const p = st.data.pts[st.sel]; ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--ink'); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p[0]/100*r.width,p[1]/100*r.height,6,0,7); ctx.stroke(); }
+  $('count').textContent = st.topic === 'all' ? shown.length.toLocaleString() + s.unit : lit.length.toLocaleString() + ' / ' + shown.length.toLocaleString() + s.unit;
+}
+function nearest(e){
+  const r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  let best = null, bd = 64;
+  shown.forEach(o => { if (st.topic !== 'all' && !o.on) return; const d = (o.x-x)**2 + (o.y-y)**2; if (d < bd) { bd = d; best = o; } });
+  return best ? {o:best, x, y} : null;
+}
+function card(){
+  const s = S[st.lang];
+  if (st.sel === null || !st.data) { $('post').style.display = 'none'; return; }
+  const p = st.data.pts[st.sel], q = st.data.posts[st.sel], t = byK[p[2]];
+  $('pTopic').textContent = t[st.lang][0]; $('pTopic').style.color = t.c;
+  $('pDate').textContent = q[0] + ' ' + s.et + ' · Truth Social';
+  $('pText').textContent = q[1];
+  $('pLink').href = 'https://truthsocial.com/@realDonaldTrump/' + q[2];
+  $('pLink').textContent = s.orig;
+  $('post').style.display = 'flex';
+}
+cv.addEventListener('mousemove', e => {
+  const n = st.data && nearest(e), tip = $('tip');
+  if (!n) { tip.style.display = 'none'; return; }
+  const p = st.data.pts[n.o.i];
+  tip.textContent = st.data.posts[n.o.i][0] + ' · ' + byK[p[2]][st.lang][0];
+  tip.style.display = 'block';
+  tip.style.left = Math.min(n.x + 12, cv.clientWidth - tip.offsetWidth - 4) + 'px';
+  tip.style.top = (n.y + 12) + 'px';
+});
+cv.addEventListener('mouseleave', () => $('tip').style.display = 'none');
+cv.addEventListener('click', e => { const n = st.data && nearest(e); st.sel = n ? n.o.i : null; draw(); card(); });
+$('pClose').onclick = () => { st.sel = null; draw(); card(); };
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
+  st.lang = b.dataset.lang;
+  try { localStorage.setItem('tts-lang', st.lang); } catch(e) {}
+  txt();
+});
+$('theme').onclick = () => { document.documentElement.dataset.theme = isDark() ? 'light' : 'dark'; txt(); };
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(draw, 100); });
+txt();
+fetch('map_data.json').then(r => r.json()).then(d => { st.data = d; draw(); }).catch(() => { $('count').textContent = 'data load failed'; });
+</script>
+</body>
+</html>
