@@ -53,6 +53,7 @@ h2{margin:0;font-size:18px;font-weight:600}
 .mini p{margin:0;font-size:13px;color:var(--mute);line-height:1.5;min-height:39px}
 .bars{height:72px;display:flex;align-items:flex-end;gap:2px;border-bottom:1px solid var(--line2)}
 .bars div{flex:1;border-radius:1px 1px 0 0;min-height:1px}
+.kw{margin:0;font-size:12px;color:var(--sub);line-height:1.5;font-family:ui-monospace,Menlo,Consolas,monospace}
 .axis{display:flex;justify-content:space-between;font-size:11px;color:var(--mute)}
 .insights{display:flex;flex-direction:column;gap:16px;max-width:760px;font-size:15px;line-height:1.8}
 .insights p{margin:0}
@@ -83,6 +84,7 @@ footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var
 </div>
 <div class="chips" id="chips"></div>
 <div class="row"><span class="note" data-t="period"></span><span id="periods" class="row"></span><span class="count" id="count"></span></div>
+<p class="note" id="selKw" style="display:none"></p>
 <div class="map" id="map">
 <canvas id="cv" aria-label="Message map"></canvas>
 <div id="labels"></div>
@@ -100,6 +102,7 @@ footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var
 <div style="display:flex;flex-direction:column;gap:6px">
 <h2 data-t="trendTitle"></h2>
 <p class="note" data-t="trendNote"></p>
+<p class="note" data-t="kwNote"></p>
 </div>
 <div class="grid" id="grid"></div>
 </section>
@@ -114,16 +117,16 @@ footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var
 
 <script>
 const T = [
-  {k:2,c:'#0F766E',ko:['이란·전쟁 외교','이란 핵시설·호르무즈 해협, 우크라이나·이스라엘, 정상 통화'],en:['Iran & war diplomacy','Iran nuclear sites, Strait of Hormuz, Ukraine, Israel, leader calls'],x:89.2,y:42.3},
-  {k:0,c:'#1F4FBF',ko:['관세·무역','관세 부과와 무역 협상, 철강·반도체 투자 유치'],en:['Tariffs & trade','Tariffs, trade deals, steel and chip investment'],x:74.8,y:59.4},
-  {k:4,c:'#A16207',ko:['지지 선언','“Complete and Total Endorsement”, 공화당 후보 공개 지지'],en:['Endorsements','“Complete and Total Endorsement” of Republican candidates'],x:16.0,y:50.4},
-  {k:9,c:'#0369A1',ko:['공화당·입법','공화당 결집, 필리버스터·예산안, 민주당 비판'],en:['GOP & legislation','Rallying Republicans, filibuster, budget, attacks on Democrats'],x:44.0,y:47.5},
-  {k:3,c:'#7C3AED',ko:['법원·인사 지명','판사·검사 지명, 법원 판결, 법무부 개편'],en:['Courts & nominations','Judge and prosecutor nominations, rulings, DOJ overhaul'],x:32.5,y:41.1},
-  {k:6,c:'#B91C1C',ko:['범죄·이민 단속','ICE·불법이민 추방, 주방위군 투입, 범죄 대응'],en:['Crime & immigration','ICE deportations, National Guard deployments, crime'],x:50.0,y:35.0},
-  {k:1,c:'#C2410C',ko:['언론·정적 공격','가짜뉴스, 정적·방송인, 선거 부정 주장'],en:['Attacks on media & rivals','“Fake news”, rivals and TV hosts, election-fraud claims'],x:41.0,y:29.0},
-  {k:8,c:'#64748B',ko:['기사 헤드라인 공유','“Trump says…” 식 기사 제목을 본문에 옮겨 붙인 글'],en:['Shared headlines','Article headlines pasted as the post, “Trump says…”'],x:62.7,y:41.2},
-  {k:5,c:'#BE185D',ko:['백악관 공사','볼룸·반사연못·케네디센터 등 건축과 보수'],en:['White House construction','Ballroom, Reflecting Pool, Kennedy Center renovations'],x:55.8,y:87.6},
-  {k:7,c:'#15803D',ko:['축하·감사','임명 축하, 명절 인사, 방송 출연 예고'],en:['Thanks & greetings','Congratulations, holiday greetings, TV appearance notices'],x:54.6,y:59.2}
+  {k:2,kw:'iran, war, strait, hormuz, nuclear',c:'#0F766E',ko:['이란·전쟁 외교','이란 핵시설·호르무즈 해협, 우크라이나·이스라엘, 정상 통화'],en:['Iran & war diplomacy','Iran nuclear sites, Strait of Hormuz, Ukraine, Israel, leader calls'],x:89.2,y:42.3},
+  {k:0,kw:'tariffs, china, trade, canada, billion',c:'#1F4FBF',ko:['관세·무역','관세 부과와 무역 협상, 철강·반도체 투자 유치'],en:['Tariffs & trade','Tariffs, trade deals, steel and chip investment'],x:74.8,y:59.4},
+  {k:4,kw:'total endorsement, election, congressional district, second amendment, secure',c:'#A16207',ko:['지지 선언','“Complete and Total Endorsement”, 공화당 후보 공개 지지'],en:['Endorsements','“Complete and Total Endorsement” of Republican candidates'],x:16.0,y:50.4},
+  {k:9,kw:'republicans, democrats, make america great, filibuster, save america act',c:'#0369A1',ko:['공화당·입법','공화당 결집, 필리버스터·예산안, 민주당 비판'],en:['GOP & legislation','Rallying Republicans, filibuster, budget, attacks on Democrats'],x:44.0,y:47.5},
+  {k:3,kw:'court, judge, supreme court, attorney, justice',c:'#7C3AED',ko:['법원·인사 지명','판사·검사 지명, 법원 판결, 법무부 개편'],en:['Courts & nominations','Judge and prosecutor nominations, rulings, DOJ overhaul'],x:32.5,y:41.1},
+  {k:6,kw:'crime, illegal, ice, criminals, border',c:'#B91C1C',ko:['범죄·이민 단속','ICE·불법이민 추방, 주방위군 투입, 범죄 대응'],en:['Crime & immigration','ICE deportations, National Guard deployments, crime'],x:50.0,y:35.0},
+  {k:1,kw:'fake news, fbi, biden, election, fraud',c:'#C2410C',ko:['언론·정적 공격','가짜뉴스, 정적·방송인, 선거 부정 주장'],en:['Attacks on media & rivals','“Fake news”, rivals and TV hosts, election-fraud claims'],x:41.0,y:29.0},
+  {k:8,kw:'president trump, exclusive, administration, says, elon',c:'#64748B',ko:['기사 헤드라인 공유','“Trump says…” 식 기사 제목을 본문에 옮겨 붙인 글'],en:['Shared headlines','Article headlines pasted as the post, “Trump says…”'],x:62.7,y:41.2},
+  {k:5,kw:'white house, ballroom, reflecting pool, kennedy center, construction',c:'#BE185D',ko:['백악관 공사','볼룸·반사연못·케네디센터 등 건축과 보수'],en:['White House construction','Ballroom, Reflecting Pool, Kennedy Center renovations'],x:55.8,y:87.6},
+  {k:7,kw:'thank, congratulations, honor, happy, great',c:'#15803D',ko:['축하·감사','임명 축하, 명절 인사, 방송 출연 예고'],en:['Thanks & greetings','Congratulations, holiday greetings, TV appearance notices'],x:54.6,y:59.2}
 ];
 const S = {
   ko:{
@@ -134,7 +137,7 @@ const S = {
     mapTitle:'메시지 지도', mapNote:'점 하나가 게시물 하나. 주제를 누르면 해당 글만 색이 뜬다. 점 위에 커서를 올리면 날짜와 주제가, 클릭하면 게시물 카드가 열린다.',
     all:'전체', period:'기간', periods:['전체 기간','2025','2026','최근 3개월'], unit:'건',
     orig:'원문 보기', et:'(미 동부)',
-    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~{max}건). 각 주제의 최다 월 막대는 짙게 표시했다. {lastm}은 {lastd}일까지.', peak:'최다',
+    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~{max}건). 각 주제의 최다 월 막대는 짙게 표시했다. {lastm}은 {lastd}일까지.', kwNote:'키워드는 군집별 TF-IDF 상위어(일반어 제외)다. 주제 이름은 이 단어와 예시 글을 보고 붙인 해석이며, 군집 경계는 뚜렷하지 않다.', kw:'키워드', peak:'최다',
     insTitle:'읽히는 것', insNote:'2026-10-06 기준 분석. 위 지도와 그래프는 매주 자동 갱신되지만 아래 문장은 그 시점의 수치다.',
     ins:[
       ['최고치는 지지 선언이 만들었다.','2026년 8월 게시물은 972건, 일평균 31.35건으로 취임 후 최다다. 그달 본문 글 522건 중 지지 선언이 162건(31.0%)으로 어느 군집, 어느 달보다 많았다.'],
@@ -154,7 +157,7 @@ const S = {
     mapTitle:'Message map', mapNote:'Each dot is one post. Pick a topic to highlight its posts. Hover a dot for its date and topic; click it to open the post.',
     all:'All', period:'Period', periods:['All time','2025','2026','Last 3 months'], unit:' posts',
     orig:'View original', et:'(ET)',
-    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–{max} posts). Each topic’s peak month is shaded dark. {lastm} runs through day {lastd}.', peak:'Peak',
+    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–{max} posts). Each topic’s peak month is shaded dark. {lastm} runs through day {lastd}.', kwNote:'Keywords are each cluster’s top TF-IDF terms, with generic words removed. Topic names are our reading of these words and sample posts; cluster boundaries are weak.', kw:'Keywords', peak:'Peak',
     insTitle:'What stands out', insNote:'Analysis as of 2026-10-06. The map and charts above refresh weekly; the figures below are from that date.',
     ins:[
       ['Endorsements drove the peak.','August 2026 had 972 posts, 31.35 a day, the most since the inauguration. Of its 522 text posts, 162 (31.0%) were endorsements, more than any cluster in any month.'],
@@ -204,6 +207,9 @@ function chips(){
   const list = [{k:'all',c:'#9A9A92',name:s.all}].concat(T.map(t => ({k:t.k,c:t.c,name:t[st.lang][0]})));
   $('chips').innerHTML = list.map(t => `<button type="button" class="chip" data-k="${t.k}" aria-pressed="${st.topic===t.k}"><span class="dot" style="background:${t.c}"></span>${t.name}</button>`).join('');
   $('chips').querySelectorAll('button').forEach(b => b.onclick = () => { st.topic = b.dataset.k === 'all' ? 'all' : +b.dataset.k; chips(); labels(); draw(); });
+  const sk = $('selKw');
+  if (st.topic === 'all') sk.style.display = 'none';
+  else { sk.style.display = 'block'; sk.innerHTML = `${s.kw} · <span class="kw" style="font-size:13px">${byK[st.topic].kw}</span>`; }
 }
 function periods(){
   $('periods').innerHTML = S[st.lang].periods.map((p,i) => `<button type="button" class="pbtn" data-i="${i}" aria-pressed="${st.period===i}">${p}</button>`).join('');
@@ -215,7 +221,7 @@ function grid(){
   $('grid').innerHTML = T.map(t => {
     const v = d.counts[t.k] || [], mx = Math.max(...v), top = v.indexOf(mx), n = v.reduce((a,b)=>a+b,0);
     const bars = v.map((x,m) => `<div title="${M[m]} ${x}${s.unit}" style="height:${x/top0*100}%;background:${t.c}${m===top?'':'59'}"></div>`).join('');
-    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p>${t[st.lang][1]}</p><div class="bars">${bars}</div><div class="axis"><span>${M[0]}</span><span>${s.peak} ${M[top]} · ${mx}${s.unit}</span><span>${M[M.length-1]}</span></div></div>`;
+    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p>${t[st.lang][1]}</p><p class="kw">${t.kw}</p><div class="bars">${bars}</div><div class="axis"><span>${M[0]}</span><span>${s.peak} ${M[top]} · ${mx}${s.unit}</span><span>${M[M.length-1]}</span></div></div>`;
   }).join('');
 }
 function labels(){
