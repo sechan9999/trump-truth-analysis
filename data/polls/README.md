@@ -22,3 +22,18 @@
 - **AP-NORC는 연 1회(12월)**뿐이라 월별 시계열이 아니다. 2026-03, 2026-09 topline에도 같은 문항이 없음을 확인
 - AP-NORC 2024-12은 이민을 '외교 정책' 범주 안에, 2025-12은 별도 범주로 집계(범주 정의 변경)
 - YouGov 'Inflation' 행은 'Inflation/prices'로 대체된 옛 항목이라 제외
+
+## Gallup MIP (`gallup_mip_monthly.csv`)
+- 원본 Gallup topline PDF 4개(`raw/gallup_*_topline.pdf`)의 "Recent Trend" 표에서 직접 파싱. 같은 달이 여러 PDF에 나오면 값 일치를 검사(불일치 0건)
+- `data_quality`: `primary`(그 달 조사 topline) / `trend`(다른 달 topline의 추세 열) / `partial`(2025-08 범죄만, Gallup 2025-09 기사 본문) / `missing`(2025-06·07, 2026-08, 보간 금지) / `excluded`(2026-09: USA Today 칼럼 인용 2차 출처, 원본 미확인)
+- `*`(0.5% 미만)는 0으로 기록하고 `lt_half=True`
+- 사용자 제공 집계본(`raw/gallup_mip_user_compiled.csv`)은 참고 보관. 대조 결과 2025-01~05 행의 열 밀림(전쟁(일반) 값이 '국가 통합' 칸에 들어감)과 2026년 '국가 통합' 누락이 있어 PDF 파싱본을 사용
+
+## 대응표 (`topic_issue_mapping_v1.csv`, 확정)
+- 비교 대상 4쌍: 관세·무역 ↔ 경제+물가(부분 대응), 범죄·이민 단속 ↔ 이민 | 범죄(별도 선), 이란·전쟁 외교 ↔ 중동 전쟁+전쟁 일반+외교(합), 공화당·입법 ↔ 정부/리더십(근사 대응)
+- `+` = 합산해 한 선, `|` = 별도 선. 나머지 6개 주제는 제외 사유 기록
+- 사용자 원본: `raw/topic_issue_mapping_v1_user.csv`
+
+## 메시지 vs 민심 (`docs/message_index_weekly.json`의 `message_vs_public`)
+- 정규화하지 않음: 트럼프 = 그 달 본문 게시물 중 주제 비중(%), Gallup = 응답자 중 언급 비율(%, 범주 합), YouGov = 1순위 선택 비율(%). 단위가 달라 수준이 아니라 추이·시점을 비교
+- 결측은 null, 진행 중인 달은 최고치 계산에서 제외

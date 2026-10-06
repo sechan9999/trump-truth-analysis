@@ -114,6 +114,78 @@ def apnorc() -> None:
     print(f"AP-NORC: {len(a)} rows, surveys {a['fielded'].unique().tolist()}")
 
 
+GALLUP = [  # 최신 파일 우선: 같은 달이 여러 PDF에 있으면 값이 같은지 검사
+    ("gallup_2026-07_topline.pdf", "https://news.gallup.com/file/poll/713027/2026_07_23_ECI%20and%20MIP%20Topline%20and%20Tabs.pdf", "2026-07"),
+    ("gallup_2026-03_topline.pdf", "https://news.gallup.com/file/poll/704288/260326Energy.pdf", "2026-03"),
+    ("gallup_2025-05_topline.pdf", "https://news.gallup.com/file/poll/691031/2025_05_01%20Values%20and%20Beliefs%20Topline_PDF.pdf", "2025-05"),
+    ("gallup_2025-03_topline.pdf", "https://news.gallup.com/file/poll/659009/2025_04_09%20Energy%20Topline%20and%20Tabs_MIP.pdf", "2025-03"),
+]
+GALLUP_CAT = {
+    "economy_general": "Economy in general", "inflation_high_cost": "High cost of living/Inflation",
+    "immigration": "Immigration", "crime_violence": "Crime/Violence",
+    "govt_poor_leadership": "The government/Poor leadership",
+    "foreign_policy_aid": "Foreign policy/Foreign aid/Focus overseas",
+    "international_issues": "International issues, problems", "war_middle_east": "War in the Middle East",
+    "wars_nonspecific": "Wars/War (nonspecific)/Fear of war", "unifying_country": "Unifying the country",
+}
+GALLUP_Q = "What do you think is the most important problem facing this country today? [OPEN-ENDED]"
+MON = {m: i + 1 for i, m in enumerate("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split())}
+# 토플라인 밖에서 확인한 값: Gallup 2025-09 기사 "rising from 3% in August to 8% in September"
+GALLUP_EXTRA = [("2025-08", "crime_violence", 3, "partial",
+                 "https://news.gallup.com/poll/695519/mood-subdued-crime-unity-concerns-rise.aspx",
+                 "Gallup 2025-09 기사 본문의 8월 비교치. 8월 다른 범주는 미공개")]
+GALLUP_MISSING = {
+    "2025-06": "MIP 미확보(해당 월 토플라인에 문항 없음, 사용자 조사). 보간 금지",
+    "2025-07": "MIP 미확보(해당 월 토플라인에 문항 없음, 사용자 조사). 보간 금지",
+    "2026-08": "MIP 미확보(해당 월 토플라인에 문항 없음, 사용자 조사). 보간 금지",
+    "2026-09": "제외: USA Today 칼럼 인용 2차 출처뿐이고 Gallup 원본 미확인, 인용 수치도 출처마다 엇갈림",
+}
+
+
+def gallup() -> None:
+    vals: dict[tuple[str, str], tuple] = {}
+    for fname, url, fielded in GALLUP:
+        with pdfplumber.open(RAW / fname) as p:
+            t = "\n".join(pg.extract_text() or "" for pg in p.pages)
+        m = re.search(r"\n((?:[A-Z][a-z]{2} ){6}[A-Z][a-z]{2})\nRecent Trend: ((?:\d{4} ){6}\d{4})", t)
+        months = [f"{y}-{MON[mo]:02d}" for mo, y in zip(m.group(1).split(), m.group(2).split())]
+        tail = t[m.end():]
+        for key, label in GALLUP_CAT.items():
+            mm = re.search(r"\n" + re.escape(label) + r"((?: (?:\d+|\*|-))+)\n", tail)
+            if not mm:
+                continue
+            for mo, v in zip(months, mm.group(1).split()):
+                if mo < START[:7] or v == "-":
+                    continue
+                pct, lt = (0, True) if v == "*" else (int(v), False)
+                quality = "primary" if mo == fielded else "trend"
+                if (mo, key) in vals:
+                    if vals[(mo, key)][0] != pct:
+                        raise ValueError(f"Gallup 불일치 {mo} {key}: {vals[(mo, key)][0]} vs {pct} ({fname})")
+                    continue
+                vals[(mo, key)] = (pct, lt, quality, url, fname)
+    fielded_months = {f: (u, n) for n, u, f in GALLUP}
+    for (mo, k), v in list(vals.items()):  # 그 달 조사 토플라인이 있으면 primary로 승격
+        if mo in fielded_months:
+            vals[(mo, k)] = (v[0], v[1], "primary", *fielded_months[mo])
+    rows = [{"month": mo, "category": k, "label": GALLUP_CAT[k], "pct": v[0], "lt_half": v[1], "data_quality": v[2],
+             "source_url": v[3], "note": f"{v[4]} Recent Trend 표" + (" ('*' = 0.5% 미만, 0으로 기록)" if v[1] else "")}
+            for (mo, k), v in vals.items()]
+    for mo, k, pct, q, url, note in GALLUP_EXTRA:
+        rows.append({"month": mo, "category": k, "label": GALLUP_CAT[k], "pct": pct, "lt_half": False,
+                     "data_quality": q, "source_url": url, "note": note})
+    for mo, note in GALLUP_MISSING.items():
+        rows.append({"month": mo, "category": "", "label": "", "pct": None, "lt_half": False,
+                     "data_quality": "excluded" if mo == "2026-09" else "missing", "source_url": "", "note": note})
+    g = pd.DataFrame(rows).sort_values(["month", "category"])
+    g["question"] = GALLUP_Q
+    g["population"] = "US adults"
+    g.to_csv(POLLS / "gallup_mip_monthly.csv", index=False, encoding="utf-8-sig")
+    got = sorted(g.loc[g["pct"].notna(), "month"].unique())
+    print(f"Gallup: {len(g)} rows, 값 있는 달 {len(got)}개 {got[0]}~{got[-1]}")
+
+
 if __name__ == "__main__":
     yougov()
     apnorc()
+    gallup()

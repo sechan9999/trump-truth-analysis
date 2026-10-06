@@ -1,0 +1,11 @@
+trump_topic_ko,trump_topic_en,gallup_category,gallup_label_verbatim,include_in_comparison,note
+관세·무역,tariffs & trade,economy + inflation,"Economy in general + High cost of living/Inflation",yes,"Gallup splits the two; sum them for comparison"
+범죄·이민 단속,crime & immigration enforcement,immigration (primary) / crime (secondary),"Immigration; Crime/Violence",yes,"Trump merges what Gallup splits — show both series with a note"
+이란·전쟁 외교,Iran & war diplomacy,war-related sum,"War in the Middle East + Wars/War (nonspecific)/Fear of war + Foreign policy/Foreign aid/Focus overseas",yes,"sum war-related categories; usually single digits — the gap itself is the story"
+공화당·입법,GOP & legislation,government/poor leadership,"The government/Poor leadership",yes,"approximate match — label as such on the chart"
+법원·인사 지명,courts & nominations,,,no,"judicial salience negligible in MIP"
+지지 선언,endorsements,,,no,"campaign activity, not an issue"
+축하·감사,thanks & greetings,,,no,"not an issue"
+기사 헤드라인 공유,headline sharing,,,no,"content-dependent; consider reclassification in v2"
+백악관 공사,White House construction,,,no,"no counterpart category"
+언론·정적 공격,attacks on media & rivals,,,no,"not an issue"

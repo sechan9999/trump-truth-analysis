@@ -19,6 +19,76 @@ CAUTION = 0.05
 N_ANNOTATIONS = 6
 
 
+POLLS = ROOT / "data" / "polls"
+
+
+def message_vs_public(wk: dict) -> dict:
+    """대응표 v1의 비교 대상 쌍마다 트럼프 월별 게시 비중과 Gallup·YouGov 월별 수치를 각자 원래 단위(%)로 묶는다.
+
+    정규화하지 않는다: 트럼프 = 그 달 본문 게시물 중 주제 비중, Gallup = 응답자 중 해당 문제 언급 비율(복수 범주는 합),
+    YouGov = 1순위로 고른 비율. 결측은 null(보간 금지).
+    """
+    import pandas as pd
+
+    mp = pd.read_csv(POLLS / "topic_issue_mapping_v1.csv").fillna("")
+    g = pd.read_csv(POLLS / "gallup_mip_monthly.csv")
+    y = pd.read_csv(POLLS / "yougov_economist_mii_monthly.csv")
+    y = y[y["group"] == "all_rv"]
+    months = wk["months"]
+    tot = [sum(wk["monthly"][k][i] for k in wk["monthly"]) for i in range(len(months))]
+    inv = {v: k for k, v in SLUG.items()}
+    gq = g.groupby("month")["data_quality"].first().to_dict()
+
+    def gallup_series(expr: str) -> list:
+        cats = expr.split("+")
+        out = []
+        for m in months:
+            sub = g[(g["month"] == m) & (g["category"].isin(cats))]
+            out.append(None if len(sub) < len(cats) else round(float(sub["pct"].sum()), 1))
+        return out
+
+    def yougov_series(expr: str) -> list:
+        issues = expr.split("+")
+        out = []
+        for m in months:
+            sub = y[(y["month"] == m) & (y["issue"].isin(issues))]
+            out.append(None if len(sub) < len(issues) else round(float(sub["share"].sum()) * 100, 1))
+        return out
+
+    partial = months[-1]  # 진행 중인 달은 최고치 계산에서 제외(표본이 며칠뿐)
+
+    def peak(vals: list) -> str | None:
+        ok = [(v, m) for v, m in zip(vals, months) if v is not None and m != partial]
+        return max(ok)[1] if ok else None
+
+    pairs = []
+    for r in mp[mp["include_in_comparison"] == "yes"].itertuples():
+        k = inv[r.trump_topic]
+        trump = [round(wk["monthly"][k][i] / tot[i] * 100, 1) if tot[i] else None for i in range(len(months))]
+        public = []
+        for expr, lab in zip(r.gallup_categories.split("|"), r.gallup_label_verbatim.split("; ")):
+            if expr:
+                v = gallup_series(expr)
+                public.append({"source": "gallup", "key": expr, "label": lab, "values": v, "peak": peak(v)})
+        for expr in [e for e in r.yougov_issues.split("|") if e]:
+            v = yougov_series(expr)
+            public.append({"source": "yougov", "key": expr, "label": expr.replace("+", " + "), "values": v, "peak": peak(v)})
+        pairs.append({"topic": r.trump_topic, "match": r.match, "note": r.note, "trump": trump, "trump_peak": peak(trump),
+                      "public": public})
+    return {
+        "mapping_version": "v1",
+        "months": months,
+        "gallup_quality": {m: gq.get(m) for m in months},
+        "yougov_method_break": "2025-06",
+        "partial_month": partial,
+        "pairs": pairs,
+        "sources": {
+            "gallup": "Gallup 'most important problem' (open-ended, US adults) — monthly topline PDFs, data/polls/raw/",
+            "yougov": "YouGov/Economist 'most important issue for you' (US registered voters), CC BY-NC 4.0",
+        },
+    }
+
+
 def main() -> None:
     iv = json.loads((DOCS / "intervention.json").read_text(encoding="utf-8"))
     wk = json.loads((DOCS / "weekly.json").read_text(encoding="utf-8"))
@@ -75,6 +145,7 @@ def main() -> None:
         "topics": topics,
         "annotations": ann,
         "notes": iv["notes"],
+        "message_vs_public": message_vs_public(wk),
     }
     (DOCS / "message_index_weekly.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"message_index_weekly: week {out['week']}, {len(topics)}개월, 주석 {len(ann)}개")
