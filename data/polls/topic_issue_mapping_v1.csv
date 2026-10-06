@@ -1,11 +1,11 @@
-trump_topic,trump_topic_ko,trump_topic_en,include_in_comparison,gallup_categories,gallup_label_verbatim,yougov_issues,apnorc_items,match,note
-tariffs_trade,관세·무역,tariffs & trade,yes,economy_general+inflation_high_cost,"Economy in general + High cost of living/Inflation","Jobs and the economy+Inflation/prices","Trade/free trade agreements/tariffs;Inflation;Economy, general",partial,"Gallup splits the two; sum them for comparison"
-crime_immigration,범죄·이민 단속,crime & immigration enforcement,yes,immigration|crime_violence,"Immigration; Crime/Violence","Immigration|Crime and criminal justice reform","Immigration/border wall/family separation/DACA/ICE;Crime/violence/hate crime",direct,"Trump merges what Gallup splits — show both series with a note"
-iran_war,이란·전쟁 외교,Iran & war diplomacy,yes,war_middle_east+wars_nonspecific+foreign_policy_aid,"War in the Middle East + Wars/War (nonspecific)/Fear of war + Foreign policy/Foreign aid/Focus overseas","National Security and foreign policy","Foreign policy issues (not including immigration)",direct,"sum war-related categories; usually single digits — the gap itself is the story"
-gop_legislation,공화당·입법,GOP & legislation,yes,govt_poor_leadership,"The government/Poor leadership",,,approximate,"approximate match — label as such on the chart; YouGov has no leadership category"
-courts_nominations,법원·인사 지명,courts & nominations,no,,,,,,"judicial salience negligible in MIP"
-endorsements,지지 선언,endorsements,no,,,,,,"campaign activity, not an issue"
-thanks_greetings,축하·감사,thanks & greetings,no,,,,,,"not an issue"
-shared_headlines,기사 헤드라인 공유,headline sharing,no,,,,,,"content-dependent; consider reclassification in v2"
-white_house_construction,백악관 공사,White House construction,no,,,,,,"no counterpart category"
-media_opponents,언론·정적 언급,media & opponents,no,,,,,,"not an issue (label v2: renamed from '언론·정적 공격')"
+trump_topic,trump_topic_ko,trump_topic_en,include_in_comparison,gallup_categories,gallup_label_verbatim,yougov_issues,apnorc_items,match,note,note_ko
+tariffs_trade,관세·무역,tariffs & trade,yes,economy_general+inflation_high_cost,Economy in general + High cost of living/Inflation,Jobs and the economy+Inflation/prices,"Trade/free trade agreements/tariffs;Inflation;Economy, general",partial,Gallup splits the two; sum them for comparison,Gallup은 경제 일반과 물가를 따로 집계하므로 합산해 비교
+crime_immigration,범죄·이민 단속,crime & immigration enforcement,yes,immigration|crime_violence,Immigration; Crime/Violence,Immigration|Crime and criminal justice reform,Immigration/border wall/family separation/DACA/ICE;Crime/violence/hate crime,direct,Trump merges what Gallup splits — show both series with a note,트럼프는 한 주제로 묶지만 Gallup은 이민과 범죄를 나눔. 두 선을 따로 표시
+iran_war,이란·전쟁 외교,Iran & war diplomacy,yes,war_middle_east+wars_nonspecific+foreign_policy_aid,War in the Middle East + Wars/War (nonspecific)/Fear of war + Foreign policy/Foreign aid/Focus overseas,National Security and foreign policy,Foreign policy issues (not including immigration),direct,sum war-related categories; usually single digits — the gap itself is the story,전쟁 관련 범주(중동 전쟁·전쟁 일반·외교)를 합산. 보통 한 자릿수라 그 격차 자체가 관찰 대상
+gop_legislation,공화당·입법,GOP & legislation,yes,govt_poor_leadership,The government/Poor leadership,,,approximate,approximate match — label as such on the chart; YouGov has no leadership category,근사 대응(정부/리더십). 차트에 근사임을 표시. YouGov에는 대응 범주 없음
+courts_nominations,법원·인사 지명,courts & nominations,no,,,,,,judicial salience negligible in MIP,
+endorsements,지지 선언,endorsements,no,,,,,,"campaign activity, not an issue",
+thanks_greetings,축하·감사,thanks & greetings,no,,,,,,not an issue,
+shared_headlines,기사 헤드라인 공유,headline sharing,no,,,,,,content-dependent; consider reclassification in v2,
+white_house_construction,백악관 공사,White House construction,no,,,,,,no counterpart category,
+media_opponents,언론·정적 언급,media & opponents,no,,,,,,not an issue (label v2: renamed from '언론·정적 공격'),

@@ -729,6 +729,7 @@
     "topic": "tariffs_trade",
     "match": "partial",
     "note": "Gallup splits the two; sum them for comparison",
+    "note_ko": "Gallup은 경제 일반과 물가를 따로 집계하므로 합산해 비교",
     "trump": [
      4.7,
      15.9,
@@ -821,6 +822,7 @@
     "topic": "crime_immigration",
     "match": "direct",
     "note": "Trump merges what Gallup splits — show both series with a note",
+    "note_ko": "트럼프는 한 주제로 묶지만 Gallup은 이민과 범죄를 나눔. 두 선을 따로 표시",
     "trump": [
      6.2,
      6.8,
@@ -973,6 +975,7 @@
     "topic": "iran_war",
     "match": "direct",
     "note": "sum war-related categories; usually single digits — the gap itself is the story",
+    "note_ko": "전쟁 관련 범주(중동 전쟁·전쟁 일반·외교)를 합산. 보통 한 자릿수라 그 격차 자체가 관찰 대상",
     "trump": [
      4.7,
      7.7,
@@ -1065,6 +1068,7 @@
     "topic": "gop_legislation",
     "match": "approximate",
     "note": "approximate match — label as such on the chart; YouGov has no leadership category",
+    "note_ko": "근사 대응(정부/리더십). 차트에 근사임을 표시. YouGov에는 대응 범주 없음",
     "trump": [
      10.9,
      11.4,

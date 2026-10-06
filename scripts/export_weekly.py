@@ -73,7 +73,7 @@ def message_vs_public(wk: dict) -> dict:
         for expr in [e for e in r.yougov_issues.split("|") if e]:
             v = yougov_series(expr)
             public.append({"source": "yougov", "key": expr, "label": expr.replace("+", " + "), "values": v, "peak": peak(v)})
-        pairs.append({"topic": r.trump_topic, "match": r.match, "note": r.note, "trump": trump, "trump_peak": peak(trump),
+        pairs.append({"topic": r.trump_topic, "match": r.match, "note": r.note, "note_ko": r.note_ko, "trump": trump, "trump_peak": peak(trump),
                       "public": public})
     return {
         "mapping_version": "v1",
