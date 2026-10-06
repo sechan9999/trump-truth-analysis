@@ -125,30 +125,17 @@ const T = [
   {k:5,c:'#BE185D',ko:['백악관 공사','볼룸·반사연못·케네디센터 등 건축과 보수'],en:['White House construction','Ballroom, Reflecting Pool, Kennedy Center renovations'],x:55.8,y:87.6},
   {k:7,c:'#15803D',ko:['축하·감사','임명 축하, 명절 인사, 방송 출연 예고'],en:['Thanks & greetings','Congratulations, holiday greetings, TV appearance notices'],x:54.6,y:59.2}
 ];
-const C = {
-  0:[3,35,45,44,35,26,41,33,16,24,21,14,35,23,8,17,13,15,24,46,31,7],
-  1:[6,25,25,23,23,34,48,49,25,22,39,37,33,41,49,52,41,46,31,53,53,9],
-  2:[3,17,15,15,15,48,9,18,11,18,11,12,23,13,68,87,25,49,22,33,24,2],
-  3:[1,6,16,11,27,7,10,19,4,5,9,5,11,17,2,17,15,20,9,26,9,3],
-  4:[3,5,17,13,29,9,27,20,8,55,130,23,49,71,40,46,91,94,34,162,40,8],
-  5:[1,5,3,3,6,4,5,10,9,11,3,7,7,12,9,13,29,35,30,37,22,3],
-  6:[4,15,26,18,19,36,12,38,36,21,19,22,46,11,23,13,10,19,13,23,12,3],
-  7:[26,54,54,51,49,50,64,54,40,50,44,31,46,30,31,37,39,59,43,41,45,7],
-  8:[10,33,56,49,27,24,39,24,10,10,13,23,21,49,50,35,22,13,70,68,38,7],
-  9:[7,25,23,27,29,50,42,41,23,21,68,23,18,25,37,25,28,44,32,33,24,13]
-};
-const MONTHS = ['25.01','25.02','25.03','25.04','25.05','25.06','25.07','25.08','25.09','25.10','25.11','25.12','26.01','26.02','26.03','26.04','26.05','26.06','26.07','26.08','26.09','26.10'];
 const S = {
   ko:{
-    meta:'2025.01 – 2026.10 · @realDonaldTrump · 12,068건',
+    meta:'2025.01 – {end} · @realDonaldTrump · {total}건',
     title:'트럼프 트루스소셜 게시물 분석.',
-    lede:'2기 취임 후 21개월치 게시물 12,068건 가운데 본문이 있는 6,078건을 문장 임베딩으로 2차원에 펼치고, 열 개 주제 군집으로 나눴다. 가까이 놓인 점일수록 비슷한 말을 한 글이다. 2026년 8월의 최고치가 무엇으로 채워졌는지, 관세 이야기가 어디로 사라졌는지가 이 지도에서 읽힌다.',
+    lede:'2기 취임 후 {mon}개월치 게시물 {total}건 가운데 본문이 있는 {n}건을 문장 임베딩으로 2차원에 펼치고, 열 개 주제 군집으로 나눴다. 가까이 놓인 점일수록 비슷한 말을 한 글이다. 2026년 8월의 최고치가 무엇으로 채워졌는지, 관세 이야기가 어디로 사라졌는지가 이 지도에서 읽힌다.',
     theme:'다크 모드', themeL:'라이트 모드',
     mapTitle:'메시지 지도', mapNote:'점 하나가 게시물 하나. 주제를 누르면 해당 글만 색이 뜬다. 점 위에 커서를 올리면 날짜와 주제가, 클릭하면 게시물 카드가 열린다.',
     all:'전체', period:'기간', periods:['전체 기간','2025','2026','최근 3개월'], unit:'건',
     orig:'원문 보기', et:'(미 동부)',
-    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~170건). 각 주제의 최다 월 막대는 짙게 표시했다. 26.10은 6일까지.', peak:'최다',
-    insTitle:'읽히는 것',
+    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~{max}건). 각 주제의 최다 월 막대는 짙게 표시했다. {lastm}은 {lastd}일까지.', peak:'최다',
+    insTitle:'읽히는 것', insNote:'2026-10-06 기준 분석. 위 지도와 그래프는 매주 자동 갱신되지만 아래 문장은 그 시점의 수치다.',
     ins:[
       ['최고치는 지지 선언이 만들었다.','2026년 8월 게시물은 972건, 일평균 31.35건으로 취임 후 최다다. 그달 본문 글 522건 중 지지 선언이 162건(31.0%)으로 어느 군집, 어느 달보다 많았다.'],
       ['지지 선언은 파도처럼 온다.','2025년 9월 8건이던 것이 10월 55건, 11월 130건(그달 본문의 36.4%)으로 치솟았다. 2026년에도 2월 71건, 5~6월 91·94건, 8월 162건으로 몇 달 간격의 물결을 그린다. 좋아요 중앙값은 7,965로 열 개 군집 중 가장 낮다.'],
@@ -157,18 +144,18 @@ const S = {
       ['범죄·이민에서 백악관 공사로.','범죄·이민 단속 군집은 2025년 9월 36건(19.8%), 2026년 1월 46건(15.9%)에서 2월 이후 월 10~23건으로 줄었다. 반대로 볼룸·반사연못 등 백악관 공사 이야기는 2025년 월 10건 안팎에서 2026년 5~8월 29~37건으로 늘었다.'],
       ['링크 대신 제목을 붙인다.','링크만 올린 글은 2025년 3월 251건에서 12월 이후 월 0~41건으로 줄었다. 같은 시기 기사 제목을 본문에 옮겨 적는 헤드라인 공유 군집은 2025년 9~11월 월 10~13건에서 2026년 7월 70건, 8월 68건으로 늘었다. 기사 공유 방식이 바뀐 것으로 보인다(추정).']
     ],
-    foot:'수집 2026-10-06 · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social 아카이브</a> · 본문 있는 글 6,078건(이미지·링크 단독, 리트루스, 20자 미만 제외) · 임베딩 all-mpnet-base-v2(소문자화, 서명 제거) · 투영 t-SNE(cosine, perplexity 40) · 군집 k-means(k=10, silhouette 0.05: 경계가 뚜렷하지 않음) · 날짜는 미 동부 기준 · <a href="https://github.com/sechan9999/trump-truth-analysis">코드·데이터</a>'
+    foot:'수집 {collected}(매주 자동 갱신) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social 아카이브</a> · 본문 있는 글 {n}건(이미지·링크 단독, 리트루스, 20자 미만 제외) · 임베딩 all-mpnet-base-v2(소문자화, 서명 제거) · 투영 t-SNE(cosine, perplexity 40) · 군집 k-means(k=10, silhouette 0.05: 경계가 뚜렷하지 않음) · 날짜는 미 동부 기준 · <a href="https://github.com/sechan9999/trump-truth-analysis">코드·데이터</a>'
   },
   en:{
-    meta:'2025.01 – 2026.10 · @realDonaldTrump · 12,068 posts',
+    meta:'2025.01 – {end} · @realDonaldTrump · {total} posts',
     title:'Trump’s Truth Social posts, analyzed.',
-    lede:'Of 12,068 posts in the 21 months since the second inauguration, the 6,078 with text were embedded, laid out in two dimensions and split into ten topic clusters. The closer two dots are, the more alike the posts. The map shows what filled the August 2026 peak, and where the tariff talk went.',
+    lede:'Of {total} posts in the {mon} months since the second inauguration, the {n} with text were embedded, laid out in two dimensions and split into ten topic clusters. The closer two dots are, the more alike the posts. The map shows what filled the August 2026 peak, and where the tariff talk went.',
     theme:'Dark mode', themeL:'Light mode',
     mapTitle:'Message map', mapNote:'Each dot is one post. Pick a topic to highlight its posts. Hover a dot for its date and topic; click it to open the post.',
     all:'All', period:'Period', periods:['All time','2025','2026','Last 3 months'], unit:' posts',
     orig:'View original', et:'(ET)',
-    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–170 posts). Each topic’s peak month is shaded dark. 26.10 runs through Oct 6.', peak:'Peak',
-    insTitle:'What stands out',
+    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–{max} posts). Each topic’s peak month is shaded dark. {lastm} runs through day {lastd}.', peak:'Peak',
+    insTitle:'What stands out', insNote:'Analysis as of 2026-10-06. The map and charts above refresh weekly; the figures below are from that date.',
     ins:[
       ['Endorsements drove the peak.','August 2026 had 972 posts, 31.35 a day, the most since the inauguration. Of its 522 text posts, 162 (31.0%) were endorsements, more than any cluster in any month.'],
       ['Endorsements come in waves.','From 8 in September 2025 to 55 in October and 130 in November (36.4% of that month’s text posts). In 2026: 71 in February, 91 and 94 in May–June, 162 in August. Their median likes, 7,965, are the lowest of the ten clusters.'],
@@ -177,7 +164,7 @@ const S = {
       ['From crime and immigration to White House construction.','Crime & immigration peaked at 36 posts (19.8%) in September 2025 and 46 (15.9%) in January 2026, then fell to 10–23 a month. White House construction (the ballroom, the Reflecting Pool) rose from about 10 a month in 2025 to 29–37 in May–August 2026.'],
       ['Headlines instead of links.','Link-only posts fell from 251 in March 2025 to 0–41 a month after December. Over the same period the shared-headlines cluster, where an article title is pasted as the post, grew from 10–13 a month (September–November 2025) to 70 in July 2026 and 68 in August. The way articles are shared seems to have changed (inferred).']
     ],
-    foot:'Collected 2026-10-06 · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social archive</a> · 6,078 text posts (excluding image-only, link-only, ReTruths and posts under 20 characters) · Embedding all-mpnet-base-v2 (lowercased, sign-offs removed) · Projection t-SNE (cosine, perplexity 40) · Clusters k-means (k=10, silhouette 0.05: boundaries are weak) · Dates in US Eastern time · <a href="https://github.com/sechan9999/trump-truth-analysis">Code & data</a>'
+    foot:'Collected {collected} (refreshed weekly) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social archive</a> · {n} text posts (excluding image-only, link-only, ReTruths and posts under 20 characters) · Embedding all-mpnet-base-v2 (lowercased, sign-offs removed) · Projection t-SNE (cosine, perplexity 40) · Clusters k-means (k=10, silhouette 0.05: boundaries are weak) · Dates in US Eastern time · <a href="https://github.com/sechan9999/trump-truth-analysis">Code & data</a>'
   }
 };
 const byK = {}; T.forEach(t => byK[t.k] = t);
@@ -188,19 +175,28 @@ if (new URLSearchParams(location.search).get('lang') === 'en') st.lang = 'en';
 const $ = id => document.getElementById(id);
 const cv = $('cv'), ctx = cv.getContext('2d');
 let shown = [];
+const D = () => st.data || {meta:{collected:'…',total:0,analyzed:0,last:'…'},months:[],counts:{}};
+function vals(){
+  const d = D(), m = d.months, last = d.meta.last || '';
+  let mx = 0; Object.values(d.counts).forEach(v => v.forEach(x => { if (x > mx) mx = x; }));
+  const mon = last.length > 4 ? Math.round((new Date(last.replace(/\./g,'-')) - new Date('2025-01-20')) / 2629746000) : '…';
+  return {end: m.length ? m[m.length-1].replace('-','.') : '…', total: d.meta.total.toLocaleString(), n: d.meta.analyzed.toLocaleString(), mon, collected: d.meta.collected, max: Math.ceil(mx/10)*10 || 10, lastm: m.length ? short(m[m.length-1]) : '', lastd: +last.slice(8,10) || ''};
+}
+const short = m => m.slice(2).replace('-','.');
+const fmt = (str, v) => str.replace(/\{(\w+)\}/g, (_, k) => v[k] ?? '');
 
 function txt(){
-  const s = S[st.lang];
+  const s = S[st.lang], v = vals();
   document.documentElement.lang = st.lang;
   document.title = s.title.replace(/\.$/,'');
   document.querySelectorAll('[data-t]').forEach(el => {
     const k = el.dataset.t;
-    if (k === 'foot') el.innerHTML = s.foot;
+    if (k === 'foot') el.innerHTML = fmt(s.foot, v);
     else if (k === 'theme') el.textContent = isDark() ? s.themeL : s.theme;
-    else el.textContent = s[k];
+    else el.textContent = fmt(s[k], v);
   });
   document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === st.lang));
-  $('insights').innerHTML = s.ins.map(([h,b]) => `<p><strong>${h}</strong> ${b}</p>`).join('');
+  $('insights').innerHTML = `<p class="note">${s.insNote}</p>` + s.ins.map(([h,b]) => `<p><strong>${h}</strong> ${b}</p>`).join('');
   chips(); periods(); grid(); labels(); draw(); card();
 }
 function chips(){
@@ -214,11 +210,12 @@ function periods(){
   $('periods').querySelectorAll('button').forEach(b => b.onclick = () => { st.period = +b.dataset.i; periods(); draw(); });
 }
 function grid(){
-  const s = S[st.lang];
+  const s = S[st.lang], d = D(), M = d.months.map(short), top0 = vals().max;
+  if (!M.length) { $('grid').innerHTML = ''; return; }
   $('grid').innerHTML = T.map(t => {
-    const v = C[t.k], mx = Math.max(...v), top = v.indexOf(mx), n = v.reduce((a,b)=>a+b,0);
-    const bars = v.map((x,m) => `<div title="${MONTHS[m]} ${x}${s.unit}" style="height:${x/170*100}%;background:${t.c}${m===top?'':'59'}"></div>`).join('');
-    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p>${t[st.lang][1]}</p><div class="bars">${bars}</div><div class="axis"><span>25.01</span><span>${s.peak} ${MONTHS[top]} · ${mx}${s.unit}</span><span>26.10</span></div></div>`;
+    const v = d.counts[t.k] || [], mx = Math.max(...v), top = v.indexOf(mx), n = v.reduce((a,b)=>a+b,0);
+    const bars = v.map((x,m) => `<div title="${M[m]} ${x}${s.unit}" style="height:${x/top0*100}%;background:${t.c}${m===top?'':'59'}"></div>`).join('');
+    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p>${t[st.lang][1]}</p><div class="bars">${bars}</div><div class="axis"><span>${M[0]}</span><span>${s.peak} ${M[top]} · ${mx}${s.unit}</span><span>${M[M.length-1]}</span></div></div>`;
   }).join('');
 }
 function labels(){
@@ -285,7 +282,7 @@ document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
 $('theme').onclick = () => { document.documentElement.dataset.theme = isDark() ? 'light' : 'dark'; txt(); };
 let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(draw, 100); });
 txt();
-fetch('map_data.json').then(r => r.json()).then(d => { st.data = d; draw(); }).catch(() => { $('count').textContent = 'data load failed'; });
+fetch('map_data.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { st.data = d; txt(); }).catch(() => { $('count').textContent = 'data load failed'; });
 </script>
 </body>
 </html>

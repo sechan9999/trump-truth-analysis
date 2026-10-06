@@ -1,0 +1,6 @@
+pandas
+requests
+ftfy
+numpy
+scikit-learn
+sentence-transformers

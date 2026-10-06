@@ -7,15 +7,14 @@ from pathlib import Path
 import ftfy
 import numpy as np
 import pandas as pd
-from model2vec import StaticModel
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.manifold import TSNE
 from sklearn.metrics import silhouette_score
 
 DATA = Path(__file__).parent / "data"
-K = int(sys.argv[1]) if len(sys.argv) > 1 else 10
-MODEL = sys.argv[2] if len(sys.argv) > 2 else "sentence-transformers/all-mpnet-base-v2"
+K = 10
+MODEL = "sentence-transformers/all-mpnet-base-v2"
 SEED = 42
 
 
@@ -40,6 +39,7 @@ def main() -> None:
     if cache.exists():
         emb = np.load(cache)
     elif MODEL.startswith("minishlab/"):
+        from model2vec import StaticModel
         emb = StaticModel.from_pretrained(MODEL).encode(df["body"].tolist(), show_progress_bar=False)
     else:
         from sentence_transformers import SentenceTransformer
@@ -73,4 +73,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    K = int(sys.argv[1]) if len(sys.argv) > 1 else K
+    MODEL = sys.argv[2] if len(sys.argv) > 2 else MODEL
     main()

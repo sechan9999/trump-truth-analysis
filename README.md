@@ -36,3 +36,11 @@ python embed.py 10      # data/clustered.json, clusters_report.json (기본 모�
 
 ## 페이지
 https://sechan9999.github.io/trump-truth-analysis/ (한국어/English 토글, `?lang=en`)
+
+## 자동 갱신
+GitHub Actions(`.github/workflows/weekly.yml`)가 매주 월요일 09:00(KST) 실행:
+1. `collect.py`로 최신 게시물 수집
+2. `update.py`로 새 게시물만 임베딩 → 고정 중심점(`state/centroids.npy`)에 배정, 지도 좌표는 가장 비슷한 기존 글 5개의 평균 위치
+3. `docs/map_data.json` 갱신 후 커밋 → Pages 재배포
+
+군집 번호와 이름이 바뀌지 않도록 k-means·t-SNE는 다시 돌리지 않는다. 전면 재분석은 `python embed.py 10` 후 `python update.py --bootstrap`.
