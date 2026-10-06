@@ -54,8 +54,9 @@ GitHub Actions(`.github/workflows/weekly.yml`)가 매주 월요일 09:00(KST) �
 ## 상원 경합주 개입 지수 (`intervention.py`, method v1)
 [US Election Insight Hub](https://github.com/sechan9999/us-election-insight-hub)에 넘기는 **기술적 맥락 지표**. 예측 모형 입력이 아니다.
 - 출력: `docs/intervention.json` → https://sechan9999.github.io/trump-truth-analysis/intervention.json (주 1회 갱신)
-- 대상: 허브 `seed-data.ts`의 상원 경합주 12곳. 가제티어 `state/gazetteer_2026Q4.json` (날짜 버전 관리)
-- 매핑 우선순위: 후보명 → 주 전체 이름 → 약어(`R-GA`, `, GA`, `(GA)` 형태만; ME·OH·IN 제외). 동명이인 위험 성은 전체 이름만
+- 대상: 상원 경합주 12곳. 가제티어 `state/gazetteer_senate_2026_v1.json`(후보·별칭·경선 탈락자 `valid_until`·`exclude_aliases`, 원본 그대로 보관)
+- 매칭 규칙 `state/matching_rules.json`: 성 단독 별칭은 allowlist만(거부 사유 기록), 동명이인 전체 이름(Mike Rogers 등)은 같은 글에 주 이름이 있을 때만, 경선 탈락·사퇴 후보는 `valid_until` 이후 글에 매핑 안 함
+- 매핑 우선순위: 후보명 → 주 전체 이름 → 약어(`R-GA`, `, GA`, `(GA)` 형태만; ME·OH·IN 제외)
 - 지지 점유율: 지지 선언 군집 글의 최근 4주 합 기준, 12개 주 합 = 1. 한 글이 여러 주면 1/k 분할
 - 민주당 후보 언급 점유율: 지지 선언 외 군집에서 민주당 후보 이름이 나온 횟수. 어조(공격 여부)는 측정하지 않음
 - z: 2025-01-20~2026-06-30 기준 4주 점유율 대비. 창 내 경합주 매핑 20건 미만이면 `small_n`, 이때 `surge` 배지 없음

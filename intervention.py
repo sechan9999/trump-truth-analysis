@@ -8,11 +8,12 @@ import pandas as pd
 
 ROOT = Path(__file__).parent
 DATA, STATE, DOCS = ROOT / "data", ROOT / "state", ROOT / "docs"
-GAZ = STATE / "gazetteer_2026Q4.json"
+GAZ = STATE / "gazetteer_senate_2026_v1.json"
+RULES = STATE / "matching_rules.json"
 ENDORSE = 4  # 지지 선언 군집
 WINDOW, MIN_N, Z_BADGE = 4, 20, 2.0
 BASELINE = ("2025-01-20", "2026-06-30")  # 선거 국면 이전
-METHOD = "v1"
+METHOD = "v1.1"
 US_STATES = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
              "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland",
              "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire",
@@ -22,39 +23,60 @@ US_STATES = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado
 ANY_STATE = re.compile(r"\b(?:" + "|".join(US_STATES) + r")\b")
 
 
-def name_re(names: list[str]) -> re.Pattern:
-    return re.compile(r"\b(?:" + "|".join(re.escape(n) for n in names) + r")\b")
-
-
-def build_matchers(g: dict):
-    m = {}
-    for s, v in g["states"].items():
-        excl = g["state_name_exclusions"].get(s, [])
-        abbr = None if s in g["abbrev_excluded"] else re.compile(rf"(?:\b[RD]-{s}\b|,\s{s}\b|\({s}\))")
-        m[s] = {
-            "cand": name_re(v["dem"] + v["rep"]),
-            "dem": name_re(v["dem"]),
+def load_matchers() -> tuple[dict, list[dict], dict]:
+    """가제티어(후보) + 매칭 규칙(별칭 정책·문맥·제외어) → 주명 매처와 후보 매처."""
+    g = json.loads(GAZ.read_text(encoding="utf-8"))
+    r = json.loads(RULES.read_text(encoding="utf-8"))
+    allow = set(r["single_token_allowlist"])
+    states, cands = {}, []
+    for st, v in g["states"].items():
+        excl = r["state_name_exclusions"].get(st, [])
+        states[st] = {
             "name": re.compile(rf"\b{re.escape(v['name'])}\b", re.I),
             "excl": re.compile("|".join(re.escape(x) for x in excl), re.I) if excl else None,
-            "abbr": abbr,
+            "abbr": None if st in r["abbrev_excluded"] else re.compile(rf"(?:\b[RD]-{st}\b|,\s{st}\b|\({st}\))"),
         }
-    return m
+        for c in v["candidates"]:
+            for a in c["aliases"]:
+                if " " not in a and a not in allow:
+                    continue  # 성 단독 별칭은 allowlist만
+                cands.append({
+                    "state": st, "name": c["name"], "party": c["party"], "role": c["role"], "alias": a,
+                    "re": re.compile(rf"\b{re.escape(a)}\b"),
+                    "until": c.get("valid_until"),
+                    "ctx": r["context_required"].get(a),
+                    "excl": re.compile("|".join(re.escape(x) for x in c.get("exclude_aliases", []))) if c.get("exclude_aliases") else None,
+                })
+    return g, cands, states
 
 
-def map_states(text: str, m: dict) -> tuple[list[str], str]:
+def cand_hits(text: str, date: str, cands: list[dict], states: dict) -> list[dict]:
+    out = []
+    for c in cands:
+        if c["until"] and date > c["until"]:
+            continue  # 경선 탈락·사퇴 후 게시물에는 구 후보명 매핑 금지
+        t = c["excl"].sub(" ", text) if c["excl"] else text
+        if not c["re"].search(t):
+            continue
+        if c["ctx"] and not states[c["ctx"]]["name"].search(text):
+            continue  # 동명이인: 주 이름이 함께 있어야 인정
+        out.append(c)
+    return out
+
+
+def map_states(text: str, date: str, cands: list[dict], states: dict) -> tuple[list[str], str]:
     """우선순위: 후보명 → 주명 → 약어. 먼저 매칭된 단계에서 중단."""
-    hits = [s for s, x in m.items() if x["cand"].search(text)]
+    hits = sorted({c["state"] for c in cand_hits(text, date, cands, states)})
     if hits:
         return hits, "candidate"
-    for s, x in m.items():
-        if x["name"].search(text):
-            t = x["excl"].sub("", text) if x["excl"] else text
-            if x["name"].search(t):
-                hits.append(s)
+    for st, x in states.items():
+        t = x["excl"].sub(" ", text) if x["excl"] else text
+        if x["name"].search(t):
+            hits.append(st)
     if hits:
         return hits, "state_name"
     if not text.isupper():
-        hits = [s for s, x in m.items() if x["abbr"] and x["abbr"].search(text)]
+        hits = [st for st, x in states.items() if x["abbr"] and x["abbr"].search(text)]
     return hits, "abbrev" if hits else "none"
 
 
@@ -65,15 +87,16 @@ def shares(counts: pd.DataFrame, states: list[str]) -> pd.DataFrame:
 
 
 def main() -> None:
-    g = json.loads(GAZ.read_text(encoding="utf-8"))
+    g, cands, smatch = load_matchers()
     states = list(g["states"])
-    m = build_matchers(g)
     d = pd.read_json(DATA / "clustered.json", dtype={"id": str})
     d["created_at"] = pd.to_datetime(d["created_at"], utc=True)
     d["week"] = d["created_at"].dt.tz_convert("America/New_York").dt.tz_localize(None).dt.to_period("W-SUN").dt.start_time
-    mapped = d["text"].map(lambda t: map_states(t, m))
-    d["states"], d["rule"] = mapped.str[0], mapped.str[1]
-    d["dem_hits"] = d["text"].map(lambda t: [s for s, x in m.items() if x["dem"].search(t)])
+    d["date"] = d["created_at"].dt.tz_convert("America/New_York").dt.strftime("%Y-%m-%d")
+    mapped = [map_states(t, dt, cands, smatch) for t, dt in zip(d["text"], d["date"])]
+    d["states"], d["rule"] = [x[0] for x in mapped], [x[1] for x in mapped]
+    d["dem_hits"] = [sorted({c["state"] for c in cand_hits(t, dt, cands, smatch) if c["party"] in ("D", "DFL")})
+                     for t, dt in zip(d["text"], d["date"])]
 
     weeks = pd.date_range(d["week"].min(), d["week"].max(), freq="7D")
     e = d[d["cluster"] == ENDORSE]
@@ -97,7 +120,8 @@ def main() -> None:
         "week": last.strftime("%Y-%m-%d"),
         "window_weeks": WINDOW,
         "method_version": METHOD,
-        "gazetteer_version": g["version"],
+        "gazetteer_version": g["gazetteer_version"],
+        "matching_rules_version": json.loads(RULES.read_text(encoding="utf-8"))["version"],
         "generated_from": "https://github.com/sechan9999/trump-truth-analysis",
         "coverage": {
             "n_endorse_window": int(len(win)),

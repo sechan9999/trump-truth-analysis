@@ -1,0 +1,36 @@
+{
+  "version": "v2",
+  "date": "2026-10-06",
+  "applies_to": "gazetteer_senate_2026_v1.json",
+  "single_token_policy": "성·이름 한 단어 별칭은 아래 allowlist에 있을 때만 사용. 나머지는 전체 이름·직함 형태만 매칭",
+  "single_token_allowlist": ["Ossoff", "Talarico", "Paxton", "Peltola", "Whatley", "Husted", "Hinson", "Tafoya", "Turek", "Pappas", "Sununu", "El-Sayed", "Platner", "Cornyn", "Crockett", "Dooley", "Wahls", "Manzur", "Heikes", "Laehn", "Redpath", "Simonetti"],
+  "single_token_rejected": {
+    "Collins": "GA(Mike)·ME(Susan) 양쪽 별칭",
+    "Brown": "OH(Sherrod)·TX(Ted) 양쪽 별칭, Scott Brown(NH)과도 충돌",
+    "Graham": "Lindsey Graham 상원의원 언급 37건과 충돌",
+    "Nixon": "Richard Nixon",
+    "Bray": "인디애나 주상원의원 Rod Bray (실측 13건 전부)",
+    "Rogers": "Hal Rogers(KY), Katie Rogers(NYT) 등",
+    "Jackson": "Ronny Jackson(TX 하원), Andrew Jackson 등",
+    "Marshall": "'Fire Marshall' 등 일반 명사",
+    "Cooper": "Mark Cooper, Allison Cooper 등",
+    "Moody": "Moody's(신용평가사) 등 일반 단어",
+    "Stevens": "Bethany Stevens(NASA), Cristian Stevens 등",
+    "Hamilton": "Hamilton Lincoln Law Institute 등",
+    "Craig": "Craig Goldman(TX 하원) 등 이름",
+    "Levy": "Eylon Levy 등",
+    "Long": "일반 단어", "Marsh": "일반 단어", "Dublin": "도시명", "Abdul": "흔한 이름",
+    "Flanagan": "흔한 성", "Whiting": "흔한 성", "Carlin": "George Carlin 등", "Kristy": "흔한 이름", "Christensen": "흔한 성"
+  },
+  "context_required": {
+    "Mike Rogers": "MI",
+    "Congressman Rogers": "MI",
+    "Senator Brown": "OH"
+  },
+  "context_note": "동명이인이 있는 전체 이름은 같은 글에 해당 주 이름이 함께 있을 때만 후보명으로 인정 (Mike Rogers: 앨라배마 현역 하원의원과 동명)",
+  "state_name_exclusions": {
+    "GA": ["Georgian", "Tbilisi", "country of Georgia", "Republic of Georgia"],
+    "KS": ["Kansas City"]
+  },
+  "abbrev_excluded": ["ME", "OH", "IN"]
+}
