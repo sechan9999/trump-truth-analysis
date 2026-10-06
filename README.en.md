@@ -52,7 +52,7 @@ Topic names are interpretations based on keywords and central posts, and they fo
 - `state/labels.json`: label definitions with version and changelog. A readable changelog is in [CHANGELOG.md](CHANGELOG.md).
 - `state/cluster_stats.json`: for each cluster, the top 8 c-TF-IDF keywords (BERTopic-style `reduce_frequent_words`, boilerplate removed), the 3 posts closest to the centroid, cohesion (mean cosine silhouette), and the boundary share (posts whose similarity to the next-closest cluster is within 0.03).
 - Each post card on the site shows the cosine similarity to its own cluster and to the runner-up. These are similarities, not probabilities.
-- `data/audit_sample.csv`: a fixed audit sample (30 posts per cluster, 300 total). The `fits` (Y/N) and `note` columns are for human review; the agreement rate will be published once they are filled in.
+- Label audit: Y/N judgments on the fixed 300-post sample (`data/audit_sample.csv`, 30 per cluster), stored in `data/audit/audit_results.csv`. **Overall fit 78.0% (234/300, Wilson 95% CI 73.0–82.3%)**; by cluster from 53% (Thanks & greetings) to 100% (Endorsements). Cluster cohesion and cluster fit rate have a rank correlation of 0.95 (10 clusters, indicative only). Run `python scripts/audit_summary.py` to rebuild `state/audit_summary.json`. In 4 rows the judged file's post text differs from the published sample (likely post edits); these are flagged `text_changed` and the published text is kept.
 
 ## Weekly update
 GitHub Actions (`.github/workflows/weekly.yml`) runs every Monday at 00:00 UTC:

@@ -93,6 +93,8 @@ def build_site() -> None:
     out = {
         "labels": {"version": labels["version"], "date": labels["date"], "clusters": labels["clusters"]},
         "stats": stats,
+        "audit": json.loads((STATE / "audit_summary.json").read_text(encoding="utf-8"))
+        if (STATE / "audit_summary.json").exists() else None,
         "meta": {"collected": meta["collected_at"][:10], "total": meta["total"], "analyzed": len(d),
                  "last": et.iloc[-1]},
         "months": months,

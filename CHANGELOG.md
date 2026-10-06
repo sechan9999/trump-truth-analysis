@@ -46,6 +46,11 @@ Naming rule: a label says what a post is about, never its tone or intent, unless
 | 2026-10-06 | Gallup MIP parsed directly from 4 topline PDFs (0 cross-file conflicts). A user-compiled CSV was kept for reference only: rows 2025-01 to 2025-05 were shifted by one column and 2026 "Unifying the country" values were missing. Gallup은 PDF에서 직접 파싱, 사용자 집계본은 참고 보관 |
 | 2026-10-06 | YouGov/Economist weekly tracker (2025-01 to 2026-09) and AP-NORC December priorities (2024-12, 2025-12) added. YouGov·AP-NORC 추가 |
 
+## Label audit / 라벨 감사
+
+| Date | Result |
+|---|---|
+| 2026-10-06 | Labels v2 audited on the fixed 300-post sample: 234/300 fit = 78.0% (Wilson 95% CI 73.0–82.3%). Lowest: Thanks & greetings 53%, GOP & legislation 60%, Media & opponents 70%; highest: Endorsements 100%. 3 posts marked unjudgeable, 12 borderline/dual-topic. Results: `data/audit/audit_results.csv`. 라벨 v2 감사 결과 |
+
 ## Not yet done / 미완료
-- Label audit: the 300-post sample (`data/audit_sample.csv`) is published but not yet reviewed. 라벨 감사 미실시
 - Intervention precision audit: 50-post sample (`data/intervention_audit.csv`) not yet reviewed. 매핑 정밀도 감사 미실시

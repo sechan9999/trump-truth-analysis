@@ -54,7 +54,7 @@ GitHub Actions(`.github/workflows/weekly.yml`)가 매주 월요일 09:00(KST) �
 - `state/labels.json`: 라벨 정의와 버전·변경 이력. 사람이 읽기 쉬운 변경 이력은 [CHANGELOG.md](CHANGELOG.md). 기술적 명명 원칙(어조·의도는 측정 근거 없이 라벨에 넣지 않음)
 - `state/cluster_stats.json`: 군집별 c-TF-IDF 키워드 8개(BERTopic `reduce_frequent_words` 방식, 상투어 제외), 중심 게시물 3개, 응집도(평균 silhouette, 코사인), 경계 비율(차순위 군집과 유사도 차 < 0.03)
 - 게시물별 소속·차순위 군집 유사도를 페이지 카드에 표시 (확률이 아닌 코사인 유사도)
-- `data/audit_sample.csv`: 라벨 감사용 고정 표본(군집당 30건, 총 300건). `fits`(Y/N)·`note` 칸을 사람이 채운 뒤 일치율을 공개할 예정
+- 라벨 감사: 고정 표본 300건(`data/audit_sample.csv`, 군집당 30건)에 대한 Y/N 판정(`data/audit/audit_results.csv`). **전체 일치 78.0% (234/300, Wilson 95% CI 73.0–82.3%)**. 군집별 53%(축하·감사)~100%(지지 선언), 응집도와 군집별 일치율의 순위 상관 0.95(군집 10개, 참고용). 집계: `python scripts/audit_summary.py` → `state/audit_summary.json`. 판정 파일의 본문 4행이 공개 표본과 달라(게시물 수정 추정) `text_changed`로 표시하고 본문은 공개 표본 기준 유지
 
 ## 허브용 주간 JSON
 `docs/weekly.json` (schema `truth-weekly/v1`, 약 45KB): 라벨·군집 통계·월별/주별 주제 건수·급증 이벤트. 게시물 원문과 좌표는 빼서 [US Election Insight Hub](https://github.com/sechan9999/us-election-insight-hub)의 '트럼프 메시지 분석' 탭이 가볍게 불러온다. → https://sechan9999.github.io/trump-truth-analysis/weekly.json

@@ -1,0 +1,150 @@
+{
+ "label_version": "v2",
+ "n": 300,
+ "overall": {
+  "n": 300,
+  "fit": 234,
+  "fit_rate": 0.78,
+  "ci95": [
+   0.73,
+   0.823
+  ],
+  "unjudgeable": 3,
+  "fit_rate_judgeable": 0.788,
+  "borderline": 12
+ },
+ "by_cluster": {
+  "0": {
+   "label": "관세·무역",
+   "n": 30,
+   "fit": 24,
+   "fit_rate": 0.8,
+   "ci95": [
+    0.627,
+    0.905
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.8,
+   "borderline": 1
+  },
+  "1": {
+   "label": "언론·정적 언급",
+   "n": 30,
+   "fit": 21,
+   "fit_rate": 0.7,
+   "ci95": [
+    0.521,
+    0.833
+   ],
+   "unjudgeable": 2,
+   "fit_rate_judgeable": 0.75,
+   "borderline": 2
+  },
+  "2": {
+   "label": "이란·전쟁 외교",
+   "n": 30,
+   "fit": 25,
+   "fit_rate": 0.833,
+   "ci95": [
+    0.664,
+    0.927
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.833,
+   "borderline": 0
+  },
+  "3": {
+   "label": "법원·인사 지명",
+   "n": 30,
+   "fit": 27,
+   "fit_rate": 0.9,
+   "ci95": [
+    0.744,
+    0.965
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.9,
+   "borderline": 2
+  },
+  "4": {
+   "label": "지지 선언",
+   "n": 30,
+   "fit": 30,
+   "fit_rate": 1.0,
+   "ci95": [
+    0.886,
+    1.0
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 1.0,
+   "borderline": 1
+  },
+  "5": {
+   "label": "백악관 공사",
+   "n": 30,
+   "fit": 25,
+   "fit_rate": 0.833,
+   "ci95": [
+    0.664,
+    0.927
+   ],
+   "unjudgeable": 1,
+   "fit_rate_judgeable": 0.862,
+   "borderline": 0
+  },
+  "6": {
+   "label": "범죄·이민 단속",
+   "n": 30,
+   "fit": 24,
+   "fit_rate": 0.8,
+   "ci95": [
+    0.627,
+    0.905
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.8,
+   "borderline": 0
+  },
+  "7": {
+   "label": "축하·감사",
+   "n": 30,
+   "fit": 16,
+   "fit_rate": 0.533,
+   "ci95": [
+    0.361,
+    0.698
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.533,
+   "borderline": 5
+  },
+  "8": {
+   "label": "기사 헤드라인 공유",
+   "n": 30,
+   "fit": 24,
+   "fit_rate": 0.8,
+   "ci95": [
+    0.627,
+    0.905
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.8,
+   "borderline": 1
+  },
+  "9": {
+   "label": "공화당·입법",
+   "n": 30,
+   "fit": 18,
+   "fit_rate": 0.6,
+   "ci95": [
+    0.423,
+    0.754
+   ],
+   "unjudgeable": 0,
+   "fit_rate_judgeable": 0.6,
+   "borderline": 0
+  }
+ },
+ "text_changed_rows": 4,
+ "method": "300 posts, 30 per cluster, fixed random sample (seed 42). fits = Y/N: does the label describe the post. note: borderline, dual-topic, unjudgeable. CI = Wilson 95%."
+}

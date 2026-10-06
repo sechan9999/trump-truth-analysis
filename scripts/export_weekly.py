@@ -93,6 +93,8 @@ def main() -> None:
     iv = json.loads((DOCS / "intervention.json").read_text(encoding="utf-8"))
     wk = json.loads((DOCS / "weekly.json").read_text(encoding="utf-8"))
     rules = json.loads((STATE / "matching_rules.json").read_text(encoding="utf-8"))
+    ap = STATE / "audit_summary.json"
+    audit = json.loads(ap.read_text(encoding="utf-8")) if ap.exists() else None
     small = iv["small_n"]
 
     months = wk["months"]
@@ -140,11 +142,13 @@ def main() -> None:
         "topic_labels": {SLUG[k]: {"ko": v["ko"][0], "en": v["en"][0], "color": v["c"],
                                    "cohesion": wk["stats"]["clusters"][k]["cohesion"],
                                    "caution": wk["stats"]["clusters"][k]["cohesion"] < CAUTION,
-                                   "keywords": wk["stats"]["clusters"][k]["keywords"][:5]}
+                                   "keywords": wk["stats"]["clusters"][k]["keywords"][:5],
+                                   "audit_fit_rate": audit["by_cluster"][k]["fit_rate"] if audit else None}
                          for k, v in wk["labels"]["clusters"].items()},
         "topics": topics,
         "annotations": ann,
         "notes": iv["notes"],
+        "label_audit": {k: audit["overall"][k] for k in ("n", "fit", "fit_rate", "ci95")} if audit else None,
         "message_vs_public": message_vs_public(wk),
     }
     (DOCS / "message_index_weekly.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -153,7 +153,8 @@
     "israel",
     "strait",
     "nuclear"
-   ]
+   ],
+   "audit_fit_rate": 0.833
   },
   "tariffs_trade": {
    "ko": "관세·무역",
@@ -167,7 +168,8 @@
     "trade",
     "canada",
     "china"
-   ]
+   ],
+   "audit_fit_rate": 0.8
   },
   "endorsements": {
    "ko": "지지 선언",
@@ -181,7 +183,8 @@
     "second amendment",
     "siege second",
     "cut taxes"
-   ]
+   ],
+   "audit_fit_rate": 1.0
   },
   "gop_legislation": {
    "ko": "공화당·입법",
@@ -195,7 +198,8 @@
     "republican",
     "vote",
     "save act"
-   ]
+   ],
+   "audit_fit_rate": 0.6
   },
   "courts_nominations": {
    "ko": "법원·인사 지명",
@@ -209,7 +213,8 @@
     "law",
     "attorney",
     "justice"
-   ]
+   ],
+   "audit_fit_rate": 0.9
   },
   "crime_immigration": {
    "ko": "범죄·이민 단속",
@@ -223,7 +228,8 @@
     "illegal",
     "crime",
     "violent"
-   ]
+   ],
+   "audit_fit_rate": 0.8
   },
   "media_opponents": {
    "ko": "언론·정적 언급",
@@ -237,7 +243,8 @@
     "cnn",
     "epstein",
     "ratings"
-   ]
+   ],
+   "audit_fit_rate": 0.7
   },
   "shared_headlines": {
    "ko": "기사 헤드라인 공유",
@@ -251,7 +258,8 @@
     "elon",
     "book",
     "law firms"
-   ]
+   ],
+   "audit_fit_rate": 0.8
   },
   "white_house_construction": {
    "ko": "백악관 공사",
@@ -265,7 +273,8 @@
     "reflecting pool",
     "building",
     "construction"
-   ]
+   ],
+   "audit_fit_rate": 0.833
   },
   "thanks_greetings": {
    "ko": "축하·감사",
@@ -279,7 +288,8 @@
     "happy",
     "wonderful",
     "god bless"
-   ]
+   ],
+   "audit_fit_rate": 0.533
   }
  },
  "topics": [
@@ -671,6 +681,15 @@
  "notes": {
   "ko": "기술적 맥락 지표이며 예측 모형 입력이 아니다. 지지 선언은 접전주를 따라가는 내생 변수라 인과로 읽을 수 없다. 트루스소셜은 유권자 전체가 아니다. 가제티어에 없는 후보(경선 탈락자 등)는 후보명으로 잡히지 않는다. dem_mention은 민주당 후보 이름 언급 횟수이며 어조(공격 여부)는 측정하지 않는다.",
   "en": "A descriptive context indicator, not a forecast input. Endorsements follow competitive races (endogenous), so no causal reading. Truth Social is not the electorate. Candidates missing from the gazetteer (e.g. primary losers) are not matched by name. dem_mention counts mentions of Democratic candidates by name; tone is not measured."
+ },
+ "label_audit": {
+  "n": 300,
+  "fit": 234,
+  "fit_rate": 0.78,
+  "ci95": [
+   0.73,
+   0.823
+  ]
  },
  "message_vs_public": {
   "mapping_version": "v1",
