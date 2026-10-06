@@ -1,0 +1,13 @@
+﻿trump_topic,trump_topic_ko,yougov_issue,apnorc_item,status,note
+tariffs_trade,관세·무역,Jobs and the economy;Inflation/prices,"Trade/free trade agreements/tariffs;Inflation;Economy, general",draft,관세는 경제·물가 양쪽에 걸침. 1:1 대응 아님
+crime_immigration,범죄·이민 단속,Immigration;Crime and criminal justice reform,Immigration/border wall/family separation/DACA/ICE;Crime/violence/hate crime,draft,
+iran_war,이란·전쟁 외교,National Security and foreign policy;Terrorism,Foreign policy issues (not including immigration),draft,AP-NORC 2024-12은 이민을 외교 범주에 포함(범주 정의 다름)
+courts_nominations,법원·인사 지명,Civil rights and civil liberties,,draft,유권자 이슈 목록에 직접 대응 항목 없음
+gop_legislation,공화당·입법,Taxes and government spending;The budget deficit,Taxes/tax reform;Debt/deficit/government spending/budget,draft,입법 내용(감세·예산) 기준 대응
+endorsements,지지 선언,,,no_match,선거 활동 글이라 이슈 대응 없음
+media_opponents,언론·정적 언급,,Politics,draft,AP-NORC '정치' 범주와 느슨하게 대응
+white_house_construction,백악관 공사,,,no_match,
+thanks_greetings,축하·감사,,,no_match,
+shared_headlines,기사 헤드라인 공유,,,no_match,형식 기준 군집
+,(트럼프 주제 없음),Health care;Medicare;Social security,Healthcare/health issues,gap,유권자 상위 이슈인데 대응하는 트럼프 주제 군집 없음
+,(트럼프 주제 없음),Inflation/prices,Personal financial issues;Inflation,gap,YouGov 1위 이슈(2026-09 33%). 트럼프 주제 중 직접 대응 군집 없음(관세·무역이 부분 대응)
