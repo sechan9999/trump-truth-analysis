@@ -1,0 +1,1687 @@
+{
+ "method_version": "v1",
+ "rule": {
+  "trailing_weeks": 12,
+  "min_count": 8,
+  "ratio": 2.0,
+  "mad_k": 3.0,
+  "ko": "주간 게시 수가 직전 12주 중앙값의 2배, 중앙값+3×MAD, 8건 중 가장 큰 값 이상인 주. 연속된 주는 시작 시점 기준선으로 하나의 에피소드로 묶음",
+  "en": "Weeks at or above the largest of 2x the trailing 12-week median, median + 3xMAD, and 8 posts. Consecutive weeks merge into one episode using the start-week baseline"
+ },
+ "events": [
+  {
+   "cluster": 3,
+   "start": "2025-05-05",
+   "end": "2025-05-11",
+   "weeks": 1,
+   "peak_week": "2025-05-05",
+   "count": 10,
+   "peak": 10,
+   "baseline_weekly": 2.5,
+   "ratio": 4.0,
+   "keywords": [
+    "missouri",
+    "jeanine",
+    "maria",
+    "attorney",
+    "eddie",
+    "cristian"
+   ],
+   "examples": [
+    [
+     "114462868084205660",
+     "2025-05-06",
+     "I am proud to announce my nomination of Zachary Bluestone to serve as Judge on the United States District Court for the Eastern District of Missouri. Zack is a True Legal Warrior. "
+    ],
+    [
+     "114462867354665095",
+     "2025-05-06",
+     "It is my honor to nominate Joshua Divine to serve as Judge on the United States District Court for the Eastern and Western Districts of Missouri. Joshua has devoutly served the Gre"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2025-05-05",
+   "end": "2025-05-11",
+   "weeks": 1,
+   "peak_week": "2025-05-05",
+   "count": 21,
+   "peak": 21,
+   "baseline_weekly": 2.0,
+   "ratio": 10.5,
+   "keywords": [
+    "secure border",
+    "endorsement",
+    "military vets",
+    "support",
+    "virginia",
+    "republican party"
+   ],
+   "examples": [
+    [
+     "114480045872688080",
+     "2025-05-09",
+     "Congressman John Joyce is a fantastic Champion for Pennsylvania's 13th Congressional District! An Original Member of my Pennsylvania Federal Leadership Team, John is fighting hard "
+    ],
+    [
+     "114474468725706522",
+     "2025-05-08",
+     "Congressman Tom Barrett is an incredible Representative for the Wonderful People of Michigan's 7th Congressional District! Tom bravely served our Country as an Army Helicopter Pilo"
+    ]
+   ]
+  },
+  {
+   "cluster": 3,
+   "start": "2025-05-26",
+   "end": "2025-06-01",
+   "weeks": 1,
+   "peak_week": "2025-05-26",
+   "count": 11,
+   "peak": 11,
+   "baseline_weekly": 3.0,
+   "ratio": 3.7,
+   "keywords": [
+    "district florida",
+    "court",
+    "judge florida",
+    "jordan",
+    "paul",
+    "anne"
+   ],
+   "examples": [
+    [
+     "114587449190015002",
+     "2025-05-28",
+     "I am honored to nominate Jordan E. Pratt to serve as Judge on the United States District Court for the Middle District of Florida. Jordan is a true Legal Champion, who currently se"
+    ],
+    [
+     "114587448932259485",
+     "2025-05-28",
+     "It is my honor to nominate John Guard to serve as Judge on the United States District Court for the Middle District of Florida! John has passionately served the Great State of Flor"
+    ]
+   ]
+  },
+  {
+   "cluster": 6,
+   "start": "2025-06-09",
+   "end": "2025-06-15",
+   "weeks": 1,
+   "peak_week": "2025-06-09",
+   "count": 17,
+   "peak": 17,
+   "baseline_weekly": 4.5,
+   "ratio": 3.8,
+   "keywords": [
+    "los angeles",
+    "houses",
+    "incompetent governor",
+    "burning",
+    "ice",
+    "federal permitting"
+   ],
+   "examples": [
+    [
+     "114654277401980803",
+     "2025-06-09",
+     "We made a great decision in sending the National Guard to deal with the violent, instigated riots in California. If we had not done so, Los Angeles would have been completely oblit"
+    ],
+    [
+     "114661875773869479",
+     "2025-06-10",
+     "Generations of Army heroes did not shed their blood on distant shores only to watch our Country be destroyed by invasion and Third World lawlessness here at home, like is happening"
+    ]
+   ]
+  },
+  {
+   "cluster": 2,
+   "start": "2025-06-16",
+   "end": "2025-06-29",
+   "weeks": 2,
+   "peak_week": "2025-06-23",
+   "count": 36,
+   "peak": 22,
+   "baseline_weekly": 3.0,
+   "ratio": 6.0,
+   "keywords": [
+    "israel iran",
+    "nuclear",
+    "bibi netanyahu",
+    "war",
+    "ceasefire",
+    "god bless"
+   ],
+   "examples": [
+    [
+     "114744772916804667",
+     "2025-06-25",
+     "Last weekend, the United States successfully carried out a massive precision strike on Iran's nuclear enrichment facilities, and it was very, very successful—It was called OBLITERA"
+    ],
+    [
+     "114734424268466099",
+     "2025-06-23",
+     "Iran has officially responded to our Obliteration of their Nuclear Facilities with a very weak response, which we expected, and have very effectively countered. There have been 14 "
+    ]
+   ]
+  },
+  {
+   "cluster": 1,
+   "start": "2025-06-23",
+   "end": "2025-06-29",
+   "weeks": 1,
+   "peak_week": "2025-06-23",
+   "count": 19,
+   "peak": 19,
+   "baseline_weekly": 4.5,
+   "ratio": 4.2,
+   "keywords": [
+    "fake news",
+    "news cnn",
+    "nuclear sites",
+    "news conference",
+    "pilots",
+    "demean"
+   ],
+   "examples": [
+    [
+     "114747234182168375",
+     "2025-06-25",
+     "FAKE NEWS CNN IS SO DISGUSTING AND INCOMPETENT. SOME OF THE DUMBEST ANCHORS IN THE BUSINESS!"
+    ],
+    [
+     "114750055630968441",
+     "2025-06-26",
+     "FAKE NEWS REPORTERS FROM CNN & THE NEW YORK TIMES SHOULD BE FIRED, IMMEDIATELY!!! BAD PEOPLE WITH EVIL INTENTIONS!!!"
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2025-06-23",
+   "end": "2025-07-06",
+   "weeks": 2,
+   "peak_week": "2025-06-23",
+   "count": 39,
+   "peak": 23,
+   "baseline_weekly": 7.0,
+   "ratio": 2.8,
+   "keywords": [
+    "beautiful",
+    "tax",
+    "history",
+    "earth",
+    "sen",
+    "cuts"
+   ],
+   "examples": [
+    [
+     "114779394158777330",
+     "2025-07-01",
+     "Almost all of our Great Republicans in the United States Senate have passed our \"ONE, BIG, BEAUTIFUL BILL.\" It is no longer a \"House Bill\" or a \"Senate Bill\". It is everyone's Bill"
+    ],
+    [
+     "114784315952739682",
+     "2025-07-02",
+     "Congressman Jason Smith: \"We are gonna get the One, Big, Beautiful Bill passed and to your desk! This will be for the people who don't have lobbyists in this town. The farmers, the"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2025-06-30",
+   "end": "2025-07-06",
+   "weeks": 1,
+   "peak_week": "2025-06-30",
+   "count": 11,
+   "peak": 11,
+   "baseline_weekly": 4.0,
+   "ratio": 2.8,
+   "keywords": [
+    "wants",
+    "elon",
+    "ev mandate",
+    "nasa",
+    "run",
+    "jobs"
+   ],
+   "examples": [
+    [
+     "114777786069997459",
+     "2025-07-01",
+     "\"The One Big Beautiful Bill Slashes Deficits, National Debt While Unleashing Economic Growth\" https://www.whitehouse.gov/fact-sheets/2025/06/fact-sheet-president-trump-is-deliverin"
+    ],
+    [
+     "114789557961047863",
+     "2025-07-03",
+     "Job Creators Network CEO Alfredo Ortiz: \"Hats off to President Trump because this three-legged stool of his has really been powerful: The trade, taxes, and regulations together. It"
+    ]
+   ]
+  },
+  {
+   "cluster": 1,
+   "start": "2025-07-14",
+   "end": "2025-08-17",
+   "weeks": 5,
+   "peak_week": "2025-07-14",
+   "count": 73,
+   "peak": 21,
+   "baseline_weekly": 5.0,
+   "ratio": 2.9,
+   "keywords": [
+    "russia",
+    "schiff",
+    "jobs",
+    "fake",
+    "adam",
+    "wall"
+   ],
+   "examples": [
+    [
+     "114960298523087379",
+     "2025-08-02",
+     "\"NEW BOMBSHELLS IN THE RUSSIA COLLUSION HOAX\""
+    ],
+    [
+     "114863203348237352",
+     "2025-07-16",
+     "The Radical Left Democrats have hit pay dirt, again! Just like with the FAKE and fully discredited Steele Dossier, the lying 51 \"Intelligence\" Agents, the Laptop from Hell, which t"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2025-07-14",
+   "end": "2025-07-20",
+   "weeks": 1,
+   "peak_week": "2025-07-14",
+   "count": 12,
+   "peak": 12,
+   "baseline_weekly": 2.5,
+   "ratio": 4.8,
+   "keywords": [
+    "setting southern",
+    "secure record",
+    "record setting",
+    "southern border",
+    "low cheap",
+    "energy"
+   ],
+   "examples": [
+    [
+     "114876637907797002",
+     "2025-07-18",
+     "Congressman Tracey Mann is an incredible Representative for the wonderful people of Kansas' \n\"Big First\" Congressional District! A fifth generation Farmer, Tracey is a strong and e"
+    ],
+    [
+     "114876653599100275",
+     "2025-07-18",
+     "Congressman Mark Harris is a terrific Representative for the incredible people of North Carolina's 8th Congressional District! Mark has a strong Record of SUCCESS, and compelling s"
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2025-07-28",
+   "end": "2025-08-03",
+   "weeks": 1,
+   "peak_week": "2025-07-28",
+   "count": 16,
+   "peak": 16,
+   "baseline_weekly": 6.0,
+   "ratio": 2.7,
+   "keywords": [
+    "late",
+    "josh hawley",
+    "nominees",
+    "senator",
+    "job",
+    "august deadline"
+   ],
+   "examples": [
+    [
+     "114953428953267494",
+     "2025-08-01",
+     "STRONG DISSENTS ON FED BOARD. IT WILL ONLY GET STRONGER! \"TOO LATE!\""
+    ],
+    [
+     "114947541528857255",
+     "2025-07-31",
+     "Jerome \"Too Late\" Powell has done it again!!! He is TOO LATE, and actually, TOO ANGRY, TOO STUPID, & TOO POLITICAL, to have the job of Fed Chair. He is costing our Country TRILLION"
+    ]
+   ]
+  },
+  {
+   "cluster": 3,
+   "start": "2025-08-18",
+   "end": "2025-08-24",
+   "weeks": 1,
+   "peak_week": "2025-08-18",
+   "count": 10,
+   "peak": 10,
+   "baseline_weekly": 2.0,
+   "ratio": 5.0,
+   "keywords": [
+    "corrupt",
+    "north carolina",
+    "susan",
+    "york",
+    "james",
+    "district north"
+   ],
+   "examples": [
+    [
+     "115074852826314245",
+     "2025-08-22",
+     "I am pleased to nominate Susan Courtwright Rodriguez to serve as Judge on the United States District Court for the Western District of North Carolina. As a Magistrate Judge for the"
+    ],
+    [
+     "115074853922882875",
+     "2025-08-22",
+     "It is my Great Honor to announce the nomination of David Bragdon to serve as Judge on the United States District Court for the Middle District of North Carolina. A proud graduate o"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2025-08-18",
+   "end": "2025-08-24",
+   "weeks": 1,
+   "peak_week": "2025-08-18",
+   "count": 15,
+   "peak": 15,
+   "baseline_weekly": 2.0,
+   "ratio": 7.5,
+   "keywords": [
+    "continue secure",
+    "texas",
+    "low continue",
+    "dustin",
+    "energy",
+    "dan"
+   ],
+   "examples": [
+    [
+     "115057221353307566",
+     "2025-08-19",
+     "Highly Respected State Representative David Cook is running to represent the wonderful people of Texas Senate District 22. David has a strong Record of Success, and incredible supp"
+    ],
+    [
+     "115057226416192109",
+     "2025-08-19",
+     "Congressman Frank Lucas is an incredible Representative for the wonderful people of Oklahoma's 3rd Congressional District! A Fifth Generation Oklahoman, and lifelong Farmer and Ran"
+    ]
+   ]
+  },
+  {
+   "cluster": 6,
+   "start": "2025-08-25",
+   "end": "2025-08-31",
+   "weeks": 1,
+   "peak_week": "2025-08-25",
+   "count": 16,
+   "peak": 16,
+   "baseline_weekly": 4.5,
+   "ratio": 3.6,
+   "keywords": [
+    "dc",
+    "arrested",
+    "veterans",
+    "crime free",
+    "free zone",
+    "chicago"
+   ],
+   "examples": [
+    [
+     "115089457027851323",
+     "2025-08-25",
+     "The incompetent Mayor of Chicago just stated that, in DC, where crime has been brought down to almost nothing, there have been no murders in 9 days, something which hasn't happened"
+    ],
+    [
+     "115125330212310166",
+     "2025-08-31",
+     "DC IS NOW A CRIME FREE ZONE, IN JUST 12 DAYS!!! President DJT"
+    ]
+   ]
+  },
+  {
+   "cluster": 1,
+   "start": "2025-09-15",
+   "end": "2025-09-28",
+   "weeks": 2,
+   "peak_week": "2025-09-22",
+   "count": 21,
+   "peak": 12,
+   "baseline_weekly": 4.0,
+   "ratio": 2.6,
+   "keywords": [
+    "monaco",
+    "security",
+    "microsoft",
+    "january 6th",
+    "lisa",
+    "access"
+   ],
+   "examples": [
+    [
+     "115211918198289404",
+     "2025-09-15",
+     "Today, I have the Great Honor of bringing a $15 Billion Dollar Defamation and Libel Lawsuit against The New York Times, one of the worst and most degenerate newspapers in the Histo"
+    ],
+    [
+     "115277150178333751",
+     "2025-09-27",
+     "It was just revealed that the FBI had secretly placed, against all Rules, Regulations, Protocols, and Standards, 274 FBI Agents into the Crowd just prior to, and during, the Januar"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2025-10-13",
+   "end": "2025-11-09",
+   "weeks": 4,
+   "peak_week": "2025-11-03",
+   "count": 167,
+   "peak": 68,
+   "baseline_weekly": 2.0,
+   "ratio": 20.9,
+   "keywords": [
+    "secure border",
+    "election congressman",
+    "endorsement election",
+    "energy",
+    "congressional district",
+    "champion"
+   ],
+   "examples": [
+    [
+     "115431695569678615",
+     "2025-10-24",
+     "Congressman Andrew Clyde is doing a truly fantastic job representing the Great People of Georgia's 9th Congressional District!A Brave U.S. Navy Veteran, Andrew knows the Wisdom and"
+    ],
+    [
+     "115487452294166543",
+     "2025-11-03",
+     "Congressman Rob Wittman is doing a truly fantastic job representing the wonderful people of Virginia's 1st Congressional District! As the Vice Chairman of the House Armed Services "
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2025-11-03",
+   "end": "2025-11-09",
+   "weeks": 1,
+   "peak_week": "2025-11-03",
+   "count": 47,
+   "peak": 47,
+   "baseline_weekly": 6.0,
+   "ratio": 7.8,
+   "keywords": [
+    "terminate filibuster",
+    "energy",
+    "insurance companies",
+    "obamacare",
+    "democrats",
+    "democrat"
+   ],
+   "examples": [
+    [
+     "115495015896453646",
+     "2025-11-04",
+     "REPUBLICANS, TERMINATE THE FILIBUSTER! GET BACK TO PASSING LEGISLATION AND VOTER REFORM! President DJT"
+    ],
+    [
+     "115499168374068086",
+     "2025-11-05",
+     "It is time for Chuck Schumer and the Radical Democrat Congress to stop playing games with peoples' lives and to pass a clean funding bill, that they've done 30 times before — and t"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2025-12-01",
+   "end": "2025-12-07",
+   "weeks": 1,
+   "peak_week": "2025-12-01",
+   "count": 11,
+   "peak": 11,
+   "baseline_weekly": 2.0,
+   "ratio": 5.5,
+   "keywords": [
+    "vote vote",
+    "trever",
+    "van epps",
+    "matt van",
+    "judge",
+    "00"
+   ],
+   "examples": [
+    [
+     "115662369700704369",
+     "2025-12-04",
+     "Congressman John \"Judge\" Carter is a Fantastic Representative for the Great People of Texas' 31st Congressional District! \"Judge\" served over 20 years as a District Court Judge in "
+    ],
+    [
+     "115650472826053655",
+     "2025-12-02",
+     "I am asking all America First Patriots in Tennessee's 7th Congressional District to please GET OUT AND VOTE for a phenomenal Candidate and MAGA Warrior, Matt Van Epps! You can win "
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2025-12-15",
+   "end": "2025-12-21",
+   "weeks": 1,
+   "peak_week": "2025-12-15",
+   "count": 9,
+   "peak": 9,
+   "baseline_weekly": 2.0,
+   "ratio": 4.5,
+   "keywords": [
+    "matt",
+    "bruce",
+    "tony",
+    "secure",
+    "kevin",
+    "paul"
+   ],
+   "examples": [
+    [
+     "115742789211395317",
+     "2025-12-18",
+     "It is my Great Honor to endorse America First Patriot, Eric Flores, who is running to represent the wonderful people of Texas' 34th Congressional District. A Brave U.S. Army Vetera"
+    ],
+    [
+     "115742838603762912",
+     "2025-12-18",
+     "It is my Great Honor to endorse MAGA Warrior, Chris Gober, who is running to represent the wonderful people of Texas' 10th Congressional District. A Harvard Law School Graduate, an"
+    ]
+   ]
+  },
+  {
+   "cluster": 6,
+   "start": "2025-12-29",
+   "end": "2026-01-04",
+   "weeks": 1,
+   "peak_week": "2025-12-29",
+   "count": 11,
+   "peak": 11,
+   "baseline_weekly": 3.5,
+   "ratio": 3.1,
+   "keywords": [
+    "wish",
+    "republican",
+    "leaving",
+    "tina",
+    "numbers",
+    "peters"
+   ],
+   "examples": [
+    [
+     "115815610061050583",
+     "2025-12-31",
+     "Douglas Murray: Trump cleaned up crime in DC – and taught everyone a lesson in public safety: https://nypost.com/2025/12/18/opinion/douglas-murray-trump-cleaned-up-crime-in-dc-and-"
+    ],
+    [
+     "115815355325954705",
+     "2025-12-31",
+     "God Bless Tina Peters, who is now, for two years out of nine, sitting in a Colorado Maximum Security Prison, at the age of 73, and sick, for the \"crime\" of trying to stop the massi"
+    ]
+   ]
+  },
+  {
+   "cluster": 0,
+   "start": "2026-01-05",
+   "end": "2026-01-11",
+   "weeks": 1,
+   "peak_week": "2026-01-05",
+   "count": 13,
+   "peak": 13,
+   "baseline_weekly": 3.0,
+   "ratio": 4.3,
+   "keywords": [
+    "equipment",
+    "venezuela",
+    "military",
+    "defense",
+    "stock buybacks",
+    "oil"
+   ],
+   "examples": [
+    [
+     "115856078669121098",
+     "2026-01-07",
+     "I have just been informed that Venezuela is going to be purchasing ONLY American Made Products, with the money they receive from our new Oil Deal. These purchases will include, amo"
+    ],
+    [
+     "115855387946005468",
+     "2026-01-07",
+     "All United State Defense Contractors, and the Defense Industry as a whole, BEWARE: While we make the best Military Equipment in the World (No other Country is even close!), Defense"
+    ]
+   ]
+  },
+  {
+   "cluster": 2,
+   "start": "2026-01-12",
+   "end": "2026-01-18",
+   "weeks": 1,
+   "peak_week": "2026-01-12",
+   "count": 8,
+   "peak": 8,
+   "baseline_weekly": 3.0,
+   "ratio": 2.7,
+   "keywords": [
+    "nato",
+    "gaza",
+    "greenland",
+    "denmark",
+    "demilitarization",
+    "phase"
+   ],
+   "examples": [
+    [
+     "115919803174585205",
+     "2026-01-18",
+     "NATO has been telling Denmark, for 20 years, that \"you have to get the Russian threat away from Greenland.\" Unfortunately, Denmark has been unable to do anything about it. Now it i"
+    ],
+    [
+     "115893658269457561",
+     "2026-01-14",
+     "NATO: Tell Denmark to get them out of here, NOW! Two dogsleds won't do it! Only the USA can!!!Danish intel warned last year about Russian and Chinese military goals toward Greenlan"
+    ]
+   ]
+  },
+  {
+   "cluster": 6,
+   "start": "2026-01-12",
+   "end": "2026-01-25",
+   "weeks": 2,
+   "peak_week": "2026-01-19",
+   "count": 25,
+   "peak": 13,
+   "baseline_weekly": 3.5,
+   "ratio": 3.6,
+   "keywords": [
+    "minnesota",
+    "state",
+    "dollars",
+    "criminals",
+    "stolen",
+    "highly"
+   ],
+   "examples": [
+    [
+     "115951636521315703",
+     "2026-01-24",
+     "This is the gunman's gun, loaded (with two additional full magazines!), and ready to go – What is that all about? Where are the local Police? Why weren't they allowed to protect IC"
+    ],
+    [
+     "115928309252078004",
+     "2026-01-20",
+     "The Department of Homeland Security and ICE must start talking about the murderers and other criminals that they are capturing and taking out of the system. They are saving many in"
+    ]
+   ]
+  },
+  {
+   "cluster": 0,
+   "start": "2026-01-19",
+   "end": "2026-01-25",
+   "weeks": 1,
+   "peak_week": "2026-01-19",
+   "count": 10,
+   "peak": 10,
+   "baseline_weekly": 4.0,
+   "ratio": 2.5,
+   "keywords": [
+    "china",
+    "canada",
+    "golden dome",
+    "greenland",
+    "general",
+    "goods products"
+   ],
+   "examples": [
+    [
+     "115951048952031044",
+     "2026-01-24",
+     "The last thing the World needs is to have China take over Canada. It's NOT going to happen, or even come close to happening! Thank you for your attention to this matter. President "
+    ],
+    [
+     "115950424403894234",
+     "2026-01-24",
+     "If Governor Carney thinks he is going to make Canada a \"Drop Off Port\" for China to send goods and products into the United States, he is sorely mistaken. China will eat Canada ali"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-01-19",
+   "end": "2026-02-01",
+   "weeks": 2,
+   "peak_week": "2026-01-19",
+   "count": 40,
+   "peak": 26,
+   "baseline_weekly": 3.0,
+   "ratio": 6.7,
+   "keywords": [
+    "indiana",
+    "state",
+    "rino",
+    "law",
+    "district",
+    "border secure"
+   ],
+   "examples": [
+    [
+     "115963259137242895",
+     "2026-01-26",
+     "It is my Great Honor to endorse State Representative Michelle Davis, a REAL Republican running for Indiana's 41st State Senate District (which I won by 33 points!), against RINO in"
+    ],
+    [
+     "115964309300790101",
+     "2026-01-26",
+     "It is my Great Honor to endorse America First Patriot Tracey Powell, a fantastic Candidate for Indiana's 21st State Senate District (which I won by 24 points!). Tracey is running a"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-02-02",
+   "end": "2026-02-08",
+   "weeks": 1,
+   "peak_week": "2026-02-02",
+   "count": 14,
+   "peak": 14,
+   "baseline_weekly": 5.5,
+   "ratio": 2.5,
+   "keywords": [
+    "market national",
+    "tariffs predicting",
+    "driven tariffs",
+    "end term",
+    "hope supreme",
+    "security driven"
+   ],
+   "examples": [
+    [
+     "116037631258027415",
+     "2026-02-08",
+     "Record Stock Market, and National Security, driven by our Great TARIFFS. I am predicting 100,000 on the DOW by the end of my Term. REMEMBER, TRUMP WAS RIGHT ABOUT EVERYTHING! I hop"
+    ],
+    [
+     "116026945752955415",
+     "2026-02-06",
+     "Trump's most important achievement: https://www.washingtonexaminer.com/opinion/columnists/4356447/trump-most-important-achievement/"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-02-16",
+   "end": "2026-03-01",
+   "weeks": 2,
+   "peak_week": "2026-02-16",
+   "count": 51,
+   "peak": 27,
+   "baseline_weekly": 3.5,
+   "ratio": 7.3,
+   "keywords": [
+    "texas",
+    "secure",
+    "district",
+    "indiana",
+    "cut taxes",
+    "energy"
+   ],
+   "examples": [
+    [
+     "116143521787584376",
+     "2026-02-27",
+     "It is my Great Honor to endorse America First Patriot, Eric Flores, who is running to represent the wonderful people of Texas' 34th Congressional District. A Brave U.S. Army Vetera"
+    ],
+    [
+     "116143525942565730",
+     "2026-02-27",
+     "It is my Great Honor to endorse Carlos De La Cruz, a fantastic America First Candidate running to be the next Congressman from Texas' 35th Congressional District! A Brave, 20 Year "
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-02-23",
+   "end": "2026-03-08",
+   "weeks": 2,
+   "peak_week": "2026-02-23",
+   "count": 52,
+   "peak": 26,
+   "baseline_weekly": 5.0,
+   "ratio": 5.2,
+   "keywords": [
+    "state union",
+    "maher",
+    "dinner",
+    "waste",
+    "401",
+    "calls"
+   ],
+   "examples": [
+    [
+     "116143278178305226",
+     "2026-02-27",
+     "President Trump Brilliant in Fourth State of the Union Address: https://amac.us/newsline/politics/president-trump-brilliant-in-fourth-state-of-the-union-address/"
+    ],
+    [
+     "116143270800377974",
+     "2026-02-27",
+     "5 unforgettable moments from Trump's record-breaking State of the Union address: https://www.foxnews.com/politics/5-unforgettable-moments-from-trumps-record-breaking-state-union-ad"
+    ]
+   ]
+  },
+  {
+   "cluster": 2,
+   "start": "2026-03-02",
+   "end": "2026-03-22",
+   "weeks": 3,
+   "peak_week": "2026-03-16",
+   "count": 50,
+   "peak": 19,
+   "baseline_weekly": 3.5,
+   "ratio": 4.8,
+   "keywords": [
+    "iran",
+    "hormuz",
+    "strait",
+    "middle east",
+    "matter",
+    "military"
+   ],
+   "examples": [
+    [
+     "116224324444349237",
+     "2026-03-13",
+     "Moments ago, at my direction, the United States Central Command executed one of the most powerful bombing raids in the History of the Middle East, and totally obliterated every MIL"
+    ],
+    [
+     "116229058692001771",
+     "2026-03-14",
+     "The United States of America has beaten and completely decimated Iran, both Militarily, Economically, and in every other way, but the Countries of the World that receive Oil throug"
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2026-03-02",
+   "end": "2026-03-08",
+   "weeks": 1,
+   "peak_week": "2026-03-02",
+   "count": 14,
+   "peak": 14,
+   "baseline_weekly": 4.5,
+   "ratio": 3.1,
+   "keywords": [
+    "save act",
+    "voters",
+    "clarity act",
+    "crypto",
+    "illness disability",
+    "order vote"
+   ],
+   "examples": [
+    [
+     "116177101048442216",
+     "2026-03-05",
+     "The Republicans MUST DO, with PASSION, and at the expense of everything else, THE SAVE AMERICA ACT - And not the watered down version. This is a Country Defining fight for the Soul"
+    ],
+    [
+     "116191986534889075",
+     "2026-03-08",
+     "PASS THE SAVE AMERICA ACT, NOW. It's all people care about!!!"
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2026-03-16",
+   "end": "2026-03-29",
+   "weeks": 2,
+   "peak_week": "2026-03-16",
+   "count": 19,
+   "peak": 10,
+   "baseline_weekly": 4.0,
+   "ratio": 2.4,
+   "keywords": [
+    "save act",
+    "deal",
+    "filibuster",
+    "ice",
+    "unless",
+    "democrats"
+   ],
+   "examples": [
+    [
+     "116261732231179804",
+     "2026-03-20",
+     "THE SAVE AMERICA ACT MUST BE PASSED BY THE SENATE. THERE IS NOTHING THAT IS MORE IMPORTANT FOR THE U.S.A. Voter I.D., Proof of Citizenship, etc. Get it done and watch all of the go"
+    ],
+    [
+     "116244486426312346",
+     "2026-03-17",
+     "The Save America Act is one of the most IMPORTANT & CONSEQUENTIAL pieces of legislation in the history of Congress, and America itself. NO MORE RIGGED ELECTIONS! Voter I.D., Proof "
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-03-23",
+   "end": "2026-03-29",
+   "weeks": 1,
+   "peak_week": "2026-03-23",
+   "count": 20,
+   "peak": 20,
+   "baseline_weekly": 4.5,
+   "ratio": 4.4,
+   "keywords": [
+    "indiana",
+    "state senate",
+    "state senator",
+    "senate district",
+    "protect hoosier",
+    "hoosier values"
+   ],
+   "examples": [
+    [
+     "116285893161347117",
+     "2026-03-24",
+     "It is my Great Honor to endorse America First Patriot Tracey Powell, a fantastic Candidate for Indiana's 21st State Senate District (which I won by 24 points!). Tracey is running a"
+    ],
+    [
+     "116285908636437489",
+     "2026-03-24",
+     "It is my Great Honor to endorse State Representative Michelle Davis, a REAL Republican running for Indiana's 41st State Senate District (which I won by 33 points!), against RINO in"
+    ]
+   ]
+  },
+  {
+   "cluster": 6,
+   "start": "2026-03-23",
+   "end": "2026-03-29",
+   "weeks": 1,
+   "peak_week": "2026-03-23",
+   "count": 8,
+   "peak": 8,
+   "baseline_weekly": 3.0,
+   "ratio": 2.7,
+   "keywords": [
+    "democrats",
+    "helping",
+    "airports",
+    "elections",
+    "ice patriots",
+    "tina"
+   ],
+   "examples": [
+    [
+     "116290465114134220",
+     "2026-03-25",
+     "Blame the Democrats for the Airport's mess. They want our Country to do badly. They want our Country to fail. They broke the already signed Bill because they want to take care of C"
+    ],
+    [
+     "116290799193660420",
+     "2026-03-25",
+     "I am so proud of our ICE Patriots! They were unfairly maligned by the Lunatic Democrats for years, and now, at the Airports, in addition to what they are supposed to be doing, they"
+    ]
+   ]
+  },
+  {
+   "cluster": 2,
+   "start": "2026-03-30",
+   "end": "2026-04-26",
+   "weeks": 4,
+   "peak_week": "2026-04-13",
+   "count": 85,
+   "peak": 27,
+   "baseline_weekly": 4.0,
+   "ratio": 5.3,
+   "keywords": [
+    "iran",
+    "strait hormuz",
+    "lebanon",
+    "blockade",
+    "navy",
+    "leaders"
+   ],
+   "examples": [
+    [
+     "116431297579272777",
+     "2026-04-19",
+     "Iran decided to fire bullets yesterday in the Strait of Hormuz — A Total Violation of our Ceasefire Agreement! Many of them were aimed at a French Ship, and a Freighter from the Un"
+    ],
+    [
+     "116420562510387829",
+     "2026-04-17",
+     "Iran has agreed to never close the Strait of Hormuz again. It will no longer be used as a weapon against the World! President DONALD J. TRUMP"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-04-06",
+   "end": "2026-04-12",
+   "weeks": 1,
+   "peak_week": "2026-04-06",
+   "count": 30,
+   "peak": 30,
+   "baseline_weekly": 4.5,
+   "ratio": 6.7,
+   "keywords": [
+    "indiana",
+    "state senate",
+    "hoosier values",
+    "protect hoosier",
+    "state senator",
+    "senate district"
+   ],
+   "examples": [
+    [
+     "116365303932078350",
+     "2026-04-07",
+     "It is my Great Honor to endorse Dr. Brian Schmutzler, a MAGA Warrior and REAL Republican running for Indiana's 11th State Senate District, against RINO incumbent Linda Rogers! A Pr"
+    ],
+    [
+     "116365255671979732",
+     "2026-04-07",
+     "It is my Great Honor to endorse Trevor De Vries, an America First Patriot and REAL Republican running for Indiana's 1st State Senate District, against RINO incumbent Dan Dernulc! A"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-04-13",
+   "end": "2026-04-26",
+   "weeks": 2,
+   "peak_week": "2026-04-13",
+   "count": 25,
+   "peak": 15,
+   "baseline_weekly": 5.0,
+   "ratio": 2.5,
+   "keywords": [
+    "birthright citizenship",
+    "tim cook",
+    "apple",
+    "tax",
+    "charlie",
+    "poll voters"
+   ],
+   "examples": [
+    [
+     "116473381652573189",
+     "2026-04-26",
+     "Trump push to restrain birthright citizenship gets ammo from unlikely source: liberal polling group: https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-bi"
+    ],
+    [
+     "116440126689763629",
+     "2026-04-20",
+     "Trump's historic rating with seniors boosted by tax deductions: https://justthenews.com/government/white-house/trumps-historic-high-rating-seniors-sweetened-tax-deductions"
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2026-04-20",
+   "end": "2026-04-26",
+   "weeks": 1,
+   "peak_week": "2026-04-20",
+   "count": 12,
+   "peak": 12,
+   "baseline_weekly": 5.0,
+   "ratio": 2.4,
+   "keywords": [
+    "justices",
+    "court",
+    "159 billion",
+    "cbd",
+    "plants",
+    "stick"
+   ],
+   "examples": [
+    [
+     "116449588860876736",
+     "2026-04-22",
+     "Senate Majority Leader John Thune, and Senator Lindsey Graham, have taken a critical first step to passing another Reconciliation Bill to fund our Great Border Patrol and ICE Agent"
+    ],
+    [
+     "116451781911005042",
+     "2026-04-22",
+     "DAVE BOSSIE: Senate Republicans Must Stand Tall And Pass SAVE America Act: https://dailycaller.com/2026/02/14/opinion-senate-republicans-must-stand-tall-and-pass-the-save-america-a"
+    ]
+   ]
+  },
+  {
+   "cluster": 5,
+   "start": "2026-05-11",
+   "end": "2026-05-17",
+   "weeks": 1,
+   "peak_week": "2026-05-11",
+   "count": 10,
+   "peak": 10,
+   "baseline_weekly": 3.0,
+   "ratio": 3.3,
+   "keywords": [
+    "million dollars",
+    "inaccurately",
+    "far superior",
+    "pool work",
+    "fix",
+    "washington"
+   ],
+   "examples": [
+    [
+     "116585301605450436",
+     "2026-05-16",
+     "The Reflecting Pool between the Lincoln Memorial and the Washington Monument, approximately 2,030 feet, versus the tallest buildings in the U.S.A. Obama and Biden spent more than 1"
+    ],
+    [
+     "116564128236086740",
+     "2026-05-12",
+     "If you'd like to see the construction of the Reflecting Pool located between the Washington Monument and the Lincoln Memorial, and look at the beginning of what will be the final s"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-05-18",
+   "end": "2026-05-24",
+   "weeks": 1,
+   "peak_week": "2026-05-18",
+   "count": 42,
+   "peak": 42,
+   "baseline_weekly": 8.5,
+   "ratio": 4.9,
+   "keywords": [
+    "19th vote",
+    "tuesday 19th",
+    "day tuesday",
+    "election day",
+    "voting location",
+    "location congressman"
+   ],
+   "examples": [
+    [
+     "116596878160158798",
+     "2026-05-18",
+     "Congressman Brett Guthrie is a Tremendous Champion for Kentucky's 2nd Congressional District! As the Chairman of the House Energy and Commerce Committee, Brett is working tirelessl"
+    ],
+    [
+     "116596882765269968",
+     "2026-05-18",
+     "It is my Great Honor to endorse America First Patriot, Ralph Alvarado, M.D., who is running to represent the incredible people of Kentucky's 6th Congressional District. A true frie"
+    ]
+   ]
+  },
+  {
+   "cluster": 5,
+   "start": "2026-05-25",
+   "end": "2026-06-07",
+   "weeks": 2,
+   "peak_week": "2026-05-25",
+   "count": 17,
+   "peak": 9,
+   "baseline_weekly": 3.0,
+   "ratio": 2.8,
+   "keywords": [
+    "judge cooper",
+    "millions dollars",
+    "kennedy center",
+    "building",
+    "institution",
+    "doing"
+   ],
+   "examples": [
+    [
+     "116660696782546784",
+     "2026-05-29",
+     "The Failing New York Times is doing everything possible to criticize the magnificent restoration of the Reflecting Pool, located between two of America's most important Landmarks, "
+    ],
+    [
+     "116704420579005040",
+     "2026-06-06",
+     "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very complex, but powerful, D"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-06-01",
+   "end": "2026-06-14",
+   "weeks": 2,
+   "peak_week": "2026-06-01",
+   "count": 52,
+   "peak": 27,
+   "baseline_weekly": 9.0,
+   "ratio": 2.9,
+   "keywords": [
+    "tuesday june",
+    "nevada",
+    "day tuesday",
+    "june 2nd",
+    "2nd vote",
+    "voting location"
+   ],
+   "examples": [
+    [
+     "116715619830723198",
+     "2026-06-08",
+     "It is my Great Honor to endorse America First Patriot, Marty O'Donnell, who is running to represent the incredible people of Nevada's 3rd Congressional District. Marty is running a"
+    ],
+    [
+     "116677931001186167",
+     "2026-06-01",
+     "It is my Great Honor to endorse America First Patriot, James Gallagher, who is running to represent the wonderful people of California's 1st Congressional District. A very successf"
+    ]
+   ]
+  },
+  {
+   "cluster": 5,
+   "start": "2026-06-15",
+   "end": "2026-06-21",
+   "weeks": 1,
+   "peak_week": "2026-06-15",
+   "count": 13,
+   "peak": 13,
+   "baseline_weekly": 3.0,
+   "ratio": 4.3,
+   "keywords": [
+    "reflecting pool",
+    "ball",
+    "arrested",
+    "begin immediately",
+    "work begin",
+    "vandalizing"
+   ],
+   "examples": [
+    [
+     "116784751146148991",
+     "2026-06-20",
+     "The United States Park Police have arrested multiple individuals for vandalizing our Nations magnificent Reflecting Pool. Who would do such a thing? These are very serious crimes h"
+    ],
+    [
+     "116785296448420208",
+     "2026-06-20",
+     "Many additional people have been arrested having to do with the disgraceful Vandalism of our beautiful Reflecting Pool. It hasn't looked or worked like this since 1922, when it was"
+    ]
+   ]
+  },
+  {
+   "cluster": 6,
+   "start": "2026-06-22",
+   "end": "2026-06-28",
+   "weeks": 1,
+   "peak_week": "2026-06-22",
+   "count": 9,
+   "peak": 9,
+   "baseline_weekly": 3.0,
+   "ratio": 3.0,
+   "keywords": [
+    "lance",
+    "experience",
+    "close",
+    "speaking",
+    "far",
+    "communists"
+   ],
+   "examples": [
+    [
+     "116817021244415806",
+     "2026-06-26",
+     "It was just announced that, and I'm not necessarily thrilled to be talking about it because it does not exactly sound NICE, the Trump Administration has the Highest Average Daily A"
+    ],
+    [
+     "116816990404292958",
+     "2026-06-26",
+     "For all of those who like to say that Barack Hussein Obama, and his Vice President, Sleepy Joe Biden, did as many Criminal ICE removals as President Trump, the figures are just in."
+    ]
+   ]
+  },
+  {
+   "cluster": 3,
+   "start": "2026-06-29",
+   "end": "2026-07-05",
+   "weeks": 1,
+   "peak_week": "2026-06-29",
+   "count": 10,
+   "peak": 10,
+   "baseline_weekly": 2.5,
+   "ratio": 4.0,
+   "keywords": [
+    "cronan",
+    "greg",
+    "power",
+    "slaughter",
+    "jason",
+    "sentencing commission"
+   ],
+   "examples": [
+    [
+     "116834854601794123",
+     "2026-06-29",
+     "Today's Historic Slaughter Decision by the Supreme Court is the Greatest Increase in Presidential Power in the last 100 years. Such a Monumental Ruling at such an important time! P"
+    ],
+    [
+     "116834086981971752",
+     "2026-06-29",
+     "To show the importance of the Slaughter Case, 90 years of precedent has been COMPLETELY AND UNEQUIVOCALLY OVERRULED, greatly increasing Presidential Power at a time when it is most"
+    ]
+   ]
+  },
+  {
+   "cluster": 5,
+   "start": "2026-06-29",
+   "end": "2026-07-05",
+   "weeks": 1,
+   "peak_week": "2026-06-29",
+   "count": 17,
+   "peak": 17,
+   "baseline_weekly": 3.5,
+   "ratio": 4.9,
+   "keywords": [
+    "el",
+    "statue",
+    "cannons",
+    "exhibition",
+    "honoring",
+    "dupont"
+   ],
+   "examples": [
+    [
+     "116835372963831103",
+     "2026-06-29",
+     "The Reflecting Pool, which suffered great damage due to the Vandals and Radical Left SCUM that hate our Country, has been, for the past two days, in full operation. It looks beauti"
+    ],
+    [
+     "116853549264630885",
+     "2026-07-02",
+     "I am thrilled to announce the opening of SPIRIT OF '76 at FREEDOM PLAZA, a new Exhibition in Washington, D.C., honoring the Heroes and Martyrs of the American Revolution. This Exhi"
+    ]
+   ]
+  },
+  {
+   "cluster": 7,
+   "start": "2026-06-29",
+   "end": "2026-07-05",
+   "weeks": 1,
+   "peak_week": "2026-06-29",
+   "count": 33,
+   "peak": 33,
+   "baseline_weekly": 8.5,
+   "ratio": 3.9,
+   "keywords": [
+    "declaration request",
+    "dollars disaster",
+    "approved given",
+    "disaster declaration",
+    "attention matter",
+    "request severe"
+   ],
+   "examples": [
+    [
+     "116841104752414661",
+     "2026-06-30",
+     "I just spoke with Senator Roger Marshall, and informed him that the Great State of Kansas has been approved to be given $5.5 Million Dollars in its Disaster Declaration Request for"
+    ],
+    [
+     "116841336987145523",
+     "2026-06-30",
+     "I just spoke with Congressman Tom Tiffany (who has my Complete and Total Endorsement for Governor!), and informed him that the Great State of Wisconsin has been approved to be give"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-06-29",
+   "end": "2026-07-05",
+   "weeks": 1,
+   "peak_week": "2026-06-29",
+   "count": 17,
+   "peak": 17,
+   "baseline_weekly": 5.0,
+   "ratio": 3.4,
+   "keywords": [
+    "children",
+    "micron",
+    "accounts",
+    "threat",
+    "communists",
+    "godless"
+   ],
+   "examples": [
+    [
+     "116868071918677461",
+     "2026-07-05",
+     "Trump says communism is the biggest threat facing America on eve of 250th birthday: https://www.washingtonexaminer.com/news/white-house/4627007/trump-communism-biggest-threat-facin"
+    ],
+    [
+     "116868074827104487",
+     "2026-07-05",
+     "'Freedom is the future': Trump warns Americans about the threat of 'hardcore, godless communists' on the rise: https://thepostmillennial.com/freedom-is-the-future-trump-warns-ameri"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-07-13",
+   "end": "2026-07-19",
+   "weeks": 1,
+   "peak_week": "2026-07-13",
+   "count": 27,
+   "peak": 27,
+   "baseline_weekly": 5.0,
+   "ratio": 5.4,
+   "keywords": [
+    "pennsylvania",
+    "defense",
+    "10 billion",
+    "national",
+    "rally",
+    "mall"
+   ],
+   "examples": [
+    [
+     "116912817965245012",
+     "2026-07-13",
+     "'America is back': Trump kicks off Great American State Fair with flyovers, patriotic National Mall speech: https://www.foxnews.com/politics/america-back-trump-kicks-off-great-amer"
+    ],
+    [
+     "116947973927079025",
+     "2026-07-19",
+     "Trump Announces Nearly $10 Billion in Defense Industrial Base Investments in Pennsylvania at McCormick's Summit: https://www.breitbart.com/politics/2026/07/15/trump-announces-nearl"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-07-27",
+   "end": "2026-08-09",
+   "weeks": 2,
+   "peak_week": "2026-07-27",
+   "count": 31,
+   "peak": 19,
+   "baseline_weekly": 4.5,
+   "ratio": 3.4,
+   "keywords": [
+    "fauci",
+    "georgia",
+    "communist",
+    "accounts",
+    "best",
+    "brian"
+   ],
+   "examples": [
+    [
+     "116997863543813488",
+     "2026-07-28",
+     "Trump Rallies in Georgia, Touting the Trump Accounts, New Policies, and Key Economic Wins: https://redstate.com/jenniferoo/2026/07/22/trump-campaigns-in-georgia-for-mike-collins-to"
+    ],
+    [
+     "116997864608476768",
+     "2026-07-28",
+     "ANDREW GIULIANI: How President Trump's World Cup vision showed America at its very best: https://www.foxnews.com/opinion/andrew-giuliani-president-trumps-world-cup-vision-showed-am"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-08-03",
+   "end": "2026-08-23",
+   "weeks": 3,
+   "peak_week": "2026-08-10",
+   "count": 152,
+   "peak": 62,
+   "baseline_weekly": 9.0,
+   "ratio": 5.6,
+   "keywords": [
+    "tuesday august",
+    "voting location",
+    "election day",
+    "vote",
+    "florida",
+    "state"
+   ],
+   "examples": [
+    [
+     "117034106669602255",
+     "2026-08-03",
+     "It is my Great Honor to endorse America First Patriot, Jon Maples, who is running to represent the fantastic people of Florida's 87th State House District! Jon is a very successful"
+    ],
+    [
+     "117101658723920664",
+     "2026-08-15",
+     "State Representative Jon Albert is doing a tremendous job representing the wonderful people of Florida's 48th State House District! From bravely fighting for the U.S. Marine Corps,"
+    ]
+   ]
+  },
+  {
+   "cluster": 3,
+   "start": "2026-08-17",
+   "end": "2026-08-23",
+   "weeks": 1,
+   "peak_week": "2026-08-17",
+   "count": 15,
+   "peak": 15,
+   "baseline_weekly": 2.0,
+   "ratio": 7.5,
+   "keywords": [
+    "oklahoma",
+    "district",
+    "judge",
+    "bobby",
+    "university",
+    "jesus"
+   ],
+   "examples": [
+    [
+     "117118691151954389",
+     "2026-08-18",
+     "I am proud to nominate Richard Bennett to serve as Judge on the United States District Court for the Southern District of Texas. Richard has dedicated his career to protecting the "
+    ],
+    [
+     "117129360852240314",
+     "2026-08-20",
+     "I am pleased to nominate Phil Axt to the U.S. District Court for the District of North Dakota. Phil is the Solicitor General of North Dakota, and has litigated numerous important c"
+    ]
+   ]
+  },
+  {
+   "cluster": 8,
+   "start": "2026-08-17",
+   "end": "2026-09-06",
+   "weeks": 3,
+   "peak_week": "2026-08-31",
+   "count": 64,
+   "peak": 25,
+   "baseline_weekly": 4.5,
+   "ratio": 4.7,
+   "keywords": [
+    "cheaper",
+    "darline graham",
+    "tax",
+    "senate",
+    "counter revolution",
+    "victor davis"
+   ],
+   "examples": [
+    [
+     "117174459750102004",
+     "2026-08-28",
+     "EXCLUSIVE: A First Look Inside Donald Trump's Dallas Midterm Convention: https://www.dailywire.com/news/exclusive-a-first-look-inside-donald-trumps-dallas-midterm-convention"
+    ],
+    [
+     "117227003669020660",
+     "2026-09-06",
+     "Trump cheers strong jobs report, calls for lower interest rates: https://justthenews.com/politics-policy/trump-cheers-strong-jobs-report-calls-lower-interest-rates"
+    ]
+   ]
+  },
+  {
+   "cluster": 0,
+   "start": "2026-08-24",
+   "end": "2026-09-06",
+   "weeks": 2,
+   "peak_week": "2026-08-24",
+   "count": 38,
+   "peak": 26,
+   "baseline_weekly": 4.5,
+   "ratio": 4.2,
+   "keywords": [
+    "lake",
+    "billion",
+    "canada",
+    "business",
+    "canadian",
+    "ontario"
+   ],
+   "examples": [
+    [
+     "117184800571598811",
+     "2026-08-30",
+     "Canadian businesses are pouring into the United States. We want to make our own cars, etc. That's what's going to happen. Canada has been ripping us off for years — NO LONGER! Pres"
+    ],
+    [
+     "117185864353206503",
+     "2026-08-30",
+     "Let all Canadian Companies that are doing business with America move to the United States, immediately. Many of them are Companies that moved out years ago due to stupid U.S. Leade"
+    ]
+   ]
+  },
+  {
+   "cluster": 7,
+   "start": "2026-09-21",
+   "end": "2026-09-27",
+   "weeks": 1,
+   "peak_week": "2026-09-21",
+   "count": 15,
+   "peak": 15,
+   "baseline_weekly": 7.5,
+   "ratio": 2.0,
+   "keywords": [
+    "china",
+    "mayors",
+    "copenhaver",
+    "peng",
+    "jim",
+    "xi"
+   ],
+   "examples": [
+    [
+     "117332812545704813",
+     "2026-09-25",
+     "President Xi and Madam Peng have just left D.C., heading for China. The meeting was one of Friendship, Strength, and Success, for both China and the U.S.A. We will be meeting again"
+    ],
+    [
+     "117310364553695688",
+     "2026-09-21",
+     "We are just leaving the White House Lawn on the maiden voyage from the newly built, and very beautiful, Heliport! I want to thank Jim Taiclet, CEO of Lockheed Martin, who made this"
+    ]
+   ]
+  }
+ ]
+}

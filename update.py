@@ -120,6 +120,7 @@ def build_site() -> None:
         "monthly": counts,
         "weeks": [w.strftime("%Y-%m-%d") for w in weeks],
         "weekly": {int(c): wc[c].tolist() for c in range(k)},
+        "events": json.loads((STATE / "events.json").read_text(encoding="utf-8")),
     }
     (DOCS / "weekly.json").write_text(json.dumps(weekly, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"weekly: {len(weeks)}주")
@@ -130,6 +131,8 @@ if __name__ == "__main__":
         bootstrap()
     else:
         print(f"신규 {add_new()}건")
+    import events
     import labels
     labels.main()
+    events.main()
     build_site()
