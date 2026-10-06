@@ -50,10 +50,17 @@ h2{margin:0;font-size:18px;font-weight:600}
 .mini{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:10px}
 .mini h3{margin:0;font-size:15px;font-weight:600}
 .mini .n{margin-left:auto;font-size:12px;color:var(--mute)}
-.mini p{margin:0;font-size:13px;color:var(--mute);line-height:1.5;min-height:39px}
+.mini .desc{margin:0;font-size:13px;color:var(--mute);line-height:1.5;min-height:39px}
 .bars{height:72px;display:flex;align-items:flex-end;gap:2px;border-bottom:1px solid var(--line2)}
 .bars div{flex:1;border-radius:1px 1px 0 0;min-height:1px}
 .kw{margin:0;font-size:12px;color:var(--sub);line-height:1.5;font-family:ui-monospace,Menlo,Consolas,monospace}
+.badges{display:flex;flex-wrap:wrap;gap:6px;font-size:11px}
+.badge{padding:2px 7px;border-radius:4px;background:var(--map);border:1px solid var(--line2);color:var(--sub)}
+.badge.warn{background:#FBE7DC;border-color:#F0C4AC;color:#8A2A0A}
+.ex{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:12px;line-height:1.5;color:var(--sub)}
+.ex li{border-left:2px solid var(--line2);padding-left:8px}
+.ex a{color:inherit;text-decoration:none}.ex a:hover{text-decoration:underline}
+.sim{font-size:12px;color:var(--mute);line-height:1.5}
 .axis{display:flex;justify-content:space-between;font-size:11px;color:var(--mute)}
 .insights{display:flex;flex-direction:column;gap:16px;max-width:760px;font-size:15px;line-height:1.8}
 .insights p{margin:0}
@@ -93,6 +100,7 @@ footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var
 <div class="head"><span class="topic" id="pTopic"></span><button type="button" class="x" id="pClose" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
 <div class="date" id="pDate"></div>
 <div class="text" id="pText"></div>
+<div class="sim" id="pSim"></div>
 <a id="pLink" target="_blank" rel="noopener" data-t="orig"></a>
 </div>
 </div>
@@ -116,18 +124,9 @@ footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var
 </div>
 
 <script>
-const T = [
-  {k:2,kw:'iran, war, strait, hormuz, nuclear',c:'#0F766E',ko:['이란·전쟁 외교','이란 핵시설·호르무즈 해협, 우크라이나·이스라엘, 정상 통화'],en:['Iran & war diplomacy','Iran nuclear sites, Strait of Hormuz, Ukraine, Israel, leader calls'],x:89.2,y:42.3},
-  {k:0,kw:'tariffs, china, trade, canada, billion',c:'#1F4FBF',ko:['관세·무역','관세 부과와 무역 협상, 철강·반도체 투자 유치'],en:['Tariffs & trade','Tariffs, trade deals, steel and chip investment'],x:74.8,y:59.4},
-  {k:4,kw:'total endorsement, election, congressional district, second amendment, secure',c:'#A16207',ko:['지지 선언','“Complete and Total Endorsement”, 공화당 후보 공개 지지'],en:['Endorsements','“Complete and Total Endorsement” of Republican candidates'],x:16.0,y:50.4},
-  {k:9,kw:'republicans, democrats, make america great, filibuster, save america act',c:'#0369A1',ko:['공화당·입법','공화당 결집, 필리버스터·예산안, 민주당 비판'],en:['GOP & legislation','Rallying Republicans, filibuster, budget, attacks on Democrats'],x:44.0,y:47.5},
-  {k:3,kw:'court, judge, supreme court, attorney, justice',c:'#7C3AED',ko:['법원·인사 지명','판사·검사 지명, 법원 판결, 법무부 개편'],en:['Courts & nominations','Judge and prosecutor nominations, rulings, DOJ overhaul'],x:32.5,y:41.1},
-  {k:6,kw:'crime, illegal, ice, criminals, border',c:'#B91C1C',ko:['범죄·이민 단속','ICE·불법이민 추방, 주방위군 투입, 범죄 대응'],en:['Crime & immigration','ICE deportations, National Guard deployments, crime'],x:50.0,y:35.0},
-  {k:1,kw:'fake news, fbi, biden, election, fraud',c:'#C2410C',ko:['언론·정적 공격','가짜뉴스, 정적·방송인, 선거 부정 주장'],en:['Attacks on media & rivals','“Fake news”, rivals and TV hosts, election-fraud claims'],x:41.0,y:29.0},
-  {k:8,kw:'president trump, exclusive, administration, says, elon',c:'#64748B',ko:['기사 헤드라인 공유','“Trump says…” 식 기사 제목을 본문에 옮겨 붙인 글'],en:['Shared headlines','Article headlines pasted as the post, “Trump says…”'],x:62.7,y:41.2},
-  {k:5,kw:'white house, ballroom, reflecting pool, kennedy center, construction',c:'#BE185D',ko:['백악관 공사','볼룸·반사연못·케네디센터 등 건축과 보수'],en:['White House construction','Ballroom, Reflecting Pool, Kennedy Center renovations'],x:55.8,y:87.6},
-  {k:7,kw:'thank, congratulations, honor, happy, great',c:'#15803D',ko:['축하·감사','임명 축하, 명절 인사, 방송 출연 예고'],en:['Thanks & greetings','Congratulations, holiday greetings, TV appearance notices'],x:54.6,y:59.2}
-];
+const ORDER = [2,0,4,9,3,6,1,8,5,7];
+let T = [];
+const byK = {};
 const S = {
   ko:{
     meta:'2025.01 – {end} · @realDonaldTrump · {total}건',
@@ -137,7 +136,7 @@ const S = {
     mapTitle:'메시지 지도', mapNote:'점 하나가 게시물 하나. 주제를 누르면 해당 글만 색이 뜬다. 점 위에 커서를 올리면 날짜와 주제가, 클릭하면 게시물 카드가 열린다.',
     all:'전체', period:'기간', periods:['전체 기간','2025','2026','최근 3개월'], unit:'건',
     orig:'원문 보기', et:'(미 동부)',
-    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~{max}건). 각 주제의 최다 월 막대는 짙게 표시했다. {lastm}은 {lastd}일까지.', kwNote:'키워드는 군집별 TF-IDF 상위어(일반어 제외)다. 주제 이름은 이 단어와 예시 글을 보고 붙인 해석이며, 군집 경계는 뚜렷하지 않다.', kw:'키워드', peak:'최다',
+    trendTitle:'주제별 월간 추이', trendNote:'같은 눈금(0~{max}건). 각 주제의 최다 월 막대는 짙게 표시했다. {lastm}은 {lastd}일까지.', kwNote:'주제 이름은 아래 키워드와 중심 게시물을 보고 붙인 해석이다(라벨 {lv}). 키워드는 c-TF-IDF 상위 8개(상투어 제외), 중심 게시물은 군집 중심에 가장 가까운 글이다. 응집도는 군집 평균 silhouette(코사인, -1~1), 경계는 차순위 군집과의 유사도 차이가 0.03 미만인 글의 비율이다. 응집도 0.05 미만은 해석 주의로 표시했다.', kw:'키워드', n:'n', coh:'응집도', bnd:'경계', caution:'해석 주의', ex:'중심 게시물', sim:'소속 군집 유사도', next:'차순위', boundary:'경계 게시물', simNote:'군집 중심과의 코사인 유사도이며 확률이 아니다.', peak:'최다',
     insTitle:'읽히는 것', insNote:'2026-10-06 기준 분석. 위 지도와 그래프는 매주 자동 갱신되지만 아래 문장은 그 시점의 수치다.',
     ins:[
       ['최고치는 지지 선언이 만들었다.','2026년 8월 게시물은 972건, 일평균 31.35건으로 취임 후 최다다. 그달 본문 글 522건 중 지지 선언이 162건(31.0%)으로 어느 군집, 어느 달보다 많았다.'],
@@ -147,7 +146,7 @@ const S = {
       ['범죄·이민에서 백악관 공사로.','범죄·이민 단속 군집은 2025년 9월 36건(19.8%), 2026년 1월 46건(15.9%)에서 2월 이후 월 10~23건으로 줄었다. 반대로 볼룸·반사연못 등 백악관 공사 이야기는 2025년 월 10건 안팎에서 2026년 5~8월 29~37건으로 늘었다.'],
       ['링크 대신 제목을 붙인다.','링크만 올린 글은 2025년 3월 251건에서 12월 이후 월 0~41건으로 줄었다. 같은 시기 기사 제목을 본문에 옮겨 적는 헤드라인 공유 군집은 2025년 9~11월 월 10~13건에서 2026년 7월 70건, 8월 68건으로 늘었다. 기사 공유 방식이 바뀐 것으로 보인다(추정).']
     ],
-    foot:'수집 {collected}(매주 자동 갱신) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social 아카이브</a> · 본문 있는 글 {n}건(이미지·링크 단독, 리트루스, 20자 미만 제외) · 임베딩 all-mpnet-base-v2(소문자화, 서명 제거) · 투영 t-SNE(cosine, perplexity 40) · 군집 k-means(k=10, silhouette 0.05: 경계가 뚜렷하지 않음) · 날짜는 미 동부 기준 · <a href="https://github.com/sechan9999/trump-truth-analysis">코드·데이터</a>'
+    foot:'수집 {collected}(매주 자동 갱신) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social 아카이브</a> · 본문 있는 글 {n}건(이미지·링크 단독, 리트루스, 20자 미만 제외) · 임베딩 all-mpnet-base-v2(소문자화, 서명 제거) · 투영 t-SNE(cosine, perplexity 40) · 군집 k-means(k=10, silhouette(코사인) {sil}: 경계가 뚜렷하지 않음) · 라벨 {lv}(<a href="https://github.com/sechan9999/trump-truth-analysis/blob/main/state/labels.json">변경 이력</a>) · 라벨 감사 미실시(<a href="https://github.com/sechan9999/trump-truth-analysis/blob/main/data/audit_sample.csv">표본 300건</a> 공개) · 날짜는 미 동부 기준 · <a href="https://github.com/sechan9999/trump-truth-analysis">코드·데이터</a>'
   },
   en:{
     meta:'2025.01 – {end} · @realDonaldTrump · {total} posts',
@@ -157,7 +156,7 @@ const S = {
     mapTitle:'Message map', mapNote:'Each dot is one post. Pick a topic to highlight its posts. Hover a dot for its date and topic; click it to open the post.',
     all:'All', period:'Period', periods:['All time','2025','2026','Last 3 months'], unit:' posts',
     orig:'View original', et:'(ET)',
-    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–{max} posts). Each topic’s peak month is shaded dark. {lastm} runs through day {lastd}.', kwNote:'Keywords are each cluster’s top TF-IDF terms, with generic words removed. Topic names are our reading of these words and sample posts; cluster boundaries are weak.', kw:'Keywords', peak:'Peak',
+    trendTitle:'Monthly trend by topic', trendNote:'Same scale (0–{max} posts). Each topic’s peak month is shaded dark. {lastm} runs through day {lastd}.', kwNote:'Topic names are our reading of the keywords and central posts below (labels {lv}). Keywords are the top 8 c-TF-IDF terms (boilerplate removed); central posts are those closest to the cluster centroid. Cohesion is the cluster’s mean silhouette (cosine, −1 to 1); boundary is the share of posts whose similarity to the next-closest cluster is within 0.03. Clusters with cohesion under 0.05 are flagged.', kw:'Keywords', n:'n', coh:'cohesion', bnd:'boundary', caution:'interpret with care', ex:'Central posts', sim:'Similarity to own cluster', next:'next', boundary:'boundary post', simNote:'Cosine similarity to cluster centroids, not a probability.', peak:'Peak',
     insTitle:'What stands out', insNote:'Analysis as of 2026-10-06. The map and charts above refresh weekly; the figures below are from that date.',
     ins:[
       ['Endorsements drove the peak.','August 2026 had 972 posts, 31.35 a day, the most since the inauguration. Of its 522 text posts, 162 (31.0%) were endorsements, more than any cluster in any month.'],
@@ -167,10 +166,9 @@ const S = {
       ['From crime and immigration to White House construction.','Crime & immigration peaked at 36 posts (19.8%) in September 2025 and 46 (15.9%) in January 2026, then fell to 10–23 a month. White House construction (the ballroom, the Reflecting Pool) rose from about 10 a month in 2025 to 29–37 in May–August 2026.'],
       ['Headlines instead of links.','Link-only posts fell from 251 in March 2025 to 0–41 a month after December. Over the same period the shared-headlines cluster, where an article title is pasted as the post, grew from 10–13 a month (September–November 2025) to 70 in July 2026 and 68 in August. The way articles are shared seems to have changed (inferred).']
     ],
-    foot:'Collected {collected} (refreshed weekly) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social archive</a> · {n} text posts (excluding image-only, link-only, ReTruths and posts under 20 characters) · Embedding all-mpnet-base-v2 (lowercased, sign-offs removed) · Projection t-SNE (cosine, perplexity 40) · Clusters k-means (k=10, silhouette 0.05: boundaries are weak) · Dates in US Eastern time · <a href="https://github.com/sechan9999/trump-truth-analysis">Code & data</a>'
+    foot:'Collected {collected} (refreshed weekly) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social archive</a> · {n} text posts (excluding image-only, link-only, ReTruths and posts under 20 characters) · Embedding all-mpnet-base-v2 (lowercased, sign-offs removed) · Projection t-SNE (cosine, perplexity 40) · Clusters k-means (k=10, silhouette (cosine) {sil}: boundaries are weak) · Labels {lv} (<a href="https://github.com/sechan9999/trump-truth-analysis/blob/main/state/labels.json">changelog</a>) · Label audit not yet done (<a href="https://github.com/sechan9999/trump-truth-analysis/blob/main/data/audit_sample.csv">300-post sample</a> published) · Dates in US Eastern time · <a href="https://github.com/sechan9999/trump-truth-analysis">Code & data</a>'
   }
 };
-const byK = {}; T.forEach(t => byK[t.k] = t);
 const PER = [[0,21],[0,11],[12,21],[19,21]];
 const st = {lang:'ko', topic:'all', period:0, data:null, sel:null};
 try { const l = localStorage.getItem('tts-lang'); if (l === 'en' || l === 'ko') st.lang = l; } catch(e) {}
@@ -183,8 +181,9 @@ function vals(){
   const d = D(), m = d.months, last = d.meta.last || '';
   let mx = 0; Object.values(d.counts).forEach(v => v.forEach(x => { if (x > mx) mx = x; }));
   const mon = last.length > 4 ? Math.round((new Date(last.replace(/\./g,'-')) - new Date('2025-01-20')) / 2629746000) : '…';
-  return {end: m.length ? m[m.length-1].replace('-','.') : '…', total: d.meta.total.toLocaleString(), n: d.meta.analyzed.toLocaleString(), mon, collected: d.meta.collected, max: Math.ceil(mx/10)*10 || 10, lastm: m.length ? short(m[m.length-1]) : '', lastd: +last.slice(8,10) || ''};
+  return {lv: d.labels ? d.labels.version : '', sil: d.stats ? d.stats.overall_silhouette.toFixed(2) : '', end: m.length ? m[m.length-1].replace('-','.') : '…', total: d.meta.total.toLocaleString(), n: d.meta.analyzed.toLocaleString(), mon, collected: d.meta.collected, max: Math.ceil(mx/10)*10 || 10, lastm: m.length ? short(m[m.length-1]) : '', lastd: +last.slice(8,10) || ''};
 }
+const esc = x => x.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const short = m => m.slice(2).replace('-','.');
 const fmt = (str, v) => str.replace(/\{(\w+)\}/g, (_, k) => v[k] ?? '');
 
@@ -209,7 +208,7 @@ function chips(){
   $('chips').querySelectorAll('button').forEach(b => b.onclick = () => { st.topic = b.dataset.k === 'all' ? 'all' : +b.dataset.k; chips(); labels(); draw(); });
   const sk = $('selKw');
   if (st.topic === 'all') sk.style.display = 'none';
-  else { sk.style.display = 'block'; sk.innerHTML = `${s.kw} · <span class="kw" style="font-size:13px">${byK[st.topic].kw}</span>`; }
+  else { sk.style.display = 'block'; sk.innerHTML = `${s.kw} · <span class="kw" style="font-size:13px">${byK[st.topic].st.keywords.join(', ')}</span>`; }
 }
 function periods(){
   $('periods').innerHTML = S[st.lang].periods.map((p,i) => `<button type="button" class="pbtn" data-i="${i}" aria-pressed="${st.period===i}">${p}</button>`).join('');
@@ -221,7 +220,7 @@ function grid(){
   $('grid').innerHTML = T.map(t => {
     const v = d.counts[t.k] || [], mx = Math.max(...v), top = v.indexOf(mx), n = v.reduce((a,b)=>a+b,0);
     const bars = v.map((x,m) => `<div title="${M[m]} ${x}${s.unit}" style="height:${x/top0*100}%;background:${t.c}${m===top?'':'59'}"></div>`).join('');
-    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p>${t[st.lang][1]}</p><p class="kw">${t.kw}</p><div class="bars">${bars}</div><div class="axis"><span>${M[0]}</span><span>${s.peak} ${M[top]} · ${mx}${s.unit}</span><span>${M[M.length-1]}</span></div></div>`;
+    return `<div class="mini"><div style="display:flex;align-items:center;gap:8px"><span class="dot" style="width:10px;height:10px;background:${t.c}"></span><h3>${t[st.lang][0]}</h3><span class="n">${n.toLocaleString()}${s.unit}</span></div><p class="desc">${t[st.lang][1]}</p><div class="badges"><span class="badge">${s.coh} ${t.st.cohesion.toFixed(2)}</span><span class="badge">${s.bnd} ${Math.round(t.st.boundary_share*100)}%</span>${t.st.cohesion < 0.05 ? `<span class="badge warn">${s.caution}</span>` : ''}</div><p class="kw">${t.st.keywords.join(', ')}</p><div class="bars">${bars}</div><div class="axis"><span>${M[0]}</span><span>${s.peak} ${M[top]} · ${mx}${s.unit}</span><span>${M[M.length-1]}</span></div><div class="note" style="font-size:12px">${s.ex}</div><ul class="ex">${t.st.exemplars.map(([id, x]) => `<li><a href="https://truthsocial.com/@realDonaldTrump/${id}" target="_blank" rel="noopener">${esc(x.length > 110 ? x.slice(0,110) + '…' : x)}</a></li>`).join('')}</ul></div>`;
   }).join('');
 }
 function labels(){
@@ -264,6 +263,8 @@ function card(){
   $('pTopic').textContent = t[st.lang][0]; $('pTopic').style.color = t.c;
   $('pDate').textContent = q[0] + ' ' + s.et + ' · Truth Social';
   $('pText').textContent = q[1];
+  const nx = byK[q[3]], bd = q[4] - q[5] < 0.03;
+  $('pSim').innerHTML = `${s.sim} ${q[4].toFixed(2)} · ${s.next} <span style="color:${nx.c}">${nx[st.lang][0]}</span> ${q[5].toFixed(2)}${bd ? ` · <strong>${s.boundary}</strong>` : ''}<br>${s.simNote}`;
   $('pLink').href = 'https://truthsocial.com/@realDonaldTrump/' + q[2];
   $('pLink').textContent = s.orig;
   $('post').style.display = 'flex';
@@ -288,7 +289,12 @@ document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => {
 $('theme').onclick = () => { document.documentElement.dataset.theme = isDark() ? 'light' : 'dark'; txt(); };
 let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(draw, 100); });
 txt();
-fetch('map_data.json', {cache: 'no-cache'}).then(r => r.json()).then(d => { st.data = d; txt(); }).catch(() => { $('count').textContent = 'data load failed'; });
+fetch('map_data.json', {cache: 'no-cache'}).then(r => r.json()).then(d => {
+  st.data = d;
+  T = ORDER.map(k => Object.assign({k, st: d.stats.clusters[k]}, d.labels.clusters[k]));
+  T.forEach(t => byK[t.k] = t);
+  txt();
+}).catch(() => { $('count').textContent = 'data load failed'; });
 </script>
 </body>
 </html>

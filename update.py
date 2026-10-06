@@ -69,7 +69,11 @@ def add_new() -> int:
 
 
 def build_site() -> None:
+    from labels import top2
     d = load_clustered()
+    emb = np.load(STATE / "emb.f16.npy").astype(np.float32)
+    s1, c2, s2 = top2(emb, np.load(STATE / "centroids.npy"), d["cluster"].to_numpy())
+    d["s1"], d["c2"], d["s2"] = s1.round(2), c2, s2.round(2)
     d["created_at"] = pd.to_datetime(d["created_at"], utc=True)
     d = d.sort_values("created_at").reset_index(drop=True)
     b = json.loads((STATE / "bounds.json").read_text(encoding="utf-8"))
@@ -84,13 +88,18 @@ def build_site() -> None:
     for c, m in zip(d["cluster"], d["month"]):
         counts[int(c)][mi[m]] += 1
     meta = json.loads((DATA / "meta.json").read_text(encoding="utf-8"))
+    labels = json.loads((STATE / "labels.json").read_text(encoding="utf-8"))
+    stats = json.loads((STATE / "cluster_stats.json").read_text(encoding="utf-8"))
     out = {
+        "labels": {"version": labels["version"], "date": labels["date"], "clusters": labels["clusters"]},
+        "stats": stats,
         "meta": {"collected": meta["collected_at"][:10], "total": meta["total"], "analyzed": len(d),
                  "last": et.iloc[-1]},
         "months": months,
         "counts": counts,
         "pts": [[x, y, int(c), mi[m]] for x, y, c, m in zip(d["x"], d["y"], d["cluster"], d["month"])],
-        "posts": [[t, (s[:220] + "…") if len(s) > 220 else s, i] for t, s, i in zip(et, d["text"], d["id"])],
+        "posts": [[t, (s[:220] + "…") if len(s) > 220 else s, i, int(c), float(a), float(b)]
+                  for t, s, i, c, a, b in zip(et, d["text"], d["id"], d["c2"], d["s1"], d["s2"])],
     }
     (DOCS / "map_data.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"site: {len(d)}건, {months[0]}~{months[-1]}")
@@ -101,4 +110,6 @@ if __name__ == "__main__":
         bootstrap()
     else:
         print(f"신규 {add_new()}건")
+    import labels
+    labels.main()
     build_site()

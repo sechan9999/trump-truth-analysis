@@ -1,0 +1,296 @@
+{
+ "overall_silhouette": 0.095,
+ "boundary_threshold": 0.03,
+ "clusters": {
+  "0": {
+   "n": 556,
+   "cohesion": 0.11,
+   "boundary_share": 0.122,
+   "keywords": [
+    "tariffs",
+    "tariff",
+    "trade",
+    "canada",
+    "china",
+    "countries",
+    "billion",
+    "companies"
+   ],
+   "exemplars": [
+    [
+     "115602969458348561",
+     "Despite the massive amount of money being made by the United States of America, Hundreds of Billions of Dollars, as a direct result of Tariffs being charged to "
+    ],
+    [
+     "114947373855664074",
+     "Tariffs are making America GREAT & RICH Again. They were successfully used against the USA for decades and, coupled with really dumb, pathetic, and crooked poli"
+    ],
+    [
+     "114472802068018414",
+     "Today is an incredible day for America as we deliver our first Fair, Open, and Reciprocal Trade Deal — Something our past Presidents never cared about. Together"
+    ]
+   ]
+  },
+  "1": {
+   "n": 764,
+   "cohesion": 0.009,
+   "boundary_share": 0.274,
+   "keywords": [
+    "fake news",
+    "york times",
+    "cnn",
+    "epstein",
+    "ratings",
+    "fbi",
+    "fraud",
+    "biden"
+   ],
+   "exemplars": [
+    [
+     "117338166998410817",
+     "Another Fake Story is that a very close friend of mine, a man I endorsed very early, Byron Donalds, is taking me off his website and Campaign materials. I won F"
+    ],
+    [
+     "114863203348237352",
+     "The Radical Left Democrats have hit pay dirt, again! Just like with the FAKE and fully discredited Steele Dossier, the lying 51 \"Intelligence\" Agents, the Lapto"
+    ],
+    [
+     "117184581053116309",
+     "Kristen Welker, the Unpopular \"Hostess\" of the once great Meet the Press, now considered Meet the Fake Press, just stated that Donald Trump has \"mixed results\" "
+    ]
+   ]
+  },
+  "2": {
+   "n": 538,
+   "cohesion": 0.152,
+   "boundary_share": 0.052,
+   "keywords": [
+    "iran",
+    "war",
+    "israel",
+    "strait",
+    "nuclear",
+    "hormuz",
+    "ukraine",
+    "deal"
+   ],
+   "exemplars": [
+    [
+     "116431297579272777",
+     "Iran decided to fire bullets yesterday in the Strait of Hormuz — A Total Violation of our Ceasefire Agreement! Many of them were aimed at a French Ship, and a F"
+    ],
+    [
+     "116629952973301768",
+     "One of the worst deals ever made by our Country was the Iran Nuclear Deal, put forth and signed into existence by Barack Hussein Obama and the rank amateurs of "
+    ],
+    [
+     "117023461141824050",
+     "The U.S.A. is locked and loaded and ready to go against the Islamic Republic of Iran, at levels of Military Terror, Strength, and Power not seen since World War"
+    ]
+   ]
+  },
+  "3": {
+   "n": 249,
+   "cohesion": 0.142,
+   "boundary_share": 0.08,
+   "keywords": [
+    "district court",
+    "serve judge",
+    "law",
+    "attorney",
+    "justice",
+    "judge district",
+    "university",
+    "nominate"
+   ],
+   "exemplars": [
+    [
+     "116558181455512054",
+     "I am pleased to announce the nomination of Daniel Traynor to serve as Judge on the United States Court of Appeals for the Eighth Circuit in North Dakota. During"
+    ],
+    [
+     "114462867354665095",
+     "It is my honor to nominate Joshua Divine to serve as Judge on the United States District Court for the Eastern and Western Districts of Missouri. Joshua has dev"
+    ],
+    [
+     "115074852826314245",
+     "I am pleased to nominate Susan Courtwright Rodriguez to serve as Judge on the United States District Court for the Western District of North Carolina. As a Magi"
+    ]
+   ]
+  },
+  "4": {
+   "n": 974,
+   "cohesion": 0.296,
+   "boundary_share": 0.014,
+   "keywords": [
+    "secure",
+    "endorsement",
+    "second amendment",
+    "siege second",
+    "cut taxes",
+    "military veterans",
+    "energy dominance",
+    "congressional district"
+   ],
+   "exemplars": [
+    [
+     "116285866660628943",
+     "Bluffton City Councilman Blake Fiechter, a True America First Patriot, is running against \"RINO\" State Senator Travis Holdman, in Indiana's 19th Senate District"
+    ],
+    [
+     "115742629595806439",
+     "I am proud to, once again, endorse the GREAT Congressman from Tennessee's 7th Congressional District, Matt Van Epps. I strongly campaigned with Matt to defeat t"
+    ],
+    [
+     "116768665410839599",
+     "It is my Great Honor to endorse Congressman Blake Moore to represent the fantastic people of Utah's 2nd Congressional District!As the Vice Chairman of the House"
+    ]
+   ]
+  },
+  "5": {
+   "n": 264,
+   "cohesion": 0.14,
+   "boundary_share": 0.083,
+   "keywords": [
+    "white house",
+    "ballroom",
+    "reflecting pool",
+    "building",
+    "construction",
+    "washington",
+    "kennedy center",
+    "interior"
+   ],
+   "exemplars": [
+    [
+     "116704420579005040",
+     "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very comp"
+    ],
+    [
+     "117039600038088122",
+     "The very complex and expensive structure, being built for the United States Military, at the East Wing of the White House. This picture does not yet include the"
+    ],
+    [
+     "116138329055014050",
+     "Great news for America, and our wonderful White House! The Judge on the case of what will be the most beautiful Ballroom anywhere in the World, has just thrown "
+    ]
+   ]
+  },
+  "6": {
+   "n": 440,
+   "cohesion": 0.047,
+   "boundary_share": 0.22,
+   "keywords": [
+    "ice",
+    "criminals",
+    "illegal",
+    "crime",
+    "violent",
+    "chicago",
+    "mayor",
+    "federal"
+   ],
+   "exemplars": [
+    [
+     "115206570863756188",
+     "The Federal Government, under my auspices as President of the United States of America, has stepped into the complete criminal mess that was Washington, D.C., o"
+    ],
+    [
+     "115533666048445520",
+     "I am proud to announce that Chicago, Illinois, despite all of the radical opposition and obstruction we have from the Mayor and the Governor, has seen Car Theft"
+    ],
+    [
+     "114690267066155731",
+     "Our Nation's ICE Officers have shown incredible strength, determination, and courage as they facilitate a very important mission, the largest Mass Deportation O"
+    ]
+   ]
+  },
+  "7": {
+   "n": 945,
+   "cohesion": -0.003,
+   "boundary_share": 0.243,
+   "keywords": [
+    "congratulations",
+    "honor",
+    "happy",
+    "wonderful",
+    "god bless",
+    "pleased announce",
+    "white house",
+    "forward"
+   ],
+   "exemplars": [
+    [
+     "114223777905731606",
+     "It was my Great Honor to welcome Medal of Honor recipients this morning at the White House—HEROES!"
+    ],
+    [
+     "115068985647592045",
+     "You people are winners, and I just think it's such an honor to be with you—We're going to Make Washington, D.C. Great Again!"
+    ],
+    [
+     "116351956955900185",
+     "We have rescued the seriously wounded, and really brave, F-15 Crew Member/Officer, from deep inside the mountains of Iran. The Iranian Military was looking hard"
+    ]
+   ]
+  },
+  "8": {
+   "n": 691,
+   "cohesion": 0.044,
+   "boundary_share": 0.219,
+   "keywords": [
+    "administration",
+    "pro bono",
+    "elon",
+    "book",
+    "law firms",
+    "salena",
+    "exclusive",
+    "best"
+   ],
+   "exemplars": [
+    [
+     "114268708154085693",
+     "\"This is an exciting day, Liberation Day. This is the single greatest salvation, for not just small businesses, but for America. This country was traveling down"
+    ],
+    [
+     "114421928785432623",
+     "\"One hundred days ago, President Donald J. Trump returned to the White House with a clear mandate from the American people: restore American greatness, secure o"
+    ],
+    [
+     "114422033648855386",
+     "President Donald Trump once said, 'No dream is too big. No challenge is too great. Nothing we want for our future is beyond our reach.' At 100 days of his secon"
+    ]
+   ]
+  },
+  "9": {
+   "n": 658,
+   "cohesion": 0.028,
+   "boundary_share": 0.237,
+   "keywords": [
+    "republicans",
+    "democrats",
+    "republican",
+    "vote",
+    "save act",
+    "filibuster",
+    "senate",
+    "pass"
+   ],
+   "exemplars": [
+    [
+     "114616192602509494",
+     "Passing THE ONE, BIG, BEAUTIFUL BILL is a Historic Opportunity to turn our Country around after four disastrous years under Joe Biden. We will take a massive st"
+    ],
+    [
+     "114495946485549840",
+     "This week the Republicans are meeting in the Tax, Energy, and Agriculture Committees on major pieces of \"THE ONE, BIG, BEAUTIFUL BILL.\" Republicans need to UNIF"
+    ],
+    [
+     "114779394158777330",
+     "Almost all of our Great Republicans in the United States Senate have passed our \"ONE, BIG, BEAUTIFUL BILL.\" It is no longer a \"House Bill\" or a \"Senate Bill\". I"
+    ]
+   ]
+  }
+ }
+}

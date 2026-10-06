@@ -1,0 +1,21 @@
+{
+  "version": "v2",
+  "date": "2026-10-06",
+  "changelog": [
+    {"version": "v1", "date": "2026-10-06", "note": "all-mpnet-base-v2 + k-means(k=10) 군집에 수동 명명"},
+    {"version": "v2", "date": "2026-10-06", "note": "해석적 라벨 중립화: '언론·정적 공격' → '언론·정적 언급' (공격성을 측정한 기준이 없음). 군집 배정은 v1과 동일"}
+  ],
+  "naming": "기술적 명명 원칙: 무엇에 관한 글인지만 적고, 어조·의도(공격, 자찬 등)는 측정 근거가 생기기 전까지 라벨에 넣지 않는다.",
+  "clusters": {
+    "2": {"ko": ["이란·전쟁 외교", "이란 핵시설·호르무즈 해협, 우크라이나·이스라엘, 정상 통화"], "en": ["Iran & war diplomacy", "Iran nuclear sites, Strait of Hormuz, Ukraine, Israel, leader calls"], "c": "#0F766E", "x": 89.2, "y": 42.3},
+    "0": {"ko": ["관세·무역", "관세 부과와 무역 협상, 철강·반도체 투자 유치"], "en": ["Tariffs & trade", "Tariffs, trade deals, steel and chip investment"], "c": "#1F4FBF", "x": 74.8, "y": 59.4},
+    "4": {"ko": ["지지 선언", "“Complete and Total Endorsement”, 공화당 후보 공개 지지"], "en": ["Endorsements", "“Complete and Total Endorsement” of Republican candidates"], "c": "#A16207", "x": 16.0, "y": 50.4},
+    "9": {"ko": ["공화당·입법", "공화당 결집, 필리버스터·SAVE Act·예산안, 민주당 언급"], "en": ["GOP & legislation", "Republicans, filibuster, SAVE Act, budget, Democrats"], "c": "#0369A1", "x": 44.0, "y": 47.5},
+    "3": {"ko": ["법원·인사 지명", "판사·검사 지명, 법원 판결, 법무부"], "en": ["Courts & nominations", "Judge and prosecutor nominations, rulings, DOJ"], "c": "#7C3AED", "x": 32.5, "y": 41.1},
+    "6": {"ko": ["범죄·이민 단속", "ICE·불법이민 추방, 주방위군 투입, 범죄"], "en": ["Crime & immigration", "ICE deportations, National Guard deployments, crime"], "c": "#B91C1C", "x": 50.0, "y": 35.0},
+    "1": {"ko": ["언론·정적 언급", "가짜뉴스, 뉴욕타임스·CNN, 정적·방송인, 선거 부정 주장"], "en": ["Media & opponents", "“Fake news”, NYT and CNN, opponents and TV hosts, election-fraud claims"], "c": "#C2410C", "x": 41.0, "y": 29.0},
+    "8": {"ko": ["기사 헤드라인 공유", "“Trump says…” 식 기사 제목을 본문에 옮겨 붙인 글 (형식 기준 군집)"], "en": ["Shared headlines", "Article headlines pasted as the post (a format-based cluster)"], "c": "#64748B", "x": 62.7, "y": 41.2},
+    "5": {"ko": ["백악관 공사", "볼룸·반사연못·케네디센터 등 건축과 보수"], "en": ["White House construction", "Ballroom, Reflecting Pool, Kennedy Center renovations"], "c": "#BE185D", "x": 55.8, "y": 87.6},
+    "7": {"ko": ["축하·감사", "임명 축하, 명절 인사, 방송 출연 예고"], "en": ["Thanks & greetings", "Congratulations, holiday greetings, TV appearance notices"], "c": "#15803D", "x": 54.6, "y": 59.2}
+  }
+}
