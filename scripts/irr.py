@@ -36,7 +36,7 @@ def make() -> None:
     blind.to_csv(BLIND, index=False, encoding="utf-8-sig")
     print(f"blind sample: {len(blind)} posts → {BLIND.relative_to(ROOT)}")
     print(s.groupby("label").size().to_string())
-    print(f"1차 판정 중 Y: {(s['fits'] == 'Y').sum()}/{len(s)}")
+    print(f"최종 판정 중 Y: {(s['final_fits'] == 'Y').sum()}/{len(s)}")
 
 
 def kappa(a: np.ndarray, b: np.ndarray) -> float:
