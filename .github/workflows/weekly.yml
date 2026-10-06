@@ -42,12 +42,15 @@ jobs:
       - name: Assign new posts and build site data
         run: python update.py
 
+      - name: Battleground intervention index
+        run: python intervention.py
+
       - name: Commit and push
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/clustered.json data/posts.csv data/monthly.csv data/meta.json state docs/map_data.json
+          git add data/clustered.json data/posts.csv data/monthly.csv data/meta.json state docs/map_data.json docs/intervention.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
