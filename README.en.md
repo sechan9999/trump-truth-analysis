@@ -34,7 +34,7 @@ python scripts/export_weekly.py # hub export (message_index_weekly.json)
 | # | Topic | Posts | Cohesion |
 |---|---|---|---|
 | 4 | Endorsements | 974 | 0.30 |
-| 7 | Thanks & greetings | 945 | −0.00 * |
+| 7 | Thanks & greetings | 945 | 0.00 * |
 | 1 | Media & opponents | 764 | 0.01 * |
 | 8 | Shared headlines | 691 | 0.04 * |
 | 9 | GOP & legislation | 658 | 0.03 * |
@@ -49,7 +49,7 @@ python scripts/export_weekly.py # hub export (message_index_weekly.json)
 Topic names are interpretations based on keywords and central posts, and they follow a descriptive naming rule: a label says what a post is about, never its tone or intent, unless that is measured. v2 renamed "Attacks on media & rivals" to "Media & opponents" for this reason. "Shared headlines" is grouped by format, not by subject.
 
 ## Label evidence and quality (`labels.py`)
-- `state/labels.json`: label definitions with version and changelog.
+- `state/labels.json`: label definitions with version and changelog. A readable changelog is in [CHANGELOG.md](CHANGELOG.md).
 - `state/cluster_stats.json`: for each cluster, the top 8 c-TF-IDF keywords (BERTopic-style `reduce_frequent_words`, boilerplate removed), the 3 posts closest to the centroid, cohesion (mean cosine silhouette), and the boundary share (posts whose similarity to the next-closest cluster is within 0.03).
 - Each post card on the site shows the cosine similarity to its own cluster and to the runner-up. These are similarities, not probabilities.
 - `data/audit_sample.csv`: a fixed audit sample (30 posts per cluster, 300 total). The `fits` (Y/N) and `note` columns are for human review; the agreement rate will be published once they are filled in.

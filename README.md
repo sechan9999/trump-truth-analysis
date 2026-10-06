@@ -24,7 +24,7 @@ python embed.py 10      # data/clustered.json, clusters_report.json (기본 모�
 | # | 이름 (라벨 v2) | 건수 | 응집도 |
 |---|---|---|---|
 | 4 | 지지 선언 | 974 | 0.30 |
-| 7 | 축하·감사 | 945 | −0.00 * |
+| 7 | 축하·감사 | 945 | 0.00 * |
 | 1 | 언론·정적 언급 | 764 | 0.01 * |
 | 8 | 기사 헤드라인 공유 | 691 | 0.04 * |
 | 9 | 공화당·입법 | 658 | 0.03 * |
@@ -51,7 +51,7 @@ GitHub Actions(`.github/workflows/weekly.yml`)가 매주 월요일 09:00(KST) �
 군집 번호와 이름이 바뀌지 않도록 k-means·t-SNE는 다시 돌리지 않는다. 전면 재분석은 `python embed.py 10` 후 `python update.py --bootstrap`.
 
 ## 라벨 근거와 품질 (`labels.py`)
-- `state/labels.json`: 라벨 정의와 버전·변경 이력. 기술적 명명 원칙(어조·의도는 측정 근거 없이 라벨에 넣지 않음)
+- `state/labels.json`: 라벨 정의와 버전·변경 이력. 사람이 읽기 쉬운 변경 이력은 [CHANGELOG.md](CHANGELOG.md). 기술적 명명 원칙(어조·의도는 측정 근거 없이 라벨에 넣지 않음)
 - `state/cluster_stats.json`: 군집별 c-TF-IDF 키워드 8개(BERTopic `reduce_frequent_words` 방식, 상투어 제외), 중심 게시물 3개, 응집도(평균 silhouette, 코사인), 경계 비율(차순위 군집과 유사도 차 < 0.03)
 - 게시물별 소속·차순위 군집 유사도를 페이지 카드에 표시 (확률이 아닌 코사인 유사도)
 - `data/audit_sample.csv`: 라벨 감사용 고정 표본(군집당 30건, 총 300건). `fits`(Y/N)·`note` 칸을 사람이 채운 뒤 일치율을 공개할 예정
