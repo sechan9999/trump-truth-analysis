@@ -104,6 +104,26 @@ def build_site() -> None:
     (DOCS / "map_data.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"site: {len(d)}건, {months[0]}~{months[-1]}")
 
+    # 허브(US Election Insight Hub) '트럼프 메시지 분석' 탭용 경량 JSON: 게시물 원문·좌표 제외
+    wk = d["created_at"].dt.tz_convert("America/New_York").dt.tz_localize(None).dt.to_period("W-SUN").dt.start_time
+    weeks = pd.date_range(wk.min(), wk.max(), freq="7D")
+    wc = pd.crosstab(wk, d["cluster"]).reindex(index=weeks, columns=range(k), fill_value=0)
+    weekly = {
+        "schema": "truth-weekly/v1",
+        "site": "https://sechan9999.github.io/trump-truth-analysis/",
+        "meta": out["meta"],
+        "labels": out["labels"],
+        "stats": {"overall_silhouette": stats["overall_silhouette"], "boundary_threshold": stats["boundary_threshold"],
+                  "clusters": {c: {kk: v[kk] for kk in ("n", "cohesion", "boundary_share", "keywords")}
+                               for c, v in stats["clusters"].items()}},
+        "months": months,
+        "monthly": counts,
+        "weeks": [w.strftime("%Y-%m-%d") for w in weeks],
+        "weekly": {int(c): wc[c].tolist() for c in range(k)},
+    }
+    (DOCS / "weekly.json").write_text(json.dumps(weekly, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"weekly: {len(weeks)}주")
+
 
 if __name__ == "__main__":
     if "--bootstrap" in sys.argv:

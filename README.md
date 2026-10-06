@@ -51,6 +51,9 @@ GitHub Actions(`.github/workflows/weekly.yml`)가 매주 월요일 09:00(KST) �
 - 게시물별 소속·차순위 군집 유사도를 페이지 카드에 표시 (확률이 아닌 코사인 유사도)
 - `data/audit_sample.csv`: 라벨 감사용 고정 표본(군집당 30건, 총 300건). `fits`(Y/N)·`note` 칸을 사람이 채운 뒤 일치율을 공개할 예정
 
+## 허브용 주간 JSON
+`docs/weekly.json` (schema `truth-weekly/v1`, 약 8KB): 라벨·군집 통계·월별/주별 주제 건수. 게시물 원문과 좌표는 빼서 [US Election Insight Hub](https://github.com/sechan9999/us-election-insight-hub)의 '트럼프 메시지 분석' 탭이 가볍게 불러온다. → https://sechan9999.github.io/trump-truth-analysis/weekly.json
+
 ## 상원 경합주 개입 지수 (`intervention.py`, method v1)
 [US Election Insight Hub](https://github.com/sechan9999/us-election-insight-hub)에 넘기는 **기술적 맥락 지표**. 예측 모형 입력이 아니다.
 - 출력: `docs/intervention.json` → https://sechan9999.github.io/trump-truth-analysis/intervention.json (주 1회 갱신)

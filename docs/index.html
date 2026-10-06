@@ -16,6 +16,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans K
 a{color:var(--accent)}
 button{font:inherit;color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:40px 16px 80px;display:flex;flex-direction:column;gap:40px}
+.tabbar{display:flex;border-bottom:1px solid var(--line2)}
+.hubtab{display:inline-flex;align-items:center;min-height:40px;padding:8px 16px;margin-bottom:-1px;border:1px solid var(--line2);border-bottom-color:var(--bg);border-radius:8px 8px 0 0;background:var(--card);color:var(--ink);font-size:14px;font-weight:600;text-decoration:none}
+.hubtab:hover{color:var(--accent)}
 .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
 .meta{font-size:13px;letter-spacing:.04em;color:var(--mute)}
 .tools{display:flex;gap:8px}
@@ -69,6 +72,7 @@ footer{font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var
 </head>
 <body>
 <div class="wrap">
+<nav class="tabbar" aria-label="Related"><a class="hubtab" id="hubtab" href="https://us-election-insight-hub-38273401034.us-central1.run.app/us?lang=ko" target="_blank" rel="noopener" data-t="hub"></a></nav>
 <header style="display:flex;flex-direction:column;gap:14px">
 <div class="top">
 <div class="meta" data-t="meta"></div>
@@ -129,6 +133,7 @@ let T = [];
 const byK = {};
 const S = {
   ko:{
+    hub:'중간선거 예측 허브 →',
     meta:'2025.01 – {end} · @realDonaldTrump · {total}건',
     title:'트럼프 트루스소셜 게시물 분석.',
     lede:'2기 취임 후 {mon}개월치 게시물 {total}건 가운데 본문이 있는 {n}건을 문장 임베딩으로 2차원에 펼치고, 열 개 주제 군집으로 나눴다. 가까이 놓인 점일수록 비슷한 말을 한 글이다. 2026년 8월의 최고치가 무엇으로 채워졌는지, 관세 이야기가 어디로 사라졌는지가 이 지도에서 읽힌다.',
@@ -149,6 +154,7 @@ const S = {
     foot:'수집 {collected}(매주 자동 갱신) · <a href="https://ix.cnn.io/data/truth-social/truth_archive.json">CNN Truth Social 아카이브</a> · 본문 있는 글 {n}건(이미지·링크 단독, 리트루스, 20자 미만 제외) · 임베딩 all-mpnet-base-v2(소문자화, 서명 제거) · 투영 t-SNE(cosine, perplexity 40) · 군집 k-means(k=10, silhouette(코사인) {sil}: 경계가 뚜렷하지 않음) · 라벨 {lv}(<a href="https://github.com/sechan9999/trump-truth-analysis/blob/main/state/labels.json">변경 이력</a>) · 라벨 감사 미실시(<a href="https://github.com/sechan9999/trump-truth-analysis/blob/main/data/audit_sample.csv">표본 300건</a> 공개) · 날짜는 미 동부 기준 · <a href="https://github.com/sechan9999/trump-truth-analysis">코드·데이터</a>'
   },
   en:{
+    hub:'Midterm forecast hub →',
     meta:'2025.01 – {end} · @realDonaldTrump · {total} posts',
     title:'Trump’s Truth Social posts, analyzed.',
     lede:'Of {total} posts in the {mon} months since the second inauguration, the {n} with text were embedded, laid out in two dimensions and split into ten topic clusters. The closer two dots are, the more alike the posts. The map shows what filled the August 2026 peak, and where the tariff talk went.',
@@ -198,6 +204,7 @@ function txt(){
     else el.textContent = fmt(s[k], v);
   });
   document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === st.lang));
+  $('hubtab').href = 'https://us-election-insight-hub-38273401034.us-central1.run.app/us?lang=' + st.lang;
   $('insights').innerHTML = `<p class="note">${s.insNote}</p>` + s.ins.map(([h,b]) => `<p><strong>${h}</strong> ${b}</p>`).join('');
   chips(); periods(); grid(); labels(); draw(); card();
 }
