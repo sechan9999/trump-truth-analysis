@@ -6,60 +6,60 @@
  "matching_rules_version": "v2",
  "generated_from": "https://github.com/sechan9999/trump-truth-analysis",
  "coverage": {
-  "n_endorse_window": 31,
-  "mapped_share": 0.581,
-  "any_state_share": 1.0,
-  "n_mapped_battleground": 18.0,
+  "n_endorse_window": 40,
+  "mapped_share": 0.625,
+  "any_state_share": 0.975,
+  "n_mapped_battleground": 25.0,
   "by_rule": {
-   "none": 13,
-   "state_name": 10,
-   "candidate": 8
+   "none": 15,
+   "candidate": 13,
+   "state_name": 12
   }
  },
- "small_n": true,
+ "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.167,
+   "endorse_share": 0.16,
    "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
+   "n_endorse": 4.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 4.95,
-   "surge": false,
+   "z_vs_baseline": 4.74,
+   "surge": true,
    "rank": 2
   },
   "FL": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.59,
+   "z_vs_baseline": -0.65,
    "surge": false,
    "rank": 6
   },
   "GA": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.38,
+   "z_vs_baseline": -0.47,
    "surge": false,
    "rank": 6
   },
   "IA": {
-   "endorse_share": 0.111,
+   "endorse_share": 0.08,
    "dem_mention_share": 0.0,
    "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.45,
+   "z_vs_baseline": 0.17,
    "surge": false,
-   "rank": 3
+   "rank": 5
   },
   "KS": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.08,
+   "z_vs_baseline": -0.17,
    "surge": false,
    "rank": 6
   },
@@ -73,13 +73,13 @@
    "rank": 10
   },
   "MI": {
-   "endorse_share": 0.111,
+   "endorse_share": 0.16,
    "dem_mention_share": 1.0,
-   "n_endorse": 2.0,
+   "n_endorse": 4.0,
    "n_dem_mention": 1.0,
-   "z_vs_baseline": 0.61,
+   "z_vs_baseline": 1.12,
    "surge": false,
-   "rank": 3
+   "rank": 2
   },
   "MN": {
    "endorse_share": 0.0,
@@ -91,13 +91,13 @@
    "rank": 10
   },
   "NC": {
-   "endorse_share": 0.111,
+   "endorse_share": 0.12,
    "dem_mention_share": 0.0,
-   "n_endorse": 2.0,
+   "n_endorse": 3.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.17,
+   "z_vs_baseline": -0.12,
    "surge": false,
-   "rank": 3
+   "rank": 4
   },
   "NH": {
    "endorse_share": 0.0,
@@ -109,20 +109,20 @@
    "rank": 10
   },
   "OH": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.24,
+   "z_vs_baseline": -0.33,
    "surge": false,
    "rank": 6
   },
   "TX": {
-   "endorse_share": 0.278,
+   "endorse_share": 0.32,
    "dem_mention_share": 0.0,
-   "n_endorse": 5.0,
+   "n_endorse": 8.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.33,
+   "z_vs_baseline": 0.52,
    "surge": false,
    "rank": 1
   }
@@ -311,7 +311,7 @@
     1.0,
     0.0,
     2.0,
-    0.0
+    1.0
    ],
    "FL": [
     2.0,
@@ -863,7 +863,7 @@
     1.0,
     1.0,
     0.0,
-    0.0
+    2.0
    ],
    "MN": [
     0.0,
@@ -1047,7 +1047,7 @@
     2.0,
     0.0,
     0.0,
-    0.0
+    1.0
    ],
    "NH": [
     0.0,
@@ -1323,7 +1323,7 @@
     5.0,
     0.0,
     0.0,
-    0.0
+    3.0
    ]
   }
  },

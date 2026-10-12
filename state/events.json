@@ -24,7 +24,7 @@
     "jeanine",
     "maria",
     "attorney",
-    "eddie",
+    "zack",
     "cristian"
    ],
    "examples": [
@@ -85,9 +85,9 @@
     "district florida",
     "court",
     "judge florida",
+    "leigh",
     "jordan",
-    "paul",
-    "anne"
+    "emil"
    ],
    "examples": [
     [
@@ -178,8 +178,8 @@
     "fake news",
     "news cnn",
     "nuclear sites",
-    "news conference",
     "pilots",
+    "news conference",
     "demean"
    ],
    "examples": [
@@ -209,8 +209,8 @@
     "beautiful",
     "tax",
     "history",
-    "earth",
     "sen",
+    "earth",
     "cuts"
    ],
    "examples": [
@@ -273,7 +273,7 @@
     "jobs",
     "fake",
     "adam",
-    "wall"
+    "wall street"
    ],
    "examples": [
     [
@@ -426,8 +426,8 @@
     "dc",
     "arrested",
     "veterans",
-    "crime free",
     "free zone",
+    "crime free",
     "chicago"
    ],
    "examples": [
@@ -551,8 +551,8 @@
     "trever",
     "van epps",
     "matt van",
-    "judge",
-    "00"
+    "00",
+    "judge"
    ],
    "examples": [
     [
@@ -612,9 +612,9 @@
     "wish",
     "republican",
     "leaving",
-    "tina",
     "numbers",
-    "peters"
+    "tina peters",
+    "da"
    ],
    "examples": [
     [
@@ -703,9 +703,9 @@
    "ratio": 3.6,
    "keywords": [
     "minnesota",
-    "state",
     "dollars",
     "criminals",
+    "state",
     "stolen",
     "highly"
    ],
@@ -733,12 +733,12 @@
    "baseline_weekly": 4.0,
    "ratio": 2.5,
    "keywords": [
-    "china",
     "canada",
     "golden dome",
     "greenland",
     "general",
-    "goods products"
+    "china eat",
+    "discussions"
    ],
    "examples": [
     [
@@ -795,12 +795,12 @@
    "baseline_weekly": 5.5,
    "ratio": 2.5,
    "keywords": [
-    "market national",
-    "tariffs predicting",
     "driven tariffs",
-    "end term",
-    "hope supreme",
-    "security driven"
+    "dow end",
+    "supreme court",
+    "remember right",
+    "watching",
+    "term remember"
    ],
    "examples": [
     [
@@ -1076,8 +1076,8 @@
    "keywords": [
     "indiana",
     "state senate",
-    "hoosier values",
     "protect hoosier",
+    "hoosier values",
     "state senator",
     "senate district"
    ],
@@ -1106,11 +1106,11 @@
    "ratio": 2.5,
    "keywords": [
     "birthright citizenship",
-    "tim cook",
     "apple",
+    "tim cook",
     "tax",
-    "charlie",
-    "poll voters"
+    "housing suggest",
+    "polling group"
    ],
    "examples": [
     [
@@ -1168,8 +1168,8 @@
    "ratio": 3.3,
    "keywords": [
     "million dollars",
-    "inaccurately",
     "far superior",
+    "inaccurately",
     "pool work",
     "fix",
     "washington"
@@ -1198,8 +1198,8 @@
    "baseline_weekly": 8.5,
    "ratio": 4.9,
    "keywords": [
-    "19th vote",
     "tuesday 19th",
+    "19th vote",
     "day tuesday",
     "election day",
     "voting location",
@@ -1295,8 +1295,8 @@
     "ball",
     "arrested",
     "begin immediately",
-    "work begin",
-    "vandalizing"
+    "vandalizing",
+    "work begin"
    ],
    "examples": [
     [
@@ -1353,11 +1353,11 @@
    "baseline_weekly": 2.5,
    "ratio": 4.0,
    "keywords": [
-    "cronan",
     "greg",
     "power",
     "slaughter",
     "jason",
+    "judge cronan",
     "sentencing commission"
    ],
    "examples": [
@@ -1388,8 +1388,8 @@
     "statue",
     "cannons",
     "exhibition",
-    "honoring",
-    "dupont"
+    "rodney",
+    "honoring"
    ],
    "examples": [
     [
@@ -1415,9 +1415,9 @@
    "baseline_weekly": 8.5,
    "ratio": 3.9,
    "keywords": [
+    "approved given",
     "declaration request",
     "dollars disaster",
-    "approved given",
     "disaster declaration",
     "attention matter",
     "request severe"
@@ -1606,7 +1606,7 @@
     "tax",
     "senate",
     "counter revolution",
-    "victor davis"
+    "victor"
    ],
    "examples": [
     [

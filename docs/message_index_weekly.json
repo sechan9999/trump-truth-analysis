@@ -6,68 +6,68 @@
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "labels_version": "v2",
- "collected": "2026-10-06",
- "n_posts_total": 12069,
- "n_posts_analyzed": 6079,
+ "collected": "2026-10-12",
+ "n_posts_total": 12141,
+ "n_posts_analyzed": 6121,
  "silhouette_cosine": 0.095,
  "site": "https://sechan9999.github.io/trump-truth-analysis/",
  "coverage": {
-  "mapped_share": 0.581,
-  "any_state_share": 1.0,
-  "n_endorse_window": 31,
-  "n_mapped_battleground": 18.0
+  "mapped_share": 0.625,
+  "any_state_share": 0.975,
+  "n_endorse_window": 40,
+  "n_mapped_battleground": 25.0
  },
- "small_n": true,
+ "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.167,
+   "endorse_share": 0.16,
    "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
+   "n_endorse": 4.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 4.95,
+   "z_vs_baseline": 4.74,
    "rank": 2,
-   "surge": false,
-   "small_n": true
+   "surge": true,
+   "small_n": false
   },
   "FL": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.59,
+   "z_vs_baseline": -0.65,
    "rank": 6,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "GA": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.38,
+   "z_vs_baseline": -0.47,
    "rank": 6,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "IA": {
-   "endorse_share": 0.111,
+   "endorse_share": 0.08,
    "dem_mention_share": 0.0,
    "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.45,
-   "rank": 3,
+   "z_vs_baseline": 0.17,
+   "rank": 5,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "KS": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.08,
+   "z_vs_baseline": -0.17,
    "rank": 6,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "ME": {
    "endorse_share": 0.0,
@@ -77,17 +77,17 @@
    "z_vs_baseline": -0.33,
    "rank": 10,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "MI": {
-   "endorse_share": 0.111,
+   "endorse_share": 0.16,
    "dem_mention_share": 1.0,
-   "n_endorse": 2.0,
+   "n_endorse": 4.0,
    "n_dem_mention": 1.0,
-   "z_vs_baseline": 0.61,
-   "rank": 3,
+   "z_vs_baseline": 1.12,
+   "rank": 2,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "MN": {
    "endorse_share": 0.0,
@@ -97,17 +97,17 @@
    "z_vs_baseline": -0.42,
    "rank": 10,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "NC": {
-   "endorse_share": 0.111,
+   "endorse_share": 0.12,
    "dem_mention_share": 0.0,
-   "n_endorse": 2.0,
+   "n_endorse": 3.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.17,
-   "rank": 3,
+   "z_vs_baseline": -0.12,
+   "rank": 4,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "NH": {
    "endorse_share": 0.0,
@@ -117,27 +117,27 @@
    "z_vs_baseline": -0.23,
    "rank": 10,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "OH": {
-   "endorse_share": 0.056,
+   "endorse_share": 0.04,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.24,
+   "z_vs_baseline": -0.33,
    "rank": 6,
    "surge": false,
-   "small_n": true
+   "small_n": false
   },
   "TX": {
-   "endorse_share": 0.278,
+   "endorse_share": 0.32,
    "dem_mention_share": 0.0,
-   "n_endorse": 5.0,
+   "n_endorse": 8.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.33,
+   "z_vs_baseline": 0.52,
    "rank": 1,
    "surge": false,
-   "small_n": true
+   "small_n": false
   }
  },
  "topic_labels": {
@@ -175,7 +175,7 @@
    "ko": "지지 선언",
    "en": "Endorsements",
    "color": "#A16207",
-   "cohesion": 0.296,
+   "cohesion": 0.295,
    "caution": false,
    "keywords": [
     "secure",
@@ -205,7 +205,7 @@
    "ko": "법원·인사 지명",
    "en": "Courts & nominations",
    "color": "#7C3AED",
-   "cohesion": 0.142,
+   "cohesion": 0.141,
    "caution": false,
    "keywords": [
     "district court",
@@ -280,7 +280,7 @@
    "ko": "축하·감사",
    "en": "Thanks & greetings",
    "color": "#15803D",
-   "cohesion": -0.003,
+   "cohesion": -0.002,
    "caution": true,
    "keywords": [
     "congratulations",
@@ -569,15 +569,15 @@
   {
    "month": "2026-10",
    "tariffs_trade": 7,
-   "media_opponents": 9,
-   "iran_war": 2,
-   "courts_nominations": 3,
-   "endorsements": 8,
+   "media_opponents": 20,
+   "iran_war": 9,
+   "courts_nominations": 4,
+   "endorsements": 17,
    "white_house_construction": 3,
-   "crime_immigration": 4,
-   "thanks_greetings": 7,
-   "shared_headlines": 7,
-   "gop_legislation": 13
+   "crime_immigration": 7,
+   "thanks_greetings": 16,
+   "shared_headlines": 8,
+   "gop_legislation": 14
   }
  ],
  "annotations": [
@@ -797,7 +797,7 @@
      7.8,
      8.8,
      10.4,
-     11.1
+     6.7
     ],
     "trump_peak": "2025-04",
     "public": [
@@ -890,7 +890,7 @@
      4.2,
      4.4,
      4.0,
-     6.3
+     6.7
     ],
     "trump_peak": "2025-09",
     "public": [
@@ -1043,7 +1043,7 @@
      7.1,
      6.3,
      8.1,
-     3.2
+     8.6
     ],
     "trump_peak": "2026-04",
     "public": [
@@ -1136,7 +1136,7 @@
      10.4,
      6.3,
      8.1,
-     20.6
+     13.3
     ],
     "trump_peak": "2025-11",
     "public": [

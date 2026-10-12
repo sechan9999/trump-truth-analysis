@@ -32,9 +32,9 @@
    ]
   },
   "1": {
-   "n": 764,
+   "n": 775,
    "cohesion": 0.009,
-   "boundary_share": 0.274,
+   "boundary_share": 0.272,
    "keywords": [
     "fake news",
     "york times",
@@ -61,9 +61,9 @@
    ]
   },
   "2": {
-   "n": 538,
+   "n": 545,
    "cohesion": 0.152,
-   "boundary_share": 0.052,
+   "boundary_share": 0.055,
    "keywords": [
     "iran",
     "war",
@@ -72,7 +72,7 @@
     "nuclear",
     "hormuz",
     "ukraine",
-    "deal"
+    "middle"
    ],
    "exemplars": [
     [
@@ -90,9 +90,9 @@
    ]
   },
   "3": {
-   "n": 249,
-   "cohesion": 0.142,
-   "boundary_share": 0.08,
+   "n": 250,
+   "cohesion": 0.141,
+   "boundary_share": 0.084,
    "keywords": [
     "district court",
     "serve judge",
@@ -119,8 +119,8 @@
    ]
   },
   "4": {
-   "n": 974,
-   "cohesion": 0.296,
+   "n": 983,
+   "cohesion": 0.295,
    "boundary_share": 0.014,
    "keywords": [
     "secure",
@@ -134,7 +134,7 @@
    ],
    "exemplars": [
     [
-     "116285866660628943",
+     "116132655097895049",
      "Bluffton City Councilman Blake Fiechter, a True America First Patriot, is running against \"RINO\" State Senator Travis Holdman, in Indiana's 19th Senate District"
     ],
     [
@@ -177,9 +177,9 @@
    ]
   },
   "6": {
-   "n": 440,
+   "n": 443,
    "cohesion": 0.047,
-   "boundary_share": 0.22,
+   "boundary_share": 0.221,
    "keywords": [
     "ice",
     "criminals",
@@ -206,9 +206,9 @@
    ]
   },
   "7": {
-   "n": 945,
-   "cohesion": -0.003,
-   "boundary_share": 0.243,
+   "n": 954,
+   "cohesion": -0.002,
+   "boundary_share": 0.244,
    "keywords": [
     "congratulations",
     "honor",
@@ -235,9 +235,9 @@
    ]
   },
   "8": {
-   "n": 691,
+   "n": 692,
    "cohesion": 0.044,
-   "boundary_share": 0.219,
+   "boundary_share": 0.218,
    "keywords": [
     "administration",
     "pro bono",
@@ -264,9 +264,9 @@
    ]
   },
   "9": {
-   "n": 658,
+   "n": 659,
    "cohesion": 0.028,
-   "boundary_share": 0.237,
+   "boundary_share": 0.238,
    "keywords": [
     "republicans",
     "democrats",
