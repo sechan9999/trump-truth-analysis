@@ -24,8 +24,8 @@
     "jeanine",
     "maria",
     "attorney",
-    "zack",
-    "cristian"
+    "cristian",
+    "eddie"
    ],
    "examples": [
     [
@@ -85,9 +85,9 @@
     "district florida",
     "court",
     "judge florida",
-    "leigh",
-    "jordan",
-    "emil"
+    "anne leigh",
+    "paul",
+    "jordan"
    ],
    "examples": [
     [
@@ -149,7 +149,7 @@
     "bibi netanyahu",
     "war",
     "ceasefire",
-    "god bless"
+    "bless"
    ],
    "examples": [
     [
@@ -178,8 +178,8 @@
     "fake news",
     "news cnn",
     "nuclear sites",
-    "pilots",
     "news conference",
+    "pilots",
     "demean"
    ],
    "examples": [
@@ -273,7 +273,7 @@
     "jobs",
     "fake",
     "adam",
-    "wall street"
+    "wall"
    ],
    "examples": [
     [
@@ -365,8 +365,8 @@
     "north carolina",
     "susan",
     "york",
-    "james",
-    "district north"
+    "district north",
+    "business"
    ],
    "examples": [
     [
@@ -426,8 +426,8 @@
     "dc",
     "arrested",
     "veterans",
-    "free zone",
     "crime free",
+    "free zone",
     "chicago"
    ],
    "examples": [
@@ -549,8 +549,8 @@
    "keywords": [
     "vote vote",
     "trever",
-    "van epps",
     "matt van",
+    "van epps",
     "00",
     "judge"
    ],
@@ -612,9 +612,9 @@
     "wish",
     "republican",
     "leaving",
+    "tina",
     "numbers",
-    "tina peters",
-    "da"
+    "peters"
    ],
    "examples": [
     [
@@ -733,12 +733,12 @@
    "baseline_weekly": 4.0,
    "ratio": 2.5,
    "keywords": [
+    "china",
     "canada",
     "golden dome",
     "greenland",
     "general",
-    "china eat",
-    "discussions"
+    "eat"
    ],
    "examples": [
     [
@@ -795,12 +795,12 @@
    "baseline_weekly": 5.5,
    "ratio": 2.5,
    "keywords": [
+    "predicting 100",
+    "court watching",
+    "right hope",
+    "term remember",
     "driven tariffs",
-    "dow end",
-    "supreme court",
-    "remember right",
-    "watching",
-    "term remember"
+    "hope supreme"
    ],
    "examples": [
     [
@@ -1047,8 +1047,8 @@
     "strait hormuz",
     "lebanon",
     "blockade",
-    "navy",
-    "leaders"
+    "leaders",
+    "navy"
    ],
    "examples": [
     [
@@ -1106,11 +1106,11 @@
    "ratio": 2.5,
    "keywords": [
     "birthright citizenship",
-    "apple",
     "tim cook",
+    "apple",
     "tax",
-    "housing suggest",
-    "polling group"
+    "economy retail",
+    "calling"
    ],
    "examples": [
     [
@@ -1139,8 +1139,8 @@
     "justices",
     "court",
     "159 billion",
-    "cbd",
     "plants",
+    "cbd",
     "stick"
    ],
    "examples": [
@@ -1168,11 +1168,11 @@
    "ratio": 3.3,
    "keywords": [
     "million dollars",
-    "far superior",
     "inaccurately",
     "pool work",
+    "far superior",
     "fix",
-    "washington"
+    "reflecting pool"
    ],
    "examples": [
     [
@@ -1232,8 +1232,8 @@
     "judge cooper",
     "millions dollars",
     "kennedy center",
-    "building",
     "institution",
+    "building",
     "doing"
    ],
    "examples": [
@@ -1296,7 +1296,7 @@
     "arrested",
     "begin immediately",
     "vandalizing",
-    "work begin"
+    "250"
    ],
    "examples": [
     [
@@ -1355,8 +1355,8 @@
    "keywords": [
     "greg",
     "power",
-    "slaughter",
     "jason",
+    "slaughter",
     "judge cronan",
     "sentencing commission"
    ],
@@ -1388,8 +1388,8 @@
     "statue",
     "cannons",
     "exhibition",
-    "rodney",
-    "honoring"
+    "honoring",
+    "rodney"
    ],
    "examples": [
     [
@@ -1415,12 +1415,12 @@
    "baseline_weekly": 8.5,
    "ratio": 3.9,
    "keywords": [
-    "approved given",
     "declaration request",
     "dollars disaster",
+    "approved given",
     "disaster declaration",
     "attention matter",
-    "request severe"
+    "informed state"
    ],
    "examples": [
     [
@@ -1449,9 +1449,9 @@
     "children",
     "micron",
     "accounts",
+    "godless communists",
     "threat",
-    "communists",
-    "godless"
+    "higher"
    ],
    "examples": [
     [
@@ -1482,7 +1482,7 @@
     "10 billion",
     "national",
     "rally",
-    "mall"
+    "state fair"
    ],
    "examples": [
     [
@@ -1606,7 +1606,7 @@
     "tax",
     "senate",
     "counter revolution",
-    "victor"
+    "drone"
    ],
    "examples": [
     [
@@ -1633,8 +1633,8 @@
    "ratio": 4.2,
    "keywords": [
     "lake",
-    "billion",
     "canada",
+    "billion",
     "business",
     "canadian",
     "ontario"

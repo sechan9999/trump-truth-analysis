@@ -1,71 +1,71 @@
 {
  "schema": "message_index_weekly/v1",
- "week": "2026-10-05",
+ "week": "2026-10-12",
  "window_weeks": 4,
  "method_version": "v1.1",
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "labels_version": "v2",
- "collected": "2026-10-12",
- "n_posts_total": 12141,
- "n_posts_analyzed": 6121,
+ "collected": "2026-10-19",
+ "n_posts_total": 12302,
+ "n_posts_analyzed": 6176,
  "silhouette_cosine": 0.095,
  "site": "https://sechan9999.github.io/trump-truth-analysis/",
  "coverage": {
-  "mapped_share": 0.625,
-  "any_state_share": 0.975,
-  "n_endorse_window": 40,
-  "n_mapped_battleground": 25.0
+  "mapped_share": 0.636,
+  "any_state_share": 0.97,
+  "n_endorse_window": 33,
+  "n_mapped_battleground": 21.0
  },
  "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.16,
+   "endorse_share": 0.19,
    "dem_mention_share": 0.0,
    "n_endorse": 4.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 4.74,
+   "z_vs_baseline": 5.7,
    "rank": 2,
    "surge": true,
    "small_n": false
   },
   "FL": {
-   "endorse_share": 0.04,
+   "endorse_share": 0.0,
    "dem_mention_share": 0.0,
-   "n_endorse": 1.0,
+   "n_endorse": 0.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.65,
-   "rank": 6,
+   "z_vs_baseline": -0.82,
+   "rank": 8,
    "surge": false,
    "small_n": false
   },
   "GA": {
-   "endorse_share": 0.04,
+   "endorse_share": 0.048,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.47,
-   "rank": 6,
+   "z_vs_baseline": -0.42,
+   "rank": 7,
    "surge": false,
    "small_n": false
   },
   "IA": {
-   "endorse_share": 0.08,
+   "endorse_share": 0.143,
    "dem_mention_share": 0.0,
-   "n_endorse": 2.0,
+   "n_endorse": 3.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.17,
-   "rank": 5,
+   "z_vs_baseline": 0.74,
+   "rank": 4,
    "surge": false,
    "small_n": false
   },
   "KS": {
-   "endorse_share": 0.04,
-   "dem_mention_share": 0.0,
-   "n_endorse": 1.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.17,
-   "rank": 6,
+   "endorse_share": 0.0,
+   "dem_mention_share": 0.25,
+   "n_endorse": 0.0,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": -0.39,
+   "rank": 8,
    "surge": false,
    "small_n": false
   },
@@ -75,16 +75,16 @@
    "n_endorse": 0.0,
    "n_dem_mention": 0.0,
    "z_vs_baseline": -0.33,
-   "rank": 10,
+   "rank": 8,
    "surge": false,
    "small_n": false
   },
   "MI": {
-   "endorse_share": 0.16,
-   "dem_mention_share": 1.0,
+   "endorse_share": 0.19,
+   "dem_mention_share": 0.5,
    "n_endorse": 4.0,
-   "n_dem_mention": 1.0,
-   "z_vs_baseline": 1.12,
+   "n_dem_mention": 2.0,
+   "z_vs_baseline": 1.43,
    "rank": 2,
    "surge": false,
    "small_n": false
@@ -95,17 +95,17 @@
    "n_endorse": 0.0,
    "n_dem_mention": 0.0,
    "z_vs_baseline": -0.42,
-   "rank": 10,
+   "rank": 8,
    "surge": false,
    "small_n": false
   },
   "NC": {
-   "endorse_share": 0.12,
-   "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.12,
-   "rank": 4,
+   "endorse_share": 0.095,
+   "dem_mention_share": 0.25,
+   "n_endorse": 2.0,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": -0.26,
+   "rank": 5,
    "surge": false,
    "small_n": false
   },
@@ -115,26 +115,26 @@
    "n_endorse": 0.0,
    "n_dem_mention": 0.0,
    "z_vs_baseline": -0.23,
-   "rank": 10,
+   "rank": 8,
    "surge": false,
    "small_n": false
   },
   "OH": {
-   "endorse_share": 0.04,
+   "endorse_share": 0.095,
    "dem_mention_share": 0.0,
-   "n_endorse": 1.0,
+   "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.33,
-   "rank": 6,
+   "z_vs_baseline": -0.02,
+   "rank": 5,
    "surge": false,
    "small_n": false
   },
   "TX": {
-   "endorse_share": 0.32,
+   "endorse_share": 0.238,
    "dem_mention_share": 0.0,
-   "n_endorse": 8.0,
+   "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.52,
+   "z_vs_baseline": 0.16,
    "rank": 1,
    "surge": false,
    "small_n": false
@@ -145,7 +145,7 @@
    "ko": "이란·전쟁 외교",
    "en": "Iran & war diplomacy",
    "color": "#0F766E",
-   "cohesion": 0.152,
+   "cohesion": 0.151,
    "caution": false,
    "keywords": [
     "iran",
@@ -175,7 +175,7 @@
    "ko": "지지 선언",
    "en": "Endorsements",
    "color": "#A16207",
-   "cohesion": 0.295,
+   "cohesion": 0.293,
    "caution": false,
    "keywords": [
     "secure",
@@ -190,14 +190,14 @@
    "ko": "공화당·입법",
    "en": "GOP & legislation",
    "color": "#0369A1",
-   "cohesion": 0.028,
+   "cohesion": 0.027,
    "caution": true,
    "keywords": [
     "republicans",
     "democrats",
     "republican",
-    "vote",
-    "save act"
+    "save act",
+    "vote"
    ],
    "audit_fit_rate": 0.6
   },
@@ -205,7 +205,7 @@
    "ko": "법원·인사 지명",
    "en": "Courts & nominations",
    "color": "#7C3AED",
-   "cohesion": 0.141,
+   "cohesion": 0.139,
    "caution": false,
    "keywords": [
     "district court",
@@ -270,8 +270,8 @@
    "keywords": [
     "white house",
     "ballroom",
-    "reflecting pool",
     "building",
+    "reflecting pool",
     "construction"
    ],
    "audit_fit_rate": 0.833
@@ -286,8 +286,8 @@
     "congratulations",
     "honor",
     "happy",
-    "wonderful",
-    "god bless"
+    "announce",
+    "wonderful"
    ],
    "audit_fit_rate": 0.533
   }
@@ -568,16 +568,16 @@
   },
   {
    "month": "2026-10",
-   "tariffs_trade": 7,
-   "media_opponents": 20,
-   "iran_war": 9,
-   "courts_nominations": 4,
-   "endorsements": 17,
-   "white_house_construction": 3,
-   "crime_immigration": 7,
-   "thanks_greetings": 16,
-   "shared_headlines": 8,
-   "gop_legislation": 14
+   "tariffs_trade": 11,
+   "media_opponents": 23,
+   "iran_war": 15,
+   "courts_nominations": 7,
+   "endorsements": 29,
+   "white_house_construction": 7,
+   "crime_immigration": 13,
+   "thanks_greetings": 24,
+   "shared_headlines": 12,
+   "gop_legislation": 19
   }
  ],
  "annotations": [
@@ -797,7 +797,7 @@
      7.8,
      8.8,
      10.4,
-     6.7
+     6.9
     ],
     "trump_peak": "2025-04",
     "public": [
@@ -890,7 +890,7 @@
      4.2,
      4.4,
      4.0,
-     6.7
+     8.1
     ],
     "trump_peak": "2025-09",
     "public": [
@@ -1043,7 +1043,7 @@
      7.1,
      6.3,
      8.1,
-     8.6
+     9.4
     ],
     "trump_peak": "2026-04",
     "public": [
@@ -1136,7 +1136,7 @@
      10.4,
      6.3,
      8.1,
-     13.3
+     11.9
     ],
     "trump_peak": "2025-11",
     "public": [

@@ -3,9 +3,9 @@
  "boundary_threshold": 0.03,
  "clusters": {
   "0": {
-   "n": 556,
+   "n": 560,
    "cohesion": 0.11,
-   "boundary_share": 0.122,
+   "boundary_share": 0.121,
    "keywords": [
     "tariffs",
     "tariff",
@@ -14,7 +14,7 @@
     "china",
     "countries",
     "billion",
-    "companies"
+    "dollars"
    ],
    "exemplars": [
     [
@@ -32,9 +32,9 @@
    ]
   },
   "1": {
-   "n": 775,
+   "n": 778,
    "cohesion": 0.009,
-   "boundary_share": 0.272,
+   "boundary_share": 0.271,
    "keywords": [
     "fake news",
     "york times",
@@ -61,9 +61,9 @@
    ]
   },
   "2": {
-   "n": 545,
-   "cohesion": 0.152,
-   "boundary_share": 0.055,
+   "n": 551,
+   "cohesion": 0.151,
+   "boundary_share": 0.056,
    "keywords": [
     "iran",
     "war",
@@ -72,7 +72,7 @@
     "nuclear",
     "hormuz",
     "ukraine",
-    "middle"
+    "russia"
    ],
    "exemplars": [
     [
@@ -90,9 +90,9 @@
    ]
   },
   "3": {
-   "n": 250,
-   "cohesion": 0.141,
-   "boundary_share": 0.084,
+   "n": 253,
+   "cohesion": 0.139,
+   "boundary_share": 0.091,
    "keywords": [
     "district court",
     "serve judge",
@@ -119,9 +119,9 @@
    ]
   },
   "4": {
-   "n": 983,
-   "cohesion": 0.295,
-   "boundary_share": 0.014,
+   "n": 995,
+   "cohesion": 0.293,
+   "boundary_share": 0.017,
    "keywords": [
     "secure",
     "endorsement",
@@ -148,18 +148,18 @@
    ]
   },
   "5": {
-   "n": 264,
+   "n": 268,
    "cohesion": 0.14,
-   "boundary_share": 0.083,
+   "boundary_share": 0.082,
    "keywords": [
     "white house",
     "ballroom",
-    "reflecting pool",
     "building",
+    "reflecting pool",
     "construction",
     "washington",
-    "kennedy center",
-    "interior"
+    "interior",
+    "kennedy center"
    ],
    "exemplars": [
     [
@@ -177,9 +177,9 @@
    ]
   },
   "6": {
-   "n": 443,
+   "n": 449,
    "cohesion": 0.047,
-   "boundary_share": 0.221,
+   "boundary_share": 0.22,
    "keywords": [
     "ice",
     "criminals",
@@ -206,18 +206,18 @@
    ]
   },
   "7": {
-   "n": 954,
+   "n": 962,
    "cohesion": -0.002,
-   "boundary_share": 0.244,
+   "boundary_share": 0.243,
    "keywords": [
     "congratulations",
     "honor",
     "happy",
+    "announce",
     "wonderful",
     "god bless",
-    "pleased announce",
-    "white house",
-    "forward"
+    "pleased",
+    "white"
    ],
    "exemplars": [
     [
@@ -235,7 +235,7 @@
    ]
   },
   "8": {
-   "n": 692,
+   "n": 696,
    "cohesion": 0.044,
    "boundary_share": 0.218,
    "keywords": [
@@ -246,7 +246,7 @@
     "law firms",
     "salena",
     "exclusive",
-    "best"
+    "llp"
    ],
    "exemplars": [
     [
@@ -264,15 +264,15 @@
    ]
   },
   "9": {
-   "n": 659,
-   "cohesion": 0.028,
+   "n": 664,
+   "cohesion": 0.027,
    "boundary_share": 0.238,
    "keywords": [
     "republicans",
     "democrats",
     "republican",
-    "vote",
     "save act",
+    "vote",
     "filibuster",
     "senate",
     "pass"
