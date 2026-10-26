@@ -1,11 +1,11 @@
 {
- "overall_silhouette": 0.095,
+ "overall_silhouette": 0.093,
  "boundary_threshold": 0.03,
  "clusters": {
   "0": {
-   "n": 560,
+   "n": 565,
    "cohesion": 0.11,
-   "boundary_share": 0.121,
+   "boundary_share": 0.12,
    "keywords": [
     "tariffs",
     "tariff",
@@ -32,15 +32,15 @@
    ]
   },
   "1": {
-   "n": 778,
+   "n": 791,
    "cohesion": 0.009,
    "boundary_share": 0.271,
    "keywords": [
     "fake news",
-    "york times",
     "cnn",
-    "epstein",
+    "york times",
     "ratings",
+    "epstein",
     "fbi",
     "fraud",
     "biden"
@@ -61,9 +61,9 @@
    ]
   },
   "2": {
-   "n": 551,
+   "n": 557,
    "cohesion": 0.151,
-   "boundary_share": 0.056,
+   "boundary_share": 0.057,
    "keywords": [
     "iran",
     "war",
@@ -90,9 +90,9 @@
    ]
   },
   "3": {
-   "n": 253,
-   "cohesion": 0.139,
-   "boundary_share": 0.091,
+   "n": 257,
+   "cohesion": 0.143,
+   "boundary_share": 0.093,
    "keywords": [
     "district court",
     "serve judge",
@@ -119,9 +119,9 @@
    ]
   },
   "4": {
-   "n": 995,
-   "cohesion": 0.293,
-   "boundary_share": 0.017,
+   "n": 1047,
+   "cohesion": 0.278,
+   "boundary_share": 0.042,
    "keywords": [
     "secure",
     "endorsement",
@@ -148,14 +148,14 @@
    ]
   },
   "5": {
-   "n": 268,
+   "n": 276,
    "cohesion": 0.14,
-   "boundary_share": 0.082,
+   "boundary_share": 0.08,
    "keywords": [
     "white house",
     "ballroom",
-    "building",
     "reflecting pool",
+    "building",
     "construction",
     "washington",
     "interior",
@@ -177,9 +177,9 @@
    ]
   },
   "6": {
-   "n": 449,
-   "cohesion": 0.047,
-   "boundary_share": 0.22,
+   "n": 456,
+   "cohesion": 0.046,
+   "boundary_share": 0.224,
    "keywords": [
     "ice",
     "criminals",
@@ -206,18 +206,18 @@
    ]
   },
   "7": {
-   "n": 962,
-   "cohesion": -0.002,
-   "boundary_share": 0.243,
+   "n": 976,
+   "cohesion": -0.001,
+   "boundary_share": 0.244,
    "keywords": [
     "congratulations",
     "honor",
     "happy",
-    "announce",
     "wonderful",
     "god bless",
-    "pleased",
-    "white"
+    "pleased announce",
+    "white house",
+    "forward"
    ],
    "exemplars": [
     [
@@ -235,18 +235,18 @@
    ]
   },
   "8": {
-   "n": 696,
-   "cohesion": 0.044,
-   "boundary_share": 0.218,
+   "n": 708,
+   "cohesion": 0.043,
+   "boundary_share": 0.219,
    "keywords": [
     "administration",
-    "pro bono",
     "elon",
+    "pro bono",
     "book",
     "law firms",
     "salena",
     "exclusive",
-    "llp"
+    "biden"
    ],
    "exemplars": [
     [
@@ -264,18 +264,18 @@
    ]
   },
   "9": {
-   "n": 664,
-   "cohesion": 0.027,
-   "boundary_share": 0.238,
+   "n": 692,
+   "cohesion": 0.024,
+   "boundary_share": 0.241,
    "keywords": [
     "republicans",
     "democrats",
     "republican",
-    "save act",
     "vote",
+    "save act",
     "filibuster",
-    "senate",
-    "pass"
+    "dumocrats",
+    "senate"
    ],
    "exemplars": [
     [

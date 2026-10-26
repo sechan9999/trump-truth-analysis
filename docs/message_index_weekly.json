@@ -1,141 +1,141 @@
 {
  "schema": "message_index_weekly/v1",
- "week": "2026-10-12",
+ "week": "2026-10-19",
  "window_weeks": 4,
  "method_version": "v1.1",
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "labels_version": "v2",
- "collected": "2026-10-19",
- "n_posts_total": 12302,
- "n_posts_analyzed": 6176,
- "silhouette_cosine": 0.095,
+ "collected": "2026-10-26",
+ "n_posts_total": 12607,
+ "n_posts_analyzed": 6325,
+ "silhouette_cosine": 0.093,
  "site": "https://sechan9999.github.io/trump-truth-analysis/",
  "coverage": {
-  "mapped_share": 0.636,
-  "any_state_share": 0.97,
-  "n_endorse_window": 33,
-  "n_mapped_battleground": 21.0
+  "mapped_share": 0.494,
+  "any_state_share": 0.852,
+  "n_endorse_window": 81,
+  "n_mapped_battleground": 40.0
  },
  "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.19,
+   "endorse_share": 0.125,
    "dem_mention_share": 0.0,
-   "n_endorse": 4.0,
+   "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 5.7,
+   "z_vs_baseline": 3.63,
    "rank": 2,
    "surge": true,
    "small_n": false
   },
   "FL": {
-   "endorse_share": 0.0,
+   "endorse_share": 0.05,
    "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
+   "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.82,
+   "z_vs_baseline": -0.61,
    "rank": 8,
    "surge": false,
    "small_n": false
   },
   "GA": {
-   "endorse_share": 0.048,
+   "endorse_share": 0.025,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.42,
-   "rank": 7,
+   "z_vs_baseline": -0.56,
+   "rank": 9,
    "surge": false,
    "small_n": false
   },
   "IA": {
-   "endorse_share": 0.143,
+   "endorse_share": 0.125,
    "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
+   "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.74,
-   "rank": 4,
-   "surge": false,
-   "small_n": false
-  },
-  "KS": {
-   "endorse_share": 0.0,
-   "dem_mention_share": 0.25,
-   "n_endorse": 0.0,
-   "n_dem_mention": 1.0,
-   "z_vs_baseline": -0.39,
-   "rank": 8,
-   "surge": false,
-   "small_n": false
-  },
-  "ME": {
-   "endorse_share": 0.0,
-   "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.33,
-   "rank": 8,
-   "surge": false,
-   "small_n": false
-  },
-  "MI": {
-   "endorse_share": 0.19,
-   "dem_mention_share": 0.5,
-   "n_endorse": 4.0,
-   "n_dem_mention": 2.0,
-   "z_vs_baseline": 1.43,
+   "z_vs_baseline": 0.58,
    "rank": 2,
    "surge": false,
    "small_n": false
   },
-  "MN": {
-   "endorse_share": 0.0,
+  "KS": {
+   "endorse_share": 0.1,
+   "dem_mention_share": 0.333,
+   "n_endorse": 4.0,
+   "n_dem_mention": 2.0,
+   "z_vs_baseline": 0.16,
+   "rank": 6,
+   "surge": false,
+   "small_n": false
+  },
+  "ME": {
+   "endorse_share": 0.025,
    "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
+   "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.42,
-   "rank": 8,
+   "z_vs_baseline": 0.57,
+   "rank": 9,
+   "surge": false,
+   "small_n": false
+  },
+  "MI": {
+   "endorse_share": 0.15,
+   "dem_mention_share": 0.5,
+   "n_endorse": 6.0,
+   "n_dem_mention": 3.0,
+   "z_vs_baseline": 1.01,
+   "rank": 1,
+   "surge": false,
+   "small_n": false
+  },
+  "MN": {
+   "endorse_share": 0.025,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.15,
+   "rank": 9,
    "surge": false,
    "small_n": false
   },
   "NC": {
-   "endorse_share": 0.095,
-   "dem_mention_share": 0.25,
-   "n_endorse": 2.0,
+   "endorse_share": 0.1,
+   "dem_mention_share": 0.167,
+   "n_endorse": 4.0,
    "n_dem_mention": 1.0,
-   "z_vs_baseline": -0.26,
-   "rank": 5,
+   "z_vs_baseline": -0.23,
+   "rank": 6,
    "surge": false,
    "small_n": false
   },
   "NH": {
-   "endorse_share": 0.0,
+   "endorse_share": 0.025,
    "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
+   "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.23,
-   "rank": 8,
+   "z_vs_baseline": 1.97,
+   "rank": 9,
    "surge": false,
    "small_n": false
   },
   "OH": {
-   "endorse_share": 0.095,
+   "endorse_share": 0.125,
    "dem_mention_share": 0.0,
-   "n_endorse": 2.0,
+   "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.02,
-   "rank": 5,
+   "z_vs_baseline": 0.15,
+   "rank": 2,
    "surge": false,
    "small_n": false
   },
   "TX": {
-   "endorse_share": 0.238,
+   "endorse_share": 0.125,
    "dem_mention_share": 0.0,
    "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.16,
-   "rank": 1,
+   "z_vs_baseline": -0.34,
+   "rank": 2,
    "surge": false,
    "small_n": false
   }
@@ -175,7 +175,7 @@
    "ko": "지지 선언",
    "en": "Endorsements",
    "color": "#A16207",
-   "cohesion": 0.293,
+   "cohesion": 0.278,
    "caution": false,
    "keywords": [
     "secure",
@@ -190,14 +190,14 @@
    "ko": "공화당·입법",
    "en": "GOP & legislation",
    "color": "#0369A1",
-   "cohesion": 0.027,
+   "cohesion": 0.024,
    "caution": true,
    "keywords": [
     "republicans",
     "democrats",
     "republican",
-    "save act",
-    "vote"
+    "vote",
+    "save act"
    ],
    "audit_fit_rate": 0.6
   },
@@ -205,7 +205,7 @@
    "ko": "법원·인사 지명",
    "en": "Courts & nominations",
    "color": "#7C3AED",
-   "cohesion": 0.139,
+   "cohesion": 0.143,
    "caution": false,
    "keywords": [
     "district court",
@@ -220,7 +220,7 @@
    "ko": "범죄·이민 단속",
    "en": "Crime & immigration",
    "color": "#B91C1C",
-   "cohesion": 0.047,
+   "cohesion": 0.046,
    "caution": true,
    "keywords": [
     "ice",
@@ -239,10 +239,10 @@
    "caution": true,
    "keywords": [
     "fake news",
-    "york times",
     "cnn",
-    "epstein",
-    "ratings"
+    "york times",
+    "ratings",
+    "epstein"
    ],
    "audit_fit_rate": 0.667
   },
@@ -250,12 +250,12 @@
    "ko": "기사 헤드라인 공유",
    "en": "Shared headlines",
    "color": "#64748B",
-   "cohesion": 0.044,
+   "cohesion": 0.043,
    "caution": true,
    "keywords": [
     "administration",
-    "pro bono",
     "elon",
+    "pro bono",
     "book",
     "law firms"
    ],
@@ -270,8 +270,8 @@
    "keywords": [
     "white house",
     "ballroom",
-    "building",
     "reflecting pool",
+    "building",
     "construction"
    ],
    "audit_fit_rate": 0.833
@@ -280,14 +280,14 @@
    "ko": "축하·감사",
    "en": "Thanks & greetings",
    "color": "#15803D",
-   "cohesion": -0.002,
+   "cohesion": -0.001,
    "caution": true,
    "keywords": [
     "congratulations",
     "honor",
     "happy",
-    "announce",
-    "wonderful"
+    "wonderful",
+    "god bless"
    ],
    "audit_fit_rate": 0.533
   }
@@ -568,16 +568,16 @@
   },
   {
    "month": "2026-10",
-   "tariffs_trade": 11,
-   "media_opponents": 23,
-   "iran_war": 15,
-   "courts_nominations": 7,
-   "endorsements": 29,
-   "white_house_construction": 7,
-   "crime_immigration": 13,
-   "thanks_greetings": 24,
-   "shared_headlines": 12,
-   "gop_legislation": 19
+   "tariffs_trade": 16,
+   "media_opponents": 36,
+   "iran_war": 21,
+   "courts_nominations": 11,
+   "endorsements": 81,
+   "white_house_construction": 15,
+   "crime_immigration": 20,
+   "thanks_greetings": 38,
+   "shared_headlines": 24,
+   "gop_legislation": 47
   }
  ],
  "annotations": [
@@ -656,9 +656,9 @@
    "ratio": 5.6,
    "keywords": [
     "tuesday august",
-    "voting location",
     "election day",
-    "vote"
+    "voting location",
+    "florida"
    ]
   },
   {
@@ -797,7 +797,7 @@
      7.8,
      8.8,
      10.4,
-     6.9
+     5.2
     ],
     "trump_peak": "2025-04",
     "public": [
@@ -890,7 +890,7 @@
      4.2,
      4.4,
      4.0,
-     8.1
+     6.5
     ],
     "trump_peak": "2025-09",
     "public": [
@@ -1043,7 +1043,7 @@
      7.1,
      6.3,
      8.1,
-     9.4
+     6.8
     ],
     "trump_peak": "2026-04",
     "public": [
@@ -1136,7 +1136,7 @@
      10.4,
      6.3,
      8.1,
-     11.9
+     15.2
     ],
     "trump_peak": "2025-11",
     "public": [

@@ -1,130 +1,130 @@
 {
- "week": "2026-10-12",
+ "week": "2026-10-19",
  "window_weeks": 4,
  "method_version": "v1.1",
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "generated_from": "https://github.com/sechan9999/trump-truth-analysis",
  "coverage": {
-  "n_endorse_window": 33,
-  "mapped_share": 0.636,
-  "any_state_share": 0.97,
-  "n_mapped_battleground": 21.0,
+  "n_endorse_window": 81,
+  "mapped_share": 0.494,
+  "any_state_share": 0.852,
+  "n_mapped_battleground": 40.0,
   "by_rule": {
-   "candidate": 13,
-   "none": 12,
-   "state_name": 8
+   "none": 41,
+   "candidate": 21,
+   "state_name": 19
   }
  },
  "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.19,
+   "endorse_share": 0.125,
    "dem_mention_share": 0.0,
-   "n_endorse": 4.0,
+   "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 5.7,
+   "z_vs_baseline": 3.63,
    "surge": true,
    "rank": 2
   },
   "FL": {
-   "endorse_share": 0.0,
+   "endorse_share": 0.05,
    "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
+   "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.82,
+   "z_vs_baseline": -0.61,
    "surge": false,
    "rank": 8
   },
   "GA": {
-   "endorse_share": 0.048,
+   "endorse_share": 0.025,
    "dem_mention_share": 0.0,
    "n_endorse": 1.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.42,
+   "z_vs_baseline": -0.56,
    "surge": false,
-   "rank": 7
+   "rank": 9
   },
   "IA": {
-   "endorse_share": 0.143,
-   "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.74,
-   "surge": false,
-   "rank": 4
-  },
-  "KS": {
-   "endorse_share": 0.0,
-   "dem_mention_share": 0.25,
-   "n_endorse": 0.0,
-   "n_dem_mention": 1.0,
-   "z_vs_baseline": -0.39,
-   "surge": false,
-   "rank": 8
-  },
-  "ME": {
-   "endorse_share": 0.0,
-   "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.33,
-   "surge": false,
-   "rank": 8
-  },
-  "MI": {
-   "endorse_share": 0.19,
-   "dem_mention_share": 0.5,
-   "n_endorse": 4.0,
-   "n_dem_mention": 2.0,
-   "z_vs_baseline": 1.43,
-   "surge": false,
-   "rank": 2
-  },
-  "MN": {
-   "endorse_share": 0.0,
-   "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.42,
-   "surge": false,
-   "rank": 8
-  },
-  "NC": {
-   "endorse_share": 0.095,
-   "dem_mention_share": 0.25,
-   "n_endorse": 2.0,
-   "n_dem_mention": 1.0,
-   "z_vs_baseline": -0.26,
-   "surge": false,
-   "rank": 5
-  },
-  "NH": {
-   "endorse_share": 0.0,
-   "dem_mention_share": 0.0,
-   "n_endorse": 0.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.23,
-   "surge": false,
-   "rank": 8
-  },
-  "OH": {
-   "endorse_share": 0.095,
-   "dem_mention_share": 0.0,
-   "n_endorse": 2.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.02,
-   "surge": false,
-   "rank": 5
-  },
-  "TX": {
-   "endorse_share": 0.238,
+   "endorse_share": 0.125,
    "dem_mention_share": 0.0,
    "n_endorse": 5.0,
    "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.58,
+   "surge": false,
+   "rank": 2
+  },
+  "KS": {
+   "endorse_share": 0.1,
+   "dem_mention_share": 0.333,
+   "n_endorse": 4.0,
+   "n_dem_mention": 2.0,
    "z_vs_baseline": 0.16,
    "surge": false,
+   "rank": 6
+  },
+  "ME": {
+   "endorse_share": 0.025,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.57,
+   "surge": false,
+   "rank": 9
+  },
+  "MI": {
+   "endorse_share": 0.15,
+   "dem_mention_share": 0.5,
+   "n_endorse": 6.0,
+   "n_dem_mention": 3.0,
+   "z_vs_baseline": 1.01,
+   "surge": false,
    "rank": 1
+  },
+  "MN": {
+   "endorse_share": 0.025,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.15,
+   "surge": false,
+   "rank": 9
+  },
+  "NC": {
+   "endorse_share": 0.1,
+   "dem_mention_share": 0.167,
+   "n_endorse": 4.0,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": -0.23,
+   "surge": false,
+   "rank": 6
+  },
+  "NH": {
+   "endorse_share": 0.025,
+   "dem_mention_share": 0.0,
+   "n_endorse": 1.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 1.97,
+   "surge": false,
+   "rank": 9
+  },
+  "OH": {
+   "endorse_share": 0.125,
+   "dem_mention_share": 0.0,
+   "n_endorse": 5.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.15,
+   "surge": false,
+   "rank": 2
+  },
+  "TX": {
+   "endorse_share": 0.125,
+   "dem_mention_share": 0.0,
+   "n_endorse": 5.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.34,
+   "surge": false,
+   "rank": 2
   }
  },
  "series": {
@@ -219,7 +219,8 @@
    "2026-09-21",
    "2026-09-28",
    "2026-10-05",
-   "2026-10-12"
+   "2026-10-12",
+   "2026-10-19"
   ],
   "endorse_counts": {
    "AK": [
@@ -312,6 +313,7 @@
     1.0,
     0.0,
     2.0,
+    1.0,
     1.0,
     1.0
    ],
@@ -406,7 +408,8 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.0,
+    2.0
    ],
    "GA": [
     0.0,
@@ -499,7 +502,8 @@
     0.0,
     0.0,
     0.0,
-    1.0
+    1.0,
+    0.0
    ],
    "IA": [
     0.0,
@@ -592,7 +596,8 @@
     1.0,
     0.0,
     0.0,
-    2.0
+    2.0,
+    3.0
    ],
    "KS": [
     0.0,
@@ -685,7 +690,8 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.0,
+    4.0
    ],
    "ME": [
     0.0,
@@ -778,7 +784,8 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.0,
+    1.0
    ],
    "MI": [
     0.0,
@@ -871,7 +878,8 @@
     1.0,
     0.0,
     2.0,
-    1.0
+    1.0,
+    3.0
    ],
    "MN": [
     0.0,
@@ -964,7 +972,8 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.0,
+    1.0
    ],
    "NC": [
     0.0,
@@ -1057,7 +1066,8 @@
     0.0,
     0.0,
     1.0,
-    1.0
+    1.0,
+    2.0
    ],
    "NH": [
     0.0,
@@ -1150,7 +1160,8 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.0,
+    1.0
    ],
    "OH": [
     0.0,
@@ -1243,7 +1254,8 @@
     0.0,
     0.0,
     0.0,
-    2.0
+    2.0,
+    3.0
    ],
    "TX": [
     0.0,
@@ -1336,7 +1348,8 @@
     0.0,
     0.0,
     3.0,
-    2.0
+    2.0,
+    0.0
    ]
   }
  },

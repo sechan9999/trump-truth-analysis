@@ -24,8 +24,8 @@
     "jeanine",
     "maria",
     "attorney",
-    "cristian",
-    "eddie"
+    "zack",
+    "cristian"
    ],
    "examples": [
     [
@@ -55,8 +55,8 @@
     "endorsement",
     "military vets",
     "support",
-    "virginia",
-    "republican party"
+    "republican party",
+    "doing"
    ],
    "examples": [
     [
@@ -85,8 +85,8 @@
     "district florida",
     "court",
     "judge florida",
+    "emil",
     "anne leigh",
-    "paul",
     "jordan"
    ],
    "examples": [
@@ -180,7 +180,7 @@
     "nuclear sites",
     "news conference",
     "pilots",
-    "demean"
+    "times"
    ],
    "examples": [
     [
@@ -208,9 +208,9 @@
    "keywords": [
     "beautiful",
     "tax",
-    "history",
-    "sen",
     "earth",
+    "sen",
+    "history",
     "cuts"
    ],
    "examples": [
@@ -458,8 +458,8 @@
     "security",
     "microsoft",
     "january 6th",
-    "lisa",
-    "access"
+    "access",
+    "lisa"
    ],
    "examples": [
     [
@@ -612,9 +612,9 @@
     "wish",
     "republican",
     "leaving",
-    "tina",
     "numbers",
-    "peters"
+    "tina peters",
+    "colorado maximum"
    ],
    "examples": [
     [
@@ -733,12 +733,12 @@
    "baseline_weekly": 4.0,
    "ratio": 2.5,
    "keywords": [
-    "china",
     "canada",
     "golden dome",
     "greenland",
     "general",
-    "eat"
+    "china eat",
+    "discussions"
    ],
    "examples": [
     [
@@ -795,12 +795,12 @@
    "baseline_weekly": 5.5,
    "ratio": 2.5,
    "keywords": [
-    "predicting 100",
-    "court watching",
-    "right hope",
-    "term remember",
-    "driven tariffs",
-    "hope supreme"
+    "watching",
+    "market national",
+    "hope supreme",
+    "record stock",
+    "end term",
+    "remember right"
    ],
    "examples": [
     [
@@ -924,7 +924,7 @@
     "clarity act",
     "crypto",
     "illness disability",
-    "order vote"
+    "banks"
    ],
    "examples": [
     [
@@ -985,8 +985,8 @@
     "state senate",
     "state senator",
     "senate district",
-    "protect hoosier",
-    "hoosier values"
+    "hoosier values",
+    "protect hoosier"
    ],
    "examples": [
     [
@@ -1106,11 +1106,11 @@
    "ratio": 2.5,
    "keywords": [
     "birthright citizenship",
-    "tim cook",
     "apple",
+    "tim cook",
     "tax",
-    "economy retail",
-    "calling"
+    "citizenship gets",
+    "gets ammo"
    ],
    "examples": [
     [
@@ -1138,10 +1138,10 @@
    "keywords": [
     "justices",
     "court",
-    "159 billion",
-    "plants",
     "cbd",
-    "stick"
+    "159 billion",
+    "stick",
+    "plants"
    ],
    "examples": [
     [
@@ -1169,10 +1169,10 @@
    "keywords": [
     "million dollars",
     "inaccurately",
-    "pool work",
     "far superior",
+    "pool work",
     "fix",
-    "reflecting pool"
+    "construction"
    ],
    "examples": [
     [
@@ -1232,8 +1232,8 @@
     "judge cooper",
     "millions dollars",
     "kennedy center",
-    "institution",
     "building",
+    "institution",
     "doing"
    ],
    "examples": [
@@ -1294,9 +1294,9 @@
     "reflecting pool",
     "ball",
     "arrested",
-    "begin immediately",
     "vandalizing",
-    "250"
+    "250",
+    "military"
    ],
    "examples": [
     [
@@ -1389,7 +1389,7 @@
     "cannons",
     "exhibition",
     "honoring",
-    "rodney"
+    "dupont"
    ],
    "examples": [
     [
@@ -1415,9 +1415,9 @@
    "baseline_weekly": 8.5,
    "ratio": 3.9,
    "keywords": [
-    "declaration request",
-    "dollars disaster",
     "approved given",
+    "dollars disaster",
+    "declaration request",
     "disaster declaration",
     "attention matter",
     "informed state"
@@ -1481,7 +1481,7 @@
     "defense",
     "10 billion",
     "national",
-    "rally",
+    "kicks",
     "state fair"
    ],
    "examples": [
@@ -1540,11 +1540,11 @@
    "ratio": 5.6,
    "keywords": [
     "tuesday august",
-    "voting location",
     "election day",
-    "vote",
+    "voting location",
     "florida",
-    "state"
+    "state",
+    "18th"
    ],
    "examples": [
     [
@@ -1606,7 +1606,7 @@
     "tax",
     "senate",
     "counter revolution",
-    "drone"
+    "victor"
    ],
    "examples": [
     [
@@ -1680,6 +1680,68 @@
      "117310364553695688",
      "2026-09-21",
      "We are just leaving the White House Lawn on the maiden voyage from the newly built, and very beautiful, Heliport! I want to thank Jim Taiclet, CEO of Lockheed Martin, who made this"
+    ]
+   ]
+  },
+  {
+   "cluster": 4,
+   "start": "2026-10-19",
+   "end": "2026-10-25",
+   "weeks": 1,
+   "peak_week": "2026-10-19",
+   "count": 52,
+   "peak": 52,
+   "baseline_weekly": 9.0,
+   "ratio": 5.8,
+   "keywords": [
+    "vote",
+    "person",
+    "early",
+    "mail",
+    "ballot",
+    "polls right"
+   ],
+   "examples": [
+    [
+     "117487024484097038",
+     "2026-10-22",
+     "🚨 ALASKA! Early Voting, in-person, is UNDERWAY NOW in the Great State of Alaska. If you have a mail-in ballot, return it immediately and, if not, GO VOTE at the Polls RIGHT NOW, an"
+    ],
+    [
+     "117486973456365506",
+     "2026-10-22",
+     "🚨 VIRGINIA! Early Voting, in-person, is UNDERWAY NOW in the Great Commonwealth of Virginia. If you have a mail-in ballot, return it immediately and, if not, GO VOTE at the Polls RI"
+    ]
+   ]
+  },
+  {
+   "cluster": 9,
+   "start": "2026-10-19",
+   "end": "2026-10-25",
+   "weeks": 1,
+   "peak_week": "2026-10-19",
+   "count": 28,
+   "peak": 28,
+   "baseline_weekly": 6.5,
+   "ratio": 4.3,
+   "keywords": [
+    "early",
+    "vote",
+    "person",
+    "ballot",
+    "mail",
+    "voting"
+   ],
+   "examples": [
+    [
+     "117484613863994238",
+     "2026-10-22",
+     "🚨 ARIZONA!Early Voting, in-person, is UNDERWAY NOW in the Great State of Arizona. If you have a mail-in ballot, return it immediately and, if not, GO VOTE at the Polls RIGHT NOW, a"
+    ],
+    [
+     "117484616158082454",
+     "2026-10-22",
+     "🚨 COLORADO!Early Voting, in-person, is UNDERWAY NOW in the Great State of Colorado. If you have a mail-in ballot, return it immediately and, if not, GO VOTE at the Polls RIGHT NOW,"
     ]
    ]
   }
