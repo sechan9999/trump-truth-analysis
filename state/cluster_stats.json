@@ -1,11 +1,11 @@
 {
- "overall_silhouette": 0.093,
+ "overall_silhouette": 0.1,
  "boundary_threshold": 0.03,
  "clusters": {
   "0": {
-   "n": 565,
+   "n": 568,
    "cohesion": 0.11,
-   "boundary_share": 0.12,
+   "boundary_share": 0.123,
    "keywords": [
     "tariffs",
     "tariff",
@@ -32,17 +32,17 @@
    ]
   },
   "1": {
-   "n": 791,
+   "n": 803,
    "cohesion": 0.009,
-   "boundary_share": 0.271,
+   "boundary_share": 0.269,
    "keywords": [
     "fake news",
     "cnn",
     "york times",
+    "fraud",
     "ratings",
     "epstein",
     "fbi",
-    "fraud",
     "biden"
    ],
    "exemplars": [
@@ -61,7 +61,7 @@
    ]
   },
   "2": {
-   "n": 557,
+   "n": 558,
    "cohesion": 0.151,
    "boundary_share": 0.057,
    "keywords": [
@@ -71,8 +71,8 @@
     "strait",
     "nuclear",
     "hormuz",
-    "ukraine",
-    "russia"
+    "russia",
+    "ukraine"
    ],
    "exemplars": [
     [
@@ -90,17 +90,17 @@
    ]
   },
   "3": {
-   "n": 257,
+   "n": 258,
    "cohesion": 0.143,
    "boundary_share": 0.093,
    "keywords": [
     "district court",
     "serve judge",
-    "law",
-    "attorney",
     "justice",
     "judge district",
+    "law",
     "university",
+    "attorney",
     "nominate"
    ],
    "exemplars": [
@@ -119,18 +119,18 @@
    ]
   },
   "4": {
-   "n": 1047,
-   "cohesion": 0.278,
-   "boundary_share": 0.042,
+   "n": 1284,
+   "cohesion": 0.282,
+   "boundary_share": 0.041,
    "keywords": [
     "secure",
     "endorsement",
     "second amendment",
     "siege second",
+    "congressional district",
     "cut taxes",
     "military veterans",
-    "energy dominance",
-    "congressional district"
+    "energy dominance"
    ],
    "exemplars": [
     [
@@ -148,9 +148,9 @@
    ]
   },
   "5": {
-   "n": 276,
+   "n": 277,
    "cohesion": 0.14,
-   "boundary_share": 0.08,
+   "boundary_share": 0.079,
    "keywords": [
     "white house",
     "ballroom",
@@ -177,15 +177,15 @@
    ]
   },
   "6": {
-   "n": 456,
-   "cohesion": 0.046,
-   "boundary_share": 0.224,
+   "n": 461,
+   "cohesion": 0.044,
+   "boundary_share": 0.226,
    "keywords": [
     "ice",
     "criminals",
     "illegal",
-    "crime",
     "violent",
+    "crime",
     "chicago",
     "mayor",
     "federal"
@@ -206,15 +206,15 @@
    ]
   },
   "7": {
-   "n": 976,
-   "cohesion": -0.001,
-   "boundary_share": 0.244,
+   "n": 991,
+   "cohesion": -0.0,
+   "boundary_share": 0.242,
    "keywords": [
     "congratulations",
     "honor",
     "happy",
-    "wonderful",
     "god bless",
+    "wonderful",
     "pleased announce",
     "white house",
     "forward"
@@ -235,9 +235,9 @@
    ]
   },
   "8": {
-   "n": 708,
+   "n": 715,
    "cohesion": 0.043,
-   "boundary_share": 0.219,
+   "boundary_share": 0.221,
    "keywords": [
     "administration",
     "elon",
@@ -245,8 +245,8 @@
     "book",
     "law firms",
     "salena",
-    "exclusive",
-    "biden"
+    "biden",
+    "exclusive"
    ],
    "exemplars": [
     [
@@ -264,9 +264,9 @@
    ]
   },
   "9": {
-   "n": 692,
-   "cohesion": 0.024,
-   "boundary_share": 0.241,
+   "n": 698,
+   "cohesion": 0.022,
+   "boundary_share": 0.244,
    "keywords": [
     "republicans",
     "democrats",
@@ -274,8 +274,8 @@
     "vote",
     "save act",
     "filibuster",
-    "dumocrats",
-    "senate"
+    "senate",
+    "pass"
    ],
    "exemplars": [
     [

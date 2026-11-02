@@ -56,7 +56,7 @@
     "military vets",
     "support",
     "republican party",
-    "doing"
+    "virginia"
    ],
    "examples": [
     [
@@ -85,9 +85,9 @@
     "district florida",
     "court",
     "judge florida",
-    "emil",
-    "anne leigh",
-    "jordan"
+    "jordan",
+    "paul",
+    "leigh"
    ],
    "examples": [
     [
@@ -304,7 +304,7 @@
     "record setting",
     "southern border",
     "low cheap",
-    "energy"
+    "help secure"
    ],
    "examples": [
     [
@@ -393,11 +393,11 @@
    "ratio": 7.5,
    "keywords": [
     "continue secure",
-    "texas",
     "low continue",
+    "texas",
     "dustin",
     "energy",
-    "dan"
+    "helping"
    ],
    "examples": [
     [
@@ -426,8 +426,8 @@
     "dc",
     "arrested",
     "veterans",
-    "crime free",
     "free zone",
+    "crime free",
     "chicago"
    ],
    "examples": [
@@ -489,8 +489,8 @@
     "election congressman",
     "endorsement election",
     "energy",
-    "congressional district",
-    "champion"
+    "champion",
+    "congressional"
    ],
    "examples": [
     [
@@ -548,11 +548,11 @@
    "ratio": 5.5,
    "keywords": [
     "vote vote",
-    "trever",
     "matt van",
     "van epps",
+    "trever",
     "00",
-    "judge"
+    "line"
    ],
    "examples": [
     [
@@ -614,7 +614,7 @@
     "leaving",
     "numbers",
     "tina peters",
-    "colorado maximum"
+    "hell free"
    ],
    "examples": [
     [
@@ -733,12 +733,12 @@
    "baseline_weekly": 4.0,
    "ratio": 2.5,
    "keywords": [
+    "china",
     "canada",
     "golden dome",
     "greenland",
     "general",
-    "china eat",
-    "discussions"
+    "eat"
    ],
    "examples": [
     [
@@ -768,8 +768,8 @@
     "state",
     "rino",
     "law",
-    "district",
-    "border secure"
+    "leigh",
+    "district"
    ],
    "examples": [
     [
@@ -795,12 +795,12 @@
    "baseline_weekly": 5.5,
    "ratio": 2.5,
    "keywords": [
-    "watching",
-    "market national",
+    "driven tariffs",
+    "predicting 100",
+    "dow end",
     "hope supreme",
-    "record stock",
-    "end term",
-    "remember right"
+    "term remember",
+    "supreme court"
    ],
    "examples": [
     [
@@ -828,8 +828,8 @@
    "keywords": [
     "texas",
     "secure",
-    "district",
     "indiana",
+    "district",
     "cut taxes",
     "energy"
    ],
@@ -924,7 +924,7 @@
     "clarity act",
     "crypto",
     "illness disability",
-    "banks"
+    "citizenship order"
    ],
    "examples": [
     [
@@ -985,8 +985,8 @@
     "state senate",
     "state senator",
     "senate district",
-    "hoosier values",
-    "protect hoosier"
+    "protect hoosier",
+    "hoosier values"
    ],
    "examples": [
     [
@@ -1047,8 +1047,8 @@
     "strait hormuz",
     "lebanon",
     "blockade",
-    "leaders",
-    "navy"
+    "navy",
+    "leaders"
    ],
    "examples": [
     [
@@ -1078,8 +1078,8 @@
     "state senate",
     "protect hoosier",
     "hoosier values",
-    "state senator",
-    "senate district"
+    "senate district",
+    "state senator"
    ],
    "examples": [
     [
@@ -1109,8 +1109,8 @@
     "apple",
     "tim cook",
     "tax",
-    "citizenship gets",
-    "gets ammo"
+    "unlikely",
+    "voters iran"
    ],
    "examples": [
     [
@@ -1168,10 +1168,10 @@
    "ratio": 3.3,
    "keywords": [
     "million dollars",
-    "inaccurately",
-    "far superior",
-    "pool work",
     "fix",
+    "pool work",
+    "far superior",
+    "inaccurately",
     "construction"
    ],
    "examples": [
@@ -1198,8 +1198,8 @@
    "baseline_weekly": 8.5,
    "ratio": 4.9,
    "keywords": [
-    "tuesday 19th",
     "19th vote",
+    "tuesday 19th",
     "day tuesday",
     "election day",
     "voting location",
@@ -1261,9 +1261,9 @@
    "ratio": 2.9,
    "keywords": [
     "tuesday june",
-    "nevada",
     "day tuesday",
     "june 2nd",
+    "nevada",
     "2nd vote",
     "voting location"
    ],
@@ -1326,8 +1326,8 @@
     "experience",
     "close",
     "speaking",
-    "far",
-    "communists"
+    "communists",
+    "far"
    ],
    "examples": [
     [
@@ -1415,12 +1415,12 @@
    "baseline_weekly": 8.5,
    "ratio": 3.9,
    "keywords": [
-    "approved given",
     "dollars disaster",
+    "approved given",
     "declaration request",
     "disaster declaration",
     "attention matter",
-    "informed state"
+    "request severe"
    ],
    "examples": [
     [
@@ -1481,8 +1481,8 @@
     "defense",
     "10 billion",
     "national",
-    "kicks",
-    "state fair"
+    "state fair",
+    "kicks"
    ],
    "examples": [
     [
@@ -1542,9 +1542,9 @@
     "tuesday august",
     "election day",
     "voting location",
-    "florida",
     "state",
-    "18th"
+    "18th",
+    "day tuesday"
    ],
    "examples": [
     [
@@ -1606,7 +1606,7 @@
     "tax",
     "senate",
     "counter revolution",
-    "victor"
+    "davis hanson"
    ],
    "examples": [
     [
@@ -1664,8 +1664,8 @@
    "ratio": 2.0,
    "keywords": [
     "china",
-    "mayors",
     "copenhaver",
+    "mayors",
     "peng",
     "jim",
     "xi"
@@ -1686,31 +1686,31 @@
   {
    "cluster": 4,
    "start": "2026-10-19",
-   "end": "2026-10-25",
-   "weeks": 1,
-   "peak_week": "2026-10-19",
-   "count": 52,
-   "peak": 52,
+   "end": "2026-11-01",
+   "weeks": 2,
+   "peak_week": "2026-10-26",
+   "count": 289,
+   "peak": 237,
    "baseline_weekly": 9.0,
-   "ratio": 5.8,
+   "ratio": 16.1,
    "keywords": [
+    "tax",
     "vote",
-    "person",
-    "early",
-    "mail",
-    "ballot",
-    "polls right"
+    "radical",
+    "massive",
+    "dumocrats",
+    "congress"
    ],
    "examples": [
     [
-     "117487024484097038",
-     "2026-10-22",
-     "🚨 ALASKA! Early Voting, in-person, is UNDERWAY NOW in the Great State of Alaska. If you have a mail-in ballot, return it immediately and, if not, GO VOTE at the Polls RIGHT NOW, an"
+     "117537117740902297",
+     "2026-10-31",
+     "It is my Great Honor to endorse America First Patriot, Scott Singer, who is running to represent the incredible people of Florida's 25th Congressional District! A Proven Leader, Sc"
     ],
     [
-     "117486973456365506",
-     "2026-10-22",
-     "🚨 VIRGINIA! Early Voting, in-person, is UNDERWAY NOW in the Great Commonwealth of Virginia. If you have a mail-in ballot, return it immediately and, if not, GO VOTE at the Polls RI"
+     "117537118568303683",
+     "2026-10-31",
+     "It is my Great Honor to endorse America First Patriot, Casey Askar, who is running to represent the tremendous people of Florida's 22nd Congressional District! A Brave U.S. Marine "
     ]
    ]
   },
@@ -1720,13 +1720,13 @@
    "end": "2026-10-25",
    "weeks": 1,
    "peak_week": "2026-10-19",
-   "count": 28,
-   "peak": 28,
+   "count": 29,
+   "peak": 29,
    "baseline_weekly": 6.5,
-   "ratio": 4.3,
+   "ratio": 4.5,
    "keywords": [
-    "early",
     "vote",
+    "early",
     "person",
     "ballot",
     "mail",
