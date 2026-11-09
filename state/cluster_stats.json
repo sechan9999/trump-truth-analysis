@@ -1,11 +1,11 @@
 {
- "overall_silhouette": 0.1,
+ "overall_silhouette": 0.106,
  "boundary_threshold": 0.03,
  "clusters": {
   "0": {
-   "n": 568,
+   "n": 569,
    "cohesion": 0.11,
-   "boundary_share": 0.123,
+   "boundary_share": 0.125,
    "keywords": [
     "tariffs",
     "tariff",
@@ -32,9 +32,9 @@
    ]
   },
   "1": {
-   "n": 803,
+   "n": 814,
    "cohesion": 0.009,
-   "boundary_share": 0.269,
+   "boundary_share": 0.268,
    "keywords": [
     "fake news",
     "cnn",
@@ -61,7 +61,7 @@
    ]
   },
   "2": {
-   "n": 558,
+   "n": 561,
    "cohesion": 0.151,
    "boundary_share": 0.057,
    "keywords": [
@@ -91,15 +91,15 @@
   },
   "3": {
    "n": 258,
-   "cohesion": 0.143,
+   "cohesion": 0.142,
    "boundary_share": 0.093,
    "keywords": [
     "district court",
     "serve judge",
     "justice",
     "judge district",
-    "law",
     "university",
+    "law",
     "attorney",
     "nominate"
    ],
@@ -119,9 +119,9 @@
    ]
   },
   "4": {
-   "n": 1284,
-   "cohesion": 0.282,
-   "boundary_share": 0.041,
+   "n": 1515,
+   "cohesion": 0.286,
+   "boundary_share": 0.035,
    "keywords": [
     "secure",
     "endorsement",
@@ -134,16 +134,16 @@
    ],
    "exemplars": [
     [
-     "116132655097895049",
+     "117548973912202629",
+     "It is my Great Honor to endorse America First Patriot, Dr. John Cowan, who is running to represent the Wonderful People of Georgia's 11th Congressional District"
+    ],
+    [
+     "116365271173259328",
      "Bluffton City Councilman Blake Fiechter, a True America First Patriot, is running against \"RINO\" State Senator Travis Holdman, in Indiana's 19th Senate District"
     ],
     [
      "115742629595806439",
      "I am proud to, once again, endorse the GREAT Congressman from Tennessee's 7th Congressional District, Matt Van Epps. I strongly campaigned with Matt to defeat t"
-    ],
-    [
-     "116768665410839599",
-     "It is my Great Honor to endorse Congressman Blake Moore to represent the fantastic people of Utah's 2nd Congressional District!As the Vice Chairman of the House"
     ]
    ]
   },
@@ -154,8 +154,8 @@
    "keywords": [
     "white house",
     "ballroom",
-    "reflecting pool",
     "building",
+    "reflecting pool",
     "construction",
     "washington",
     "interior",
@@ -182,12 +182,12 @@
    "boundary_share": 0.226,
    "keywords": [
     "ice",
-    "criminals",
     "illegal",
+    "criminals",
     "violent",
-    "crime",
     "chicago",
     "mayor",
+    "crime",
     "federal"
    ],
    "exemplars": [
@@ -206,17 +206,17 @@
    ]
   },
   "7": {
-   "n": 991,
+   "n": 1006,
    "cohesion": -0.0,
    "boundary_share": 0.242,
    "keywords": [
     "congratulations",
     "honor",
     "happy",
-    "god bless",
-    "wonderful",
     "pleased announce",
+    "god bless",
     "white house",
+    "wonderful",
     "forward"
    ],
    "exemplars": [
@@ -235,17 +235,17 @@
    ]
   },
   "8": {
-   "n": 715,
+   "n": 718,
    "cohesion": 0.043,
-   "boundary_share": 0.221,
+   "boundary_share": 0.22,
    "keywords": [
     "administration",
     "elon",
     "pro bono",
     "book",
     "law firms",
-    "salena",
     "biden",
+    "salena",
     "exclusive"
    ],
    "exemplars": [
@@ -264,15 +264,15 @@
    ]
   },
   "9": {
-   "n": 698,
-   "cohesion": 0.022,
-   "boundary_share": 0.244,
+   "n": 705,
+   "cohesion": 0.02,
+   "boundary_share": 0.247,
    "keywords": [
     "republicans",
     "democrats",
     "republican",
-    "vote",
     "save act",
+    "vote",
     "filibuster",
     "senate",
     "pass"

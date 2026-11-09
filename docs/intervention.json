@@ -1,130 +1,130 @@
 {
- "week": "2026-10-26",
+ "week": "2026-11-02",
  "window_weeks": 4,
  "method_version": "v1.1",
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "generated_from": "https://github.com/sechan9999/trump-truth-analysis",
  "coverage": {
-  "n_endorse_window": 313,
-  "mapped_share": 0.671,
-  "any_state_share": 0.952,
-  "n_mapped_battleground": 210.0,
+  "n_endorse_window": 532,
+  "mapped_share": 0.617,
+  "any_state_share": 0.883,
+  "n_mapped_battleground": 328.0,
   "by_rule": {
-   "state_name": 172,
-   "none": 103,
-   "candidate": 38
+   "state_name": 264,
+   "none": 204,
+   "candidate": 64
   }
  },
  "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.024,
-   "dem_mention_share": 0.273,
-   "n_endorse": 5.0,
-   "n_dem_mention": 3.0,
-   "z_vs_baseline": 0.42,
-   "surge": false,
-   "rank": 7
-  },
-  "FL": {
-   "endorse_share": 0.324,
-   "dem_mention_share": 0.0,
-   "n_endorse": 68.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.54,
-   "surge": false,
-   "rank": 1
-  },
-  "GA": {
-   "endorse_share": 0.005,
-   "dem_mention_share": 0.0,
-   "n_endorse": 1.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.68,
-   "surge": false,
-   "rank": 11
-  },
-  "IA": {
-   "endorse_share": 0.064,
-   "dem_mention_share": 0.0,
-   "n_endorse": 13.5,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.02,
-   "surge": false,
-   "rank": 5
-  },
-  "KS": {
-   "endorse_share": 0.05,
-   "dem_mention_share": 0.273,
-   "n_endorse": 10.5,
-   "n_dem_mention": 3.0,
-   "z_vs_baseline": -0.11,
-   "surge": false,
-   "rank": 6
-  },
-  "ME": {
-   "endorse_share": 0.01,
-   "dem_mention_share": 0.0,
-   "n_endorse": 2.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.02,
-   "surge": false,
-   "rank": 10
-  },
-  "MI": {
-   "endorse_share": 0.095,
+   "endorse_share": 0.043,
    "dem_mention_share": 0.364,
-   "n_endorse": 20.0,
+   "n_endorse": 14.0,
    "n_dem_mention": 4.0,
-   "z_vs_baseline": 0.45,
-   "surge": false,
-   "rank": 4
-  },
-  "MN": {
-   "endorse_share": 0.014,
-   "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.27,
+   "z_vs_baseline": 1.02,
    "surge": false,
    "rank": 9
   },
-  "NC": {
-   "endorse_share": 0.024,
-   "dem_mention_share": 0.091,
-   "n_endorse": 5.0,
-   "n_dem_mention": 1.0,
-   "z_vs_baseline": -0.66,
+  "FL": {
+   "endorse_share": 0.241,
+   "dem_mention_share": 0.0,
+   "n_endorse": 79.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.19,
+   "surge": false,
+   "rank": 2
+  },
+  "GA": {
+   "endorse_share": 0.058,
+   "dem_mention_share": 0.0,
+   "n_endorse": 19.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.36,
    "surge": false,
    "rank": 7
   },
-  "NH": {
-   "endorse_share": 0.005,
+  "IA": {
+   "endorse_share": 0.059,
    "dem_mention_share": 0.0,
-   "n_endorse": 1.0,
+   "n_endorse": 19.5,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.19,
+   "z_vs_baseline": -0.02,
+   "surge": false,
+   "rank": 6
+  },
+  "KS": {
+   "endorse_share": 0.044,
+   "dem_mention_share": 0.273,
+   "n_endorse": 14.5,
+   "n_dem_mention": 3.0,
+   "z_vs_baseline": -0.15,
+   "surge": false,
+   "rank": 8
+  },
+  "ME": {
+   "endorse_share": 0.009,
+   "dem_mention_share": 0.0,
+   "n_endorse": 3.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.0,
+   "surge": false,
+   "rank": 11
+  },
+  "MI": {
+   "endorse_share": 0.076,
+   "dem_mention_share": 0.273,
+   "n_endorse": 25.0,
+   "n_dem_mention": 3.0,
+   "z_vs_baseline": 0.26,
+   "surge": false,
+   "rank": 3
+  },
+  "MN": {
+   "endorse_share": 0.018,
+   "dem_mention_share": 0.0,
+   "n_endorse": 6.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.22,
+   "surge": false,
+   "rank": 10
+  },
+  "NC": {
+   "endorse_share": 0.067,
+   "dem_mention_share": 0.091,
+   "n_endorse": 22.0,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": -0.42,
+   "surge": false,
+   "rank": 5
+  },
+  "NH": {
+   "endorse_share": 0.009,
+   "dem_mention_share": 0.0,
+   "n_endorse": 3.0,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": 0.58,
    "surge": false,
    "rank": 11
   },
   "OH": {
-   "endorse_share": 0.105,
+   "endorse_share": 0.076,
    "dem_mention_share": 0.0,
-   "n_endorse": 22.0,
+   "n_endorse": 25.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.03,
+   "z_vs_baseline": -0.13,
    "surge": false,
    "rank": 3
   },
   "TX": {
-   "endorse_share": 0.281,
+   "endorse_share": 0.299,
    "dem_mention_share": 0.0,
-   "n_endorse": 59.0,
+   "n_endorse": 98.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.35,
+   "z_vs_baseline": 0.42,
    "surge": false,
-   "rank": 2
+   "rank": 1
   }
  },
  "series": {
@@ -221,7 +221,8 @@
    "2026-10-05",
    "2026-10-12",
    "2026-10-19",
-   "2026-10-26"
+   "2026-10-26",
+   "2026-11-02"
   ],
   "endorse_counts": {
    "AK": [
@@ -317,7 +318,8 @@
     1.0,
     1.0,
     1.0,
-    2.0
+    2.0,
+    10.0
    ],
    "FL": [
     2.0,
@@ -412,7 +414,8 @@
     0.0,
     0.0,
     2.0,
-    66.0
+    66.0,
+    11.0
    ],
    "GA": [
     0.0,
@@ -507,7 +510,8 @@
     0.0,
     1.0,
     0.0,
-    0.0
+    0.0,
+    18.0
    ],
    "IA": [
     0.0,
@@ -602,7 +606,8 @@
     0.0,
     2.0,
     3.0,
-    8.5
+    8.5,
+    6.0
    ],
    "KS": [
     0.0,
@@ -697,7 +702,8 @@
     0.0,
     0.0,
     4.0,
-    6.5
+    6.5,
+    4.0
    ],
    "ME": [
     0.0,
@@ -791,6 +797,7 @@
     0.0,
     0.0,
     0.0,
+    1.0,
     1.0,
     1.0
    ],
@@ -887,7 +894,8 @@
     2.0,
     1.0,
     3.0,
-    14.0
+    14.0,
+    7.0
    ],
    "MN": [
     0.0,
@@ -982,7 +990,8 @@
     0.0,
     0.0,
     1.0,
-    2.0
+    2.0,
+    3.0
    ],
    "NC": [
     0.0,
@@ -1077,7 +1086,8 @@
     1.0,
     1.0,
     2.0,
-    1.0
+    1.0,
+    18.0
    ],
    "NH": [
     0.0,
@@ -1172,7 +1182,8 @@
     0.0,
     0.0,
     1.0,
-    0.0
+    0.0,
+    2.0
    ],
    "OH": [
     0.0,
@@ -1267,7 +1278,8 @@
     0.0,
     2.0,
     3.0,
-    17.0
+    17.0,
+    3.0
    ],
    "TX": [
     0.0,
@@ -1362,7 +1374,8 @@
     3.0,
     2.0,
     0.0,
-    54.0
+    54.0,
+    42.0
    ]
   }
  },
