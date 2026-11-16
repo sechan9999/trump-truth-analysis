@@ -1,70 +1,70 @@
 {
  "schema": "message_index_weekly/v1",
- "week": "2026-11-02",
+ "week": "2026-11-09",
  "window_weeks": 4,
  "method_version": "v1.1",
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "labels_version": "v2",
- "collected": "2026-11-09",
- "n_posts_total": 13338,
- "n_posts_analyzed": 6884,
- "silhouette_cosine": 0.106,
+ "collected": "2026-11-16",
+ "n_posts_total": 13406,
+ "n_posts_analyzed": 6925,
+ "silhouette_cosine": 0.105,
  "site": "https://sechan9999.github.io/trump-truth-analysis/",
  "coverage": {
-  "mapped_share": 0.617,
-  "any_state_share": 0.883,
-  "n_endorse_window": 532,
-  "n_mapped_battleground": 328.0
+  "mapped_share": 0.61,
+  "any_state_share": 0.879,
+  "n_endorse_window": 521,
+  "n_mapped_battleground": 318.0
  },
  "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.043,
-   "dem_mention_share": 0.364,
-   "n_endorse": 14.0,
+   "endorse_share": 0.041,
+   "dem_mention_share": 0.5,
+   "n_endorse": 13.0,
    "n_dem_mention": 4.0,
-   "z_vs_baseline": 1.02,
+   "z_vs_baseline": 0.96,
    "rank": 9,
    "surge": false,
    "small_n": false
   },
   "FL": {
-   "endorse_share": 0.241,
+   "endorse_share": 0.248,
    "dem_mention_share": 0.0,
    "n_endorse": 79.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.19,
+   "z_vs_baseline": 0.23,
    "rank": 2,
    "surge": false,
    "small_n": false
   },
   "GA": {
-   "endorse_share": 0.058,
+   "endorse_share": 0.057,
    "dem_mention_share": 0.0,
-   "n_endorse": 19.0,
+   "n_endorse": 18.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.36,
-   "rank": 7,
-   "surge": false,
-   "small_n": false
-  },
-  "IA": {
-   "endorse_share": 0.059,
-   "dem_mention_share": 0.0,
-   "n_endorse": 19.5,
-   "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.02,
+   "z_vs_baseline": -0.37,
    "rank": 6,
    "surge": false,
    "small_n": false
   },
+  "IA": {
+   "endorse_share": 0.055,
+   "dem_mention_share": 0.0,
+   "n_endorse": 17.5,
+   "n_dem_mention": 0.0,
+   "z_vs_baseline": -0.06,
+   "rank": 7,
+   "surge": false,
+   "small_n": false
+  },
   "KS": {
-   "endorse_share": 0.044,
-   "dem_mention_share": 0.273,
+   "endorse_share": 0.046,
+   "dem_mention_share": 0.25,
    "n_endorse": 14.5,
-   "n_dem_mention": 3.0,
-   "z_vs_baseline": -0.15,
+   "n_dem_mention": 2.0,
+   "z_vs_baseline": -0.14,
    "rank": 8,
    "surge": false,
    "small_n": false
@@ -74,36 +74,36 @@
    "dem_mention_share": 0.0,
    "n_endorse": 3.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.0,
+   "z_vs_baseline": 0.01,
    "rank": 11,
    "surge": false,
    "small_n": false
   },
   "MI": {
-   "endorse_share": 0.076,
-   "dem_mention_share": 0.273,
-   "n_endorse": 25.0,
-   "n_dem_mention": 3.0,
-   "z_vs_baseline": 0.26,
+   "endorse_share": 0.075,
+   "dem_mention_share": 0.25,
+   "n_endorse": 24.0,
+   "n_dem_mention": 2.0,
+   "z_vs_baseline": 0.25,
    "rank": 3,
    "surge": false,
    "small_n": false
   },
   "MN": {
-   "endorse_share": 0.018,
+   "endorse_share": 0.019,
    "dem_mention_share": 0.0,
    "n_endorse": 6.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.22,
+   "z_vs_baseline": -0.21,
    "rank": 10,
    "surge": false,
    "small_n": false
   },
   "NC": {
-   "endorse_share": 0.067,
-   "dem_mention_share": 0.091,
-   "n_endorse": 22.0,
-   "n_dem_mention": 1.0,
+   "endorse_share": 0.066,
+   "dem_mention_share": 0.0,
+   "n_endorse": 21.0,
+   "n_dem_mention": 0.0,
    "z_vs_baseline": -0.42,
    "rank": 5,
    "surge": false,
@@ -114,27 +114,27 @@
    "dem_mention_share": 0.0,
    "n_endorse": 3.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.58,
+   "z_vs_baseline": 0.6,
    "rank": 11,
    "surge": false,
    "small_n": false
   },
   "OH": {
-   "endorse_share": 0.076,
+   "endorse_share": 0.072,
    "dem_mention_share": 0.0,
-   "n_endorse": 25.0,
+   "n_endorse": 23.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.13,
-   "rank": 3,
+   "z_vs_baseline": -0.15,
+   "rank": 4,
    "surge": false,
    "small_n": false
   },
   "TX": {
-   "endorse_share": 0.299,
+   "endorse_share": 0.302,
    "dem_mention_share": 0.0,
-   "n_endorse": 98.0,
+   "n_endorse": 96.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.42,
+   "z_vs_baseline": 0.44,
    "rank": 1,
    "surge": false,
    "small_n": false
@@ -160,7 +160,7 @@
    "ko": "관세·무역",
    "en": "Tariffs & trade",
    "color": "#1F4FBF",
-   "cohesion": 0.11,
+   "cohesion": 0.109,
    "caution": false,
    "keywords": [
     "tariffs",
@@ -175,7 +175,7 @@
    "ko": "지지 선언",
    "en": "Endorsements",
    "color": "#A16207",
-   "cohesion": 0.286,
+   "cohesion": 0.285,
    "caution": false,
    "keywords": [
     "secure",
@@ -211,8 +211,8 @@
     "district court",
     "serve judge",
     "justice",
-    "judge district",
-    "university"
+    "university",
+    "judge district"
    ],
    "audit_fit_rate": 0.933
   },
@@ -235,12 +235,12 @@
    "ko": "언론·정적 언급",
    "en": "Media & opponents",
    "color": "#C2410C",
-   "cohesion": 0.009,
+   "cohesion": 0.01,
    "caution": true,
    "keywords": [
     "fake news",
-    "cnn",
     "york times",
+    "cnn",
     "fraud",
     "ratings"
    ],
@@ -581,16 +581,16 @@
   },
   {
    "month": "2026-11",
-   "tariffs_trade": 1,
-   "media_opponents": 13,
-   "iran_war": 3,
-   "courts_nominations": 0,
-   "endorsements": 278,
+   "tariffs_trade": 4,
+   "media_opponents": 22,
+   "iran_war": 6,
+   "courts_nominations": 7,
+   "endorsements": 279,
    "white_house_construction": 0,
-   "crime_immigration": 1,
-   "thanks_greetings": 16,
-   "shared_headlines": 3,
-   "gop_legislation": 7
+   "crime_immigration": 3,
+   "thanks_greetings": 21,
+   "shared_headlines": 5,
+   "gop_legislation": 16
   }
  ],
  "annotations": [
@@ -813,7 +813,7 @@
      8.8,
      10.4,
      3.5,
-     0.3
+     1.1
     ],
     "trump_peak": "2025-04",
     "public": [
@@ -909,7 +909,7 @@
      4.4,
      4.0,
      4.4,
-     0.3
+     0.8
     ],
     "trump_peak": "2025-09",
     "public": [
@@ -1067,7 +1067,7 @@
      6.3,
      8.1,
      4.0,
-     0.9
+     1.7
     ],
     "trump_peak": "2026-04",
     "public": [
@@ -1163,7 +1163,7 @@
      6.3,
      8.1,
      9.7,
-     2.2
+     4.4
     ],
     "trump_peak": "2025-11",
     "public": [
