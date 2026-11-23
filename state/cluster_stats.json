@@ -3,9 +3,9 @@
  "boundary_threshold": 0.03,
  "clusters": {
   "0": {
-   "n": 572,
-   "cohesion": 0.109,
-   "boundary_share": 0.128,
+   "n": 576,
+   "cohesion": 0.108,
+   "boundary_share": 0.13,
    "keywords": [
     "tariffs",
     "tariff",
@@ -32,7 +32,7 @@
    ]
   },
   "1": {
-   "n": 823,
+   "n": 824,
    "cohesion": 0.01,
    "boundary_share": 0.265,
    "keywords": [
@@ -43,7 +43,7 @@
     "ratings",
     "epstein",
     "fbi",
-    "biden"
+    "story"
    ],
    "exemplars": [
     [
@@ -61,9 +61,9 @@
    ]
   },
   "2": {
-   "n": 564,
+   "n": 566,
    "cohesion": 0.151,
-   "boundary_share": 0.057,
+   "boundary_share": 0.058,
    "keywords": [
     "iran",
     "war",
@@ -71,8 +71,8 @@
     "strait",
     "nuclear",
     "hormuz",
-    "russia",
-    "ukraine"
+    "ukraine",
+    "russia"
    ],
    "exemplars": [
     [
@@ -97,8 +97,8 @@
     "district court",
     "serve judge",
     "justice",
-    "university",
     "judge district",
+    "university",
     "law",
     "nominate",
     "attorney"
@@ -119,7 +119,7 @@
    ]
   },
   "4": {
-   "n": 1516,
+   "n": 1517,
    "cohesion": 0.285,
    "boundary_share": 0.036,
    "keywords": [
@@ -138,7 +138,7 @@
      "It is my Great Honor to endorse America First Patriot, Dr. John Cowan, who is running to represent the Wonderful People of Georgia's 11th Congressional District"
     ],
     [
-     "116365271173259328",
+     "116285866660628943",
      "Bluffton City Councilman Blake Fiechter, a True America First Patriot, is running against \"RINO\" State Senator Travis Holdman, in Indiana's 19th Senate District"
     ],
     [
@@ -177,8 +177,8 @@
    ]
   },
   "6": {
-   "n": 463,
-   "cohesion": 0.044,
+   "n": 466,
+   "cohesion": 0.043,
    "boundary_share": 0.225,
    "keywords": [
     "ice",
@@ -206,9 +206,9 @@
    ]
   },
   "7": {
-   "n": 1011,
-   "cohesion": -0.0,
-   "boundary_share": 0.243,
+   "n": 1017,
+   "cohesion": 0.0,
+   "boundary_share": 0.242,
    "keywords": [
     "congratulations",
     "honor",
@@ -235,7 +235,7 @@
    ]
   },
   "8": {
-   "n": 720,
+   "n": 721,
    "cohesion": 0.043,
    "boundary_share": 0.221,
    "keywords": [
@@ -264,9 +264,9 @@
    ]
   },
   "9": {
-   "n": 714,
+   "n": 717,
    "cohesion": 0.02,
-   "boundary_share": 0.244,
+   "boundary_share": 0.243,
    "keywords": [
     "republicans",
     "democrats",

@@ -1,128 +1,128 @@
 {
- "week": "2026-11-09",
+ "week": "2026-11-16",
  "window_weeks": 4,
  "method_version": "v1.1",
  "gazetteer_version": "v1",
  "matching_rules_version": "v2",
  "generated_from": "https://github.com/sechan9999/trump-truth-analysis",
  "coverage": {
-  "n_endorse_window": 521,
-  "mapped_share": 0.61,
-  "any_state_share": 0.879,
-  "n_mapped_battleground": 318.0,
+  "n_endorse_window": 470,
+  "mapped_share": 0.632,
+  "any_state_share": 0.887,
+  "n_mapped_battleground": 297.0,
   "by_rule": {
-   "state_name": 262,
-   "none": 203,
-   "candidate": 56
+   "state_name": 249,
+   "none": 173,
+   "candidate": 48
   }
  },
  "small_n": false,
  "states": {
   "AK": {
-   "endorse_share": 0.041,
-   "dem_mention_share": 0.5,
-   "n_endorse": 13.0,
+   "endorse_share": 0.04,
+   "dem_mention_share": 0.667,
+   "n_endorse": 12.0,
    "n_dem_mention": 4.0,
-   "z_vs_baseline": 0.96,
+   "z_vs_baseline": 0.94,
    "surge": false,
-   "rank": 9
+   "rank": 8
   },
   "FL": {
-   "endorse_share": 0.248,
+   "endorse_share": 0.259,
    "dem_mention_share": 0.0,
-   "n_endorse": 79.0,
+   "n_endorse": 77.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.23,
+   "z_vs_baseline": 0.27,
    "surge": false,
    "rank": 2
   },
   "GA": {
-   "endorse_share": 0.057,
+   "endorse_share": 0.061,
    "dem_mention_share": 0.0,
    "n_endorse": 18.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.37,
+   "z_vs_baseline": -0.34,
    "surge": false,
    "rank": 6
   },
   "IA": {
-   "endorse_share": 0.055,
+   "endorse_share": 0.049,
    "dem_mention_share": 0.0,
-   "n_endorse": 17.5,
+   "n_endorse": 14.5,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.06,
+   "z_vs_baseline": -0.12,
    "surge": false,
    "rank": 7
   },
   "KS": {
-   "endorse_share": 0.046,
-   "dem_mention_share": 0.25,
-   "n_endorse": 14.5,
-   "n_dem_mention": 2.0,
-   "z_vs_baseline": -0.14,
+   "endorse_share": 0.035,
+   "dem_mention_share": 0.167,
+   "n_endorse": 10.5,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": -0.19,
    "surge": false,
-   "rank": 8
+   "rank": 9
   },
   "ME": {
-   "endorse_share": 0.009,
+   "endorse_share": 0.007,
    "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
+   "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.01,
+   "z_vs_baseline": -0.08,
    "surge": false,
    "rank": 11
   },
   "MI": {
-   "endorse_share": 0.075,
-   "dem_mention_share": 0.25,
-   "n_endorse": 24.0,
-   "n_dem_mention": 2.0,
-   "z_vs_baseline": 0.25,
+   "endorse_share": 0.071,
+   "dem_mention_share": 0.167,
+   "n_endorse": 21.0,
+   "n_dem_mention": 1.0,
+   "z_vs_baseline": 0.2,
    "surge": false,
    "rank": 3
   },
   "MN": {
-   "endorse_share": 0.019,
+   "endorse_share": 0.017,
    "dem_mention_share": 0.0,
-   "n_endorse": 6.0,
+   "n_endorse": 5.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.21,
+   "z_vs_baseline": -0.24,
    "surge": false,
    "rank": 10
   },
   "NC": {
-   "endorse_share": 0.066,
+   "endorse_share": 0.064,
    "dem_mention_share": 0.0,
-   "n_endorse": 21.0,
+   "n_endorse": 19.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.42,
+   "z_vs_baseline": -0.44,
    "surge": false,
    "rank": 5
   },
   "NH": {
-   "endorse_share": 0.009,
+   "endorse_share": 0.007,
    "dem_mention_share": 0.0,
-   "n_endorse": 3.0,
+   "n_endorse": 2.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.6,
+   "z_vs_baseline": 0.37,
    "surge": false,
    "rank": 11
   },
   "OH": {
-   "endorse_share": 0.072,
+   "endorse_share": 0.067,
    "dem_mention_share": 0.0,
-   "n_endorse": 23.0,
+   "n_endorse": 20.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": -0.15,
+   "z_vs_baseline": -0.18,
    "surge": false,
    "rank": 4
   },
   "TX": {
-   "endorse_share": 0.302,
+   "endorse_share": 0.323,
    "dem_mention_share": 0.0,
    "n_endorse": 96.0,
    "n_dem_mention": 0.0,
-   "z_vs_baseline": 0.44,
+   "z_vs_baseline": 0.53,
    "surge": false,
    "rank": 1
   }
@@ -223,7 +223,8 @@
    "2026-10-19",
    "2026-10-26",
    "2026-11-02",
-   "2026-11-09"
+   "2026-11-09",
+   "2026-11-16"
   ],
   "endorse_counts": {
    "AK": [
@@ -321,6 +322,7 @@
     1.0,
     2.0,
     10.0,
+    0.0,
     0.0
    ],
    "FL": [
@@ -418,6 +420,7 @@
     2.0,
     66.0,
     11.0,
+    0.0,
     0.0
    ],
    "GA": [
@@ -515,6 +518,7 @@
     0.0,
     0.0,
     18.0,
+    0.0,
     0.0
    ],
    "IA": [
@@ -612,6 +616,7 @@
     3.0,
     8.5,
     6.0,
+    0.0,
     0.0
    ],
    "KS": [
@@ -709,6 +714,7 @@
     4.0,
     6.5,
     4.0,
+    0.0,
     0.0
    ],
    "ME": [
@@ -806,6 +812,7 @@
     1.0,
     1.0,
     1.0,
+    0.0,
     0.0
    ],
    "MI": [
@@ -903,6 +910,7 @@
     3.0,
     14.0,
     7.0,
+    0.0,
     0.0
    ],
    "MN": [
@@ -1000,6 +1008,7 @@
     1.0,
     2.0,
     3.0,
+    0.0,
     0.0
    ],
    "NC": [
@@ -1097,6 +1106,7 @@
     2.0,
     1.0,
     18.0,
+    0.0,
     0.0
    ],
    "NH": [
@@ -1194,6 +1204,7 @@
     1.0,
     0.0,
     2.0,
+    0.0,
     0.0
    ],
    "OH": [
@@ -1291,6 +1302,7 @@
     3.0,
     17.0,
     3.0,
+    0.0,
     0.0
    ],
    "TX": [
@@ -1388,6 +1400,7 @@
     0.0,
     54.0,
     42.0,
+    0.0,
     0.0
    ]
   }
